@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=latex 2017.2.18)  28 FEB 2017 20:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=latex 2017.2.18)  21 MAR 2017 12:43
 entering extended mode
 **./Memoire.tex
 (Memoire.tex
@@ -692,8 +692,8 @@ Package ifvtex Info: VTeX not detected.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg")) (Memoire.aux
 (pageDeGarde.aux) (remerciments.aux) (resume.aux) (abstract.aux)
-(listeSymbole.aux) (chapitre1.aux) (chapitre2.aux) (chapitre3.aux)
-(chapitre4.aux))
+(listeSymbole.aux) (introduction.aux) (partie1.aux) (partie2.aux)
+(conclusion.aux))
 \openout1 = `Memoire.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
@@ -837,19 +837,23 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
 (Font)              scaled to size 24.88pt on input line 20.
  (Memoire.toc
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 12.0pt on input line 3.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 10.0pt on input line 3.
-)
+(Font)              scaled to size 12.0pt on input line 3.
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
+(Font)              scaled to size 10.0pt on input line 5.
+ [3])
 \tf@toc=\write3
 \openout3 = `Memoire.toc'.
 
- [3] [4
-
-] (Memoire.lof)
+ [4] (Memoire.lof)
 \tf@lof=\write4
 \openout4 = `Memoire.lof'.
 
- [5] [6
+ [5
+
+] [6
 
 ] (Memoire.lot)
 \tf@lot=\write5
@@ -860,64 +864,77 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
 
 
 (listeSymbole.tex)
-\openout2 = `chapitre1.aux'.
+\openout2 = `introduction.aux'.
 
- (chapitre1.tex [8
-
-
+ (introduction.tex [8
 
 
-]
+
+
+] [9] [10])
+\openout2 = `partie1.aux'.
+
+ (partie1.tex
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 20.74pt on input line 1.
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
+(Font)              scaled to size 20.74pt on input line 1.
+ [11
+
+
+
+] [12]
 Chapitre 1.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 20.74pt on input line 1.
+(Font)              scaled to size 14.4pt on input line 3.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 20.74pt on input line 1.
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 14.4pt on input line 2.
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 14.4pt on input line 2.
-) [9]
-\openout2 = `chapitre2.aux'.
+(Font)              scaled to size 14.4pt on input line 3.
+[13
 
- (chapitre2.tex [10
-
-
+] [14
 
 ]
 Chapitre 2.
-) [11]
-\openout2 = `chapitre3.aux'.
+) [15]
+\openout2 = `partie2.aux'.
 
- (chapitre3.tex [12
+ (partie2.tex [16
 
 
 
-]
+] [17] [18]
 Chapitre 3.
-) [13]
-\openout2 = `chapitre4.aux'.
+[19
 
- (chapitre4.tex [14
-
-
+] [20
 
 ]
 Chapitre 4.
-) [15] (Memoire.aux (pageDeGarde.aux) (remerciments.aux) (resume.aux)
-(abstract.aux) (listeSymbole.aux) (chapitre1.aux) (chapitre2.aux)
-(chapitre3.aux) (chapitre4.aux)) )
+[21] [22
+
+]
+Chapitre 5.
+) [23]
+\openout2 = `conclusion.aux'.
+
+ (conclusion.tex [24
+
+
+
+] [25] [26]) (Memoire.aux (pageDeGarde.aux)
+(remerciments.aux) (resume.aux) (abstract.aux) (listeSymbole.aux)
+(introduction.aux) (partie1.aux) (partie2.aux) (conclusion.aux)) )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 5605 strings out of 493334
- 86791 string characters out of 3139217
+ 5607 strings out of 493334
+ 86849 string characters out of 3139217
  165081 words of memory out of 3000000
- 9003 multiletter control sequences out of 15000+200000
- 84451 words of font info for 32 fonts, out of 3000000 for 9000
+ 9005 multiletter control sequences out of 15000+200000
+ 94150 words of font info for 34 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 29i,4n,35p,316b,5913s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 29i,5n,35p,316b,5913s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Memoire.dvi (15 pages, 12268 bytes).
+Output written on Memoire.dvi (26 pages, 13392 bytes).

@@ -1,24 +1,27 @@
 \select@language {french}
 \select@language {french}
-\contentsline {chapter}{\numberline {1}}{9}
-\contentsline {section}{\numberline {1.1}Introduction}{9}
-\contentsline {section}{\numberline {1.2}Modele De Tache}{9}
-\contentsline {section}{\numberline {1.3}Ordonnancement Mono-Processeur}{9}
-\contentsline {section}{\numberline {1.4}Ordonnancement Multi-Processeur}{9}
-\contentsline {section}{\numberline {1.5}Conclusion}{9}
-\contentsline {chapter}{\numberline {2}}{11}
-\contentsline {section}{\numberline {2.1}Besoin Des Systeme Temps Reels}{11}
-\contentsline {section}{\numberline {2.2}}{11}
-\contentsline {section}{\numberline {2.3}}{11}
-\contentsline {section}{\numberline {2.4}}{11}
-\contentsline {section}{\numberline {2.5}}{11}
-\contentsline {section}{\numberline {2.6}}{11}
-\contentsline {section}{\numberline {2.7}}{11}
-\contentsline {chapter}{\numberline {3}Contributions}{13}
-\contentsline {section}{\numberline {3.1}Introduction}{13}
-\contentsline {section}{\numberline {3.2}}{13}
-\contentsline {section}{\numberline {3.3}}{13}
-\contentsline {section}{\numberline {3.4}}{13}
-\contentsline {section}{\numberline {3.5}}{13}
-\contentsline {chapter}{\numberline {4}}{15}
-\contentsline {section}{\numberline {4.1}}{15}
+\contentsline {part}{I\hspace {1em}Partie Theorique}{11}
+\contentsline {chapter}{\numberline {1}Introduction Au systeme temps r\IeC {\'e}el}{13}
+\contentsline {section}{\numberline {1.1}Introduction}{13}
+\contentsline {section}{\numberline {1.2}Taxonomie sur les syst\IeC {\`e}mes temps r\IeC {\'e}el}{13}
+\contentsline {section}{\numberline {1.3}Ordonnancement monoprocesseur}{13}
+\contentsline {section}{\numberline {1.4}Ordonnancement Multiprocesseur}{13}
+\contentsline {section}{\numberline {1.5}Conclusion}{13}
+\contentsline {chapter}{\numberline {2}Etat de l'art}{15}
+\contentsline {section}{\numberline {2.1}Introduction}{15}
+\contentsline {section}{\numberline {2.2}Les mod\IeC {\`e}les de consommation d'\IeC {\'e}nerie DVFS et DPM}{15}
+\contentsline {section}{\numberline {2.3}Les \IeC {\'e}tats C-states du processeur}{15}
+\contentsline {section}{\numberline {2.4}L'endormissement de processeur (Online VS Offline)}{15}
+\contentsline {section}{\numberline {2.5}Le Mod\IeC {\`e}le d'endormissement de Dsouza}{15}
+\contentsline {section}{\numberline {2.6}Conclusion}{15}
+\contentsline {part}{II\hspace {1em}Contributions et Implementation}{17}
+\contentsline {chapter}{\numberline {3}Endormissement de tache sous priorit\IeC {\'e} Fixe}{19}
+\contentsline {section}{\numberline {3.1}Le cas monoprocesseur}{19}
+\contentsline {section}{\numberline {3.2}Le cas multiprocesseur}{19}
+\contentsline {chapter}{\numberline {4}Endormissement de tache sous priorit\IeC {\'e} dynamique}{21}
+\contentsline {section}{\numberline {4.1}Le cas monoprocesseur}{21}
+\contentsline {section}{\numberline {4.2}Le cas multiprocesseur}{21}
+\contentsline {chapter}{\numberline {5}Exp\IeC {\'e}rimentations}{23}
+\contentsline {section}{\numberline {5.1}La g\IeC {\'e}n\IeC {\'e}ration des taches}{23}
+\contentsline {section}{\numberline {5.2}La simulation}{23}
+\contentsline {section}{\numberline {5.3}Discussions}{23}
