@@ -79,7 +79,7 @@ R_{i} = \\
 \begin{array}{l}
 R_{i}^0=C_{i}
 \\
- R_{i}^{(k+1)}=C_{i}+\sum_{j \in pr(i)}  \left \lceil 
+ R_{i}^{(k+1)}=C_{i}+\underset{j=1}{\sum}  \left \lceil 
  \frac{R_{i}^{(k)}}{T_{j}} \right \rceil * C_{j}  
 \end{array}\right.
 \end{equation}

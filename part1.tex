@@ -39,50 +39,12 @@ Par exemple, un logiciel de diffusion de flux vidéo produit un certain nombre d
 \textbf{Optimalité}. Un algorithme d’ordonnancement est dit optimal s’il peut ordonnancer tous les ensembles de tâches ordonnançables par d’autres algorithmes d’ordonnancement existants.}
 
 \subsection{Algorithme d’ordonnancement à priorité fixe}
-\subsubsection{Rate Monotonic \cite{LL73}}
-\paragraph{
-Rate Monotonic est un algorithme à priorité fixe introduit par Liu et Layland dans \cite{LL73}. Cet algorithme affecte des priorités aux tâches inversement proportionnel à leur période : plus leur période est petite, plus la tâche est prioritaire. Un exemple de système de tâche ordonnancée par Rate Monotonic est donné table 1.1. La figure 1.5 est une représentation graphique de l'ordonnancement correspondant.}
-\paragraph{
-\textbf{Théorème 3 \cite{LL73}}. Rate Monotonic est optimal pour l'ordonnancement de systèmes de tâches synchrones, indépendantes et à échéance sur requête en présence de préemption.}
-\paragraph{
-\textbf{Théorème 4 \cite{LL73} (Condition Suffisante)}. Un système temps réel composé de n tâches est ordonnançable par Rate Monotonic si : }
-\begin{equation}
-U = \sum_{i=1}^n \frac{C_i}{T_i} \leq n ( 2^{\frac{1}{n}} - 1)
-\end{equation}
-
-\subsubsection{Deadline Monotonic }%\cite{LW82}}
-\paragraph{
-Deadline Monotonic est un algorithme à priorité fixe introduit par Leung et Whitehead dans %\cite{LW82}.\\
-Cet algorithme est proche de celui de Rate Monotonic, à la différence que les priorités sont maintenant affectées en fonction de l'échéance relative de chaque tâche au lieu de leur période.
-Cet algorithme est optimal dans le cadre des algorithmes à priorité fixe pour des systèmes de tâches synchrones à échéance contrainte lorsque la préemption est autorisée. Monotonic et Deadline Monotonic se confondent.
-\\ \textbf{Condition suffisante d'ordonnançabilité} La condition suffisante d'ordonnançabilité est inspirée de la condition suffisante d'ordonnançabilité de Liu et Layland (cf. théorème 4) :}
-\paragraph{
-\textbf{Théorème 6}. Un système temps réel composé de n tâches est ordonnançable par Deadline
-Monotonic si la condition suivante est vérifiée :}
-\begin{equation}
-U = \sum_{i=1}^n \frac{C_i}{D_i} \leq n ( 2^{\frac{1}{n}} - 1)
-\end{equation}
-
-\paragraph{
-\textbf{Condition necessaire et suffisante d'ordonnançabilité} Joseph et al ont proposé un test d’ordonnancabilité basé sur le pire
-temps de reponse $R_{i}$.  Le pire temps de réponse est le moment ou la tache $i$ de priorité $p$ terminera son exécution quand les taches les plus prioritaire sont actifs avec elle en même temps.\\
-soit $\Gamma$ = $\tau_{1},\tau_{2},. . . \tau_{n}$ un ensemble de $n$
-taches.  $\Gamma$ est ordonnancable sous deadline monotonic ssi:}
-
-\begin{equation}
-\forall \tau_{i} \in \Gamma / R_{i} \leq D_{i}
-\end{equation}
-
-\begin{equation}
-R_{i} = \\
-\left\lbrace
-\begin{array}{l}
-R_{i}^0=C_{i}
-\\
- R_{i}^{(k+1)}=C_{i}+\sum_{j \in pr(i)}  \left \lceil 
- \frac{R_{i}^{(k)}}{T_{j}} \right \rceil * C_{j}  
-\end{array}\right.
-\end{equation}
+\subsubsection{Rate Monotonic}
+\paragraph
+{\textbf{Théorème 3 (\cite{LL73})}. Rate Monotonic est optimal pour l'ordonnancement de systèmes de tâches synchrones, indépendantes et à échéance sur requête en présence de préemption.
+Conditions suffisantes d'ordonnançabilité Liu et Layland ont donné dans [LL73], la condition suffisante d'ordonnançabilité : }
+\paragraph
+{\textbf{Théorème 4 ([LL73])}. Un système temps réel composé de n tâches est ordonnançable par Rate Monotonic si : }
 
 \section{Ordonnancement Multiprocesseur}
 \section{Conclusion}

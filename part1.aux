@@ -10,9 +10,6 @@
 \@writefile{toc}{\contentsline {paragraph}{Les systèmes temps réels mou sont des systèmes où on tolère les retards et ne requièrent pas un déterminisme temporel aussi fort que les systèmes temps réels dur. Par exemple, un logiciel de diffusion de flux vidéo produit un certain nombre d’images dans un intervalle de temps régulier. Le fait de manquer une ou plusieurs échéances ne provoque pas l’arrêt du système multimédia. La qualité de la vidéo est dégradée mais le service peut continuer de fonctionner sans risque. Donc les systèmes temps réels mou offre le meilleur service possible (notion de best eﬀort) et les retards dans l’obtention des résultats ne sont pas dramatiques.}{13}}
 \@writefile{toc}{\contentsline {paragraph}{A la frontière entre les systèmes temps réel dur et mou, les systèmes temps réel ferme tolèrent une certaine proportion d’échéances manquées. Ils ne considèrent que les résultats obtenus à temps et sont liés à la notion de qualité de service (QoS).}{13}}
 \citation{LL73}
-\citation{LL73}
-\citation{LL73}
-\citation{LL73}
 \@writefile{toc}{\contentsline {section}{\numberline {1.3}Ordonnancement monoprocesseur}{14}}
 \@writefile{toc}{\contentsline {paragraph}{Un algorithme d’ordonnancement est chargé de répartir les tâches sur un ou plusieurs processeurs : il décide quelle tâche sera exécutée sur tel processeur et pour combien de temps. }{14}}
 \@writefile{toc}{\contentsline {paragraph}{Nous définissons dans un premier temps les termes habituels concernant les systèmes temps réel.}{14}}
@@ -22,14 +19,9 @@
 \@writefile{toc}{\contentsline {paragraph}{ \textbf  {Ordonnançabilité / Faisabilité}. Un système de tâches est dit ordonnançable si un ordonnancement existe permettant de satisfaire toutes les contraintes temps réel. Un système de tâches est dit faisable s’il existe un algorithme d’ordonnancement permettant d’ordonnancer ce système de tâches sans aucune violation d’échéances.}{14}}
 \@writefile{toc}{\contentsline {paragraph}{ \textbf  {Optimalité}. Un algorithme d’ordonnancement est dit optimal s’il peut ordonnancer tous les ensembles de tâches ordonnançables par d’autres algorithmes d’ordonnancement existants.}{14}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.3.1}Algorithme d’ordonnancement à priorité fixe}{14}}
-\@writefile{toc}{\contentsline {subsubsection}{Rate Monotonic \cite  {LL73}}{14}}
-\@writefile{toc}{\contentsline {paragraph}{ Rate Monotonic est un algorithme à priorité fixe introduit par Liu et Layland dans \cite  {LL73}. Cet algorithme affecte des priorités aux tâches inversement proportionnel à leur période : plus leur période est petite, plus la tâche est prioritaire. Un exemple de système de tâche ordonnancée par Rate Monotonic est donné table 1.1. La figure 1.5 est une représentation graphique de l'ordonnancement correspondant.}{14}}
-\@writefile{toc}{\contentsline {paragraph}{ \textbf  {Théorème 3 \cite  {LL73}}. Rate Monotonic est optimal pour l'ordonnancement de systèmes de tâches synchrones, indépendantes et à échéance sur requête en présence de préemption.}{14}}
-\@writefile{toc}{\contentsline {paragraph}{ \textbf  {Théorème 4 \cite  {LL73} (Condition Suffisante)}. Un système temps réel composé de n tâches est ordonnançable par Rate Monotonic si : }{15}}
-\@writefile{toc}{\contentsline {subsubsection}{Deadline Monotonic }{15}}
-\@writefile{toc}{\contentsline {paragraph}{ Deadline Monotonic est un algorithme à priorité fixe introduit par Leung et Whitehead dans Cet algorithme est proche de celui de Rate Monotonic, à la différence que les priorités sont maintenant affectées en fonction de l'échéance relative de chaque tâche au lieu de leur période. Cet algorithme est optimal dans le cadre des algorithmes à priorité fixe pour des systèmes de tâches synchrones à échéance contrainte lorsque la préemption est autorisée. Monotonic et Deadline Monotonic se confondent. \\ \textbf  {Condition suffisante d'ordonnançabilité} La condition suffisante d'ordonnançabilité est inspirée de la condition suffisante d'ordonnançabilité de Liu et Layland (cf. théorème 4) :}{15}}
-\@writefile{toc}{\contentsline {paragraph}{ \textbf  {Théorème 6}. Un système temps réel composé de n tâches est ordonnançable par Deadline Monotonic si la condition suivante est vérifiée :}{15}}
-\@writefile{toc}{\contentsline {paragraph}{ \textbf  {Condition necessaire et suffisante d'ordonnançabilité} Joseph et al ont proposé un test d’ordonnancabilité basé sur le pire temps de reponse $R_{i}$. Le pire temps de réponse est le moment ou la tache $i$ de priorité $p$ terminera son exécution quand les taches les plus prioritaire sont actifs avec elle en même temps.\\ soit $\Gamma $ = $\tau _{1},\tau _{2},. . . \tau _{n}$ un ensemble de $n$ taches. $\Gamma $ est ordonnancable sous deadline monotonic ssi:}{15}}
+\@writefile{toc}{\contentsline {subsubsection}{Rate Monotonic}{14}}
+\@writefile{toc}{\contentsline {paragraph}{\textbf  {Théorème 3 (\cite  {LL73})}. Rate Monotonic est optimal pour l'ordonnancement de systèmes de tâches synchrones, indépendantes et à échéance sur requête en présence de préemption. Conditions suffisantes d'ordonnançabilité Liu et Layland ont donné dans [LL73], la condition suffisante d'ordonnançabilité : }{14}}
+\@writefile{toc}{\contentsline {paragraph}{\textbf  {Théorème 4 ([LL73])}. Un système temps réel composé de n tâches est ordonnançable par Rate Monotonic si : }{14}}
 \@writefile{toc}{\contentsline {section}{\numberline {1.4}Ordonnancement Multiprocesseur}{15}}
 \@writefile{toc}{\contentsline {section}{\numberline {1.5}Conclusion}{15}}
 \@writefile{toc}{\contentsline {chapter}{\numberline {2}Etat de l'art}{17}}
@@ -42,7 +34,7 @@
 \@writefile{toc}{\contentsline {section}{\numberline {2.4}L'endormissement de processeur (Online VS Offline)}{17}}
 \@writefile{toc}{\contentsline {section}{\numberline {2.5}Le Modèle d'endormissement de Dsouza}{17}}
 \@writefile{toc}{\contentsline {section}{\numberline {2.6}Conclusion}{17}}
-\@setckpt{partie1}{
+\@setckpt{part1}{
 \setcounter{page}{18}
 \setcounter{equation}{0}
 \setcounter{enumi}{0}
