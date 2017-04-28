@@ -1,5 +1,4 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: Memoire.aux
-A level-1 auxiliary file: pageDeGarde.aux
 A level-1 auxiliary file: remerciments.aux
 A level-1 auxiliary file: resume.aux
 A level-1 auxiliary file: abstract.aux
@@ -10,3 +9,13 @@ A level-1 auxiliary file: partie2.aux
 A level-1 auxiliary file: conclusion.aux
 The style file: plain.bst
 Database file #1: bib.bib
+A bad cross reference---entry "YDS95"
+refers to entry "conf/focs/1995", which doesn't exist
+A bad cross reference---entry "PS01"
+refers to entry "conf/sosp/2001", which doesn't exist
+Warning--I didn't find a database entry for "BBMB13"
+Warning--I didn't find a database entry for "conf/sosp/2001"
+Warning--I didn't find a database entry for "conf/focs/1995"
+Warning--to sort, need author or key in STM
+Warning--to sort, need author or key in MPC
+(There were 2 error messages)

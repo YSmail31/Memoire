@@ -10,14 +10,20 @@
 \usepackage{amsthm}
 \usepackage{amssymb}
 \selectlanguage{french}
-\setlength{\parindent}{0cm}
-\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
-\newcommand{\hsp}{\hspace{10pt}}
-\newcommand{\HRule}{\rule{\linewidth}{0.23mm}}
-\newcommand{\LRule}{\rule{\linewidth}{0.1mm}}
-
+\setlength{\parindent}{0.8cm}
+\setlength{\parskip}{1cm plus 4mm minus 3mm}
+%\newcommand{\hsp}{\hspace{8pt}}
+%\newcommand{\HRule}{\rule{\linewidth}{0.23mm}}
+%\newcommand{\LRule}{\rule{\linewidth}{0.1mm}}
+\newtheorem{theoreme}{Theoreme}[section]
+\usepackage[francais]{minitoc}
+\setcounter{minitocdepth}{3}
+\usepackage{rtsched}
+\usepackage{hyperref}
+\addtocontents{section}{\vspace{-1cm}}
 \begin{document}
-\include{pageDeGarde}
+\dominitoc
+%\include{pageDeGarde}
 \include{remerciments}
 \include{resume}
 \include{abstract}

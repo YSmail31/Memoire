@@ -1,46 +1,47 @@
 \select@language {french}
 \select@language {french}
-\contentsline {part}{I\hspace {1em}Partie Theorique}{11}
-\contentsline {chapter}{\numberline {1}Introduction Au systeme temps réel}{13}
-\contentsline {section}{\numberline {1.1}Introduction}{13}
-\contentsline {section}{\numberline {1.2}Taxonomie sur les systèmes temps réel}{13}
-\contentsline {paragraph}{Les systèmes temps réel dits critiques (ou dur) correspondent ont des systèmes pour lesquelles il est intolérable qu’une échéance soit manquée au risque de causer des conséquences graves, telles que des blessures ou des pertes humaines. Les centrales nucléaires ou le guidage de missiles représentent de tels systèmes à haute criticité. Dans le domaine de l’informatique embarqué, l’automobile et l’aéronautique regorgent de systèmes critiques à l’image des équipements déclencheurs d’airbags ou des logiciels de contrôle de vol de satellite. Il est crucial que les résultats soient disponibles au moment voulu et un résultat obtenu trop tard est inutilisable, à l’instar d’un système anti-missile qui recevrait la position d’un objet volant avec du retard.}{13}
-\contentsline {paragraph}{Les systèmes temps réels mou sont des systèmes où on tolère les retards et ne requièrent pas un déterminisme temporel aussi fort que les systèmes temps réels dur. Par exemple, un logiciel de diffusion de flux vidéo produit un certain nombre d’images dans un intervalle de temps régulier. Le fait de manquer une ou plusieurs échéances ne provoque pas l’arrêt du système multimédia. La qualité de la vidéo est dégradée mais le service peut continuer de fonctionner sans risque. Donc les systèmes temps réels mou offre le meilleur service possible (notion de best eﬀort) et les retards dans l’obtention des résultats ne sont pas dramatiques.}{13}
-\contentsline {paragraph}{A la frontière entre les systèmes temps réel dur et mou, les systèmes temps réel ferme tolèrent une certaine proportion d’échéances manquées. Ils ne considèrent que les résultats obtenus à temps et sont liés à la notion de qualité de service (QoS).}{13}
-\contentsline {section}{\numberline {1.3}Ordonnancement monoprocesseur}{14}
-\contentsline {paragraph}{Un algorithme d’ordonnancement est chargé de répartir les tâches sur un ou plusieurs processeurs : il décide quelle tâche sera exécutée sur tel processeur et pour combien de temps. }{14}
-\contentsline {paragraph}{Nous définissons dans un premier temps les termes habituels concernant les systèmes temps réel.}{14}
-\contentsline {paragraph}{ \textbf {Hors-ligne en-ligne}. Un algorithme d’ordonnancement hors-ligne prend la totalité de ses décisions d’ordonnancement avant l’exécution du système. Au contraire, un ordonnancement en-ligne prend les décisions d’ordonnancement lors de l’exécution }{14}
-\contentsline {paragraph}{ \textbf {Priorités}. Les algorithmes d’ordonnancement temps réel peuvent être classés suivant leur utilisation des priorités pour choisir quelle tâche doit être ordonnancée. }{14}
-\contentsline {paragraph}{ \textbf {Préemptif / non préemptif}. Un algorithme d’ordonnancement préemptif est un algorithme d’ordonnancement qui peut arrêter l’exécution d’une tâche, i.e. la préempter, à tout moment lors de l’exécution. Au contraire, un algorithme d’ordonnancement non préemptif ne permet aucune préemption, un travail en cours d’exécution ne peut être arrêté.}{14}
-\contentsline {paragraph}{ \textbf {Ordonnançabilité / Faisabilité}. Un système de tâches est dit ordonnançable si un ordonnancement existe permettant de satisfaire toutes les contraintes temps réel. Un système de tâches est dit faisable s’il existe un algorithme d’ordonnancement permettant d’ordonnancer ce système de tâches sans aucune violation d’échéances.}{14}
-\contentsline {paragraph}{ \textbf {Optimalité}. Un algorithme d’ordonnancement est dit optimal s’il peut ordonnancer tous les ensembles de tâches ordonnançables par d’autres algorithmes d’ordonnancement existants.}{14}
-\contentsline {subsection}{\numberline {1.3.1}Algorithme d’ordonnancement à priorité fixe}{14}
-\contentsline {subsubsection}{Rate Monotonic \cite {LL73}}{14}
-\contentsline {paragraph}{ Rate Monotonic est un algorithme à priorité fixe introduit par Liu et Layland dans \cite {LL73}. Cet algorithme affecte des priorités aux tâches inversement proportionnel à leur période : plus leur période est petite, plus la tâche est prioritaire. Un exemple de système de tâche ordonnancée par Rate Monotonic est donné table 1.1. La figure 1.5 est une représentation graphique de l'ordonnancement correspondant.}{14}
-\contentsline {paragraph}{ \textbf {Théorème 3 \cite {LL73}}. Rate Monotonic est optimal pour l'ordonnancement de systèmes de tâches synchrones, indépendantes et à échéance sur requête en présence de préemption.}{14}
-\contentsline {paragraph}{ \textbf {Théorème 4 \cite {LL73} (Condition Suffisante)}. Un système temps réel composé de n tâches est ordonnançable par Rate Monotonic si : }{15}
-\contentsline {subsubsection}{Deadline Monotonic }{15}
-\contentsline {paragraph}{ Deadline Monotonic est un algorithme à priorité fixe introduit par Leung et Whitehead dans Cet algorithme est proche de celui de Rate Monotonic, à la différence que les priorités sont maintenant affectées en fonction de l'échéance relative de chaque tâche au lieu de leur période. Cet algorithme est optimal dans le cadre des algorithmes à priorité fixe pour des systèmes de tâches synchrones à échéance contrainte lorsque la préemption est autorisée. Monotonic et Deadline Monotonic se confondent. \\ \textbf {Condition suffisante d'ordonnançabilité} La condition suffisante d'ordonnançabilité est inspirée de la condition suffisante d'ordonnançabilité de Liu et Layland (cf. théorème 4) :}{15}
-\contentsline {paragraph}{ \textbf {Théorème 6}. Un système temps réel composé de n tâches est ordonnançable par Deadline Monotonic si la condition suivante est vérifiée :}{15}
-\contentsline {paragraph}{ \textbf {Condition necessaire et suffisante d'ordonnançabilité} Joseph et al ont proposé un test d’ordonnancabilité basé sur le pire temps de reponse $R_{i}$. Le pire temps de réponse est le moment ou la tache $i$ de priorité $p$ terminera son exécution quand les taches les plus prioritaire sont actifs avec elle en même temps.\\ soit $\Gamma $ = $\tau _{1},\tau _{2},. . . \tau _{n}$ un ensemble de $n$ taches. $\Gamma $ est ordonnancable sous deadline monotonic ssi:}{15}
-\contentsline {section}{\numberline {1.4}Ordonnancement Multiprocesseur}{15}
-\contentsline {section}{\numberline {1.5}Conclusion}{15}
-\contentsline {chapter}{\numberline {2}Etat de l'art}{17}
-\contentsline {section}{\numberline {2.1}Introduction}{17}
-\contentsline {section}{\numberline {2.2}Les modèles de consommation d'énerie DVFS et DPM}{17}
-\contentsline {section}{\numberline {2.3}Les états C-states du processeur}{17}
-\contentsline {section}{\numberline {2.4}L'endormissement de processeur (Online VS Offline)}{17}
-\contentsline {section}{\numberline {2.5}Le Modèle d'endormissement de Dsouza}{17}
-\contentsline {section}{\numberline {2.6}Conclusion}{17}
-\contentsline {part}{II\hspace {1em}Contributions et Implementation}{19}
-\contentsline {chapter}{\numberline {3}Endormissement de tache sous priorité Fixe}{21}
-\contentsline {section}{\numberline {3.1}Le cas monoprocesseur}{21}
-\contentsline {section}{\numberline {3.2}Le cas multiprocesseur}{21}
-\contentsline {chapter}{\numberline {4}Endormissement de tache sous priorité dynamique}{23}
-\contentsline {section}{\numberline {4.1}Le cas monoprocesseur}{23}
-\contentsline {section}{\numberline {4.2}Le cas multiprocesseur}{23}
-\contentsline {chapter}{\numberline {5}Expérimentations}{25}
-\contentsline {section}{\numberline {5.1}La génération des taches}{25}
-\contentsline {section}{\numberline {5.2}La simulation}{25}
-\contentsline {section}{\numberline {5.3}Discussions}{25}
+\partbegin 
+\contentsline {part}{I\hspace {1em}Partie Theorique}{11}{part.1}
+\contentsline {xpart}{Partie Theorique}{13}{part.1}
+\contentsline {chapter}{\numberline {1}Introduction Au systeme temps réel}{13}{chapter.1}
+\contentsline {section}{\numberline {1.1}Introduction}{14}{section.1.1}
+\contentsline {section}{\numberline {1.2}Taxonomie sur les systèmes temps réel}{14}{section.1.2}
+\contentsline {section}{\numberline {1.3}Ordonnancement monoprocesseur}{14}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}Algorithme d’ordonnancement à priorité fixe}{15}{subsection.1.3.1}
+\contentsline {subsubsection}{Rate Monotonic \cite {LL73}}{15}{section*.7}
+\contentsline {subsubsection}{Deadline Monotonic \cite {LW82}}{16}{section*.8}
+\contentsline {subsection}{\numberline {1.3.2}Algorithme d’ordonnancement à priorité dynamique}{16}{subsection.1.3.2}
+\contentsline {subsubsection}{Earliest Deadline First\cite {LL73}}{17}{section*.9}
+\contentsline {subsubsection}{Least Laxity}{18}{section*.10}
+\contentsline {section}{\numberline {1.4}Ordonnancement Multiprocesseur}{18}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.1}Classification}{19}{subsection.1.4.1}
+\contentsline {subsection}{\numberline {1.4.2}Optimalité}{19}{subsection.1.4.2}
+\contentsline {subsection}{\numberline {1.4.3}Algorithme d'ordonnancement utilisant une stratégie par partitionnement}{19}{subsection.1.4.3}
+\contentsline {subsubsection}{Généralité}{19}{section*.11}
+\contentsline {subsubsection}{First-Fit et Best-Fit}{20}{section*.12}
+\contentsline {subsection}{\numberline {1.4.4}Algorithme d'ordonnancement utilisant une stratégie globale}{20}{subsection.1.4.4}
+\contentsline {subsubsection}{Algorithme de type Pfair}{20}{section*.13}
+\contentsline {section}{\numberline {1.5}Conclusion}{20}{section.1.5}
+\contentsline {chapter}{\numberline {2}Etat de l'art}{21}{chapter.2}
+\contentsline {section}{\numberline {2.1}Introduction}{21}{section.2.1}
+\contentsline {section}{\numberline {2.2}Modélisation des tâches}{21}{section.2.2}
+\contentsline {section}{\numberline {2.3}Les modèles de consommation d'énergie DVFS et DPM}{23}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Consommation dynamique}{23}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Consommation statique}{24}{subsection.2.3.2}
+\contentsline {section}{\numberline {2.4}Les états C-states du processeur}{24}{section.2.4}
+\contentsline {section}{\numberline {2.5}L'endormissement de processeur (Online VS Offline)}{26}{section.2.5}
+\contentsline {section}{\numberline {2.6}Le Modèle d'endormissement de Dsouza}{26}{section.2.6}
+\contentsline {section}{\numberline {2.7}Conclusion}{26}{section.2.7}
+\contentsline {part}{II\hspace {1em}Contributions et Implementation}{27}{part.2}
+\contentsline {xpart}{Contributions et Implementation}{29}{part.2}
+\contentsline {chapter}{\numberline {3}Endormissement de tache sous priorité Fixe}{29}{chapter.3}
+\contentsline {section}{\numberline {3.1}Le cas monoprocesseur}{29}{section.3.1}
+\contentsline {section}{\numberline {3.2}Le cas multiprocesseur}{29}{section.3.2}
+\contentsline {chapter}{\numberline {4}Endormissement de tache sous priorité dynamique}{31}{chapter.4}
+\contentsline {section}{\numberline {4.1}Le cas monoprocesseur}{31}{section.4.1}
+\contentsline {section}{\numberline {4.2}Le cas multiprocesseur}{31}{section.4.2}
+\contentsline {chapter}{\numberline {5}Expérimentations}{33}{chapter.5}
+\contentsline {section}{\numberline {5.1}La génération des taches}{33}{section.5.1}
+\contentsline {section}{\numberline {5.2}La simulation}{33}{section.5.2}
+\contentsline {section}{\numberline {5.3}Discussions}{33}{section.5.3}
+\partbegin 

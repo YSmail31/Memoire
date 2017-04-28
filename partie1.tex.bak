@@ -41,14 +41,17 @@ Par exemple, un logiciel de diffusion de flux vidéo produit un certain nombre d
 \subsection{Algorithme d’ordonnancement à priorité fixe}
 \subsubsection{Rate Monotonic \cite{LL73}}
 \paragraph{
-Rate Monotonic est un algorithme à priorité fixe introduit par Liu et Layland dans \cite{LL73}. Cet algorithme affecte des priorités aux tâches inversement proportionnel à leur période : plus leur période est petite, plus la tâche est prioritaire. Un exemple de système de tâche ordonnancée par Rate Monotonic est donné table 1.1. La figure 1.5 est une représentation graphique de l'ordonnancement correspondant.}
-\paragraph{
-\textbf{Théorème 3 \cite{LL73}}. Rate Monotonic est optimal pour l'ordonnancement de systèmes de tâches synchrones, indépendantes et à échéance sur requête en présence de préemption.}
-\paragraph{
-\textbf{Théorème 4 \cite{LL73} (Condition Suffisante)}. Un système temps réel composé de n tâches est ordonnançable par Rate Monotonic si : }
+Rate Monotonic est un algorithme à priorité fixe introduit par Liu et Layland dans \cite{LL73}. Cet algorithme affecte des priorités aux tâches inversement proportionnel à leur période : plus leur période est petite, plus la tâche est prioritaire. Un exemple de système de tâche ordonnancée par Rate Monotonic est donné table 1.1. La figure 1.5 est une représentation graphique de l'ordonnancement correspondant.
+}
+\begin{theoreme}
+Rate Monotonic est optimal pour l'ordonnancement de systèmes de tâches synchrones, indépendantes et à échéance sur requête en présence de préemption.
+\end{theoreme}
+
+\begin{theoreme}[Condition Suffisante \cite{LL73}]. Un système temps réel composé de n tâches est ordonnançable par Rate Monotonic si :
 \begin{equation}
 U = \sum_{i=1}^n \frac{C_i}{T_i} \leq n ( 2^{\frac{1}{n}} - 1)
 \end{equation}
+\end{theoreme}
 
 \subsubsection{Deadline Monotonic }%\cite{LW82}}
 \paragraph{
@@ -56,40 +59,245 @@ Deadline Monotonic est un algorithme à priorité fixe introduit par Leung et Wh
 Cet algorithme est proche de celui de Rate Monotonic, à la différence que les priorités sont maintenant affectées en fonction de l'échéance relative de chaque tâche au lieu de leur période.
 Cet algorithme est optimal dans le cadre des algorithmes à priorité fixe pour des systèmes de tâches synchrones à échéance contrainte lorsque la préemption est autorisée. Monotonic et Deadline Monotonic se confondent.
 \\ \textbf{Condition suffisante d'ordonnançabilité} La condition suffisante d'ordonnançabilité est inspirée de la condition suffisante d'ordonnançabilité de Liu et Layland (cf. théorème 4) :}
-\paragraph{
-\textbf{Théorème 6}. Un système temps réel composé de n tâches est ordonnançable par Deadline
-Monotonic si la condition suivante est vérifiée :}
+
+\begin{theoreme}
+ Un système temps réel composé de n tâches est ordonnançable par Deadline
+Monotonic si la condition suivante est vérifiée :
 \begin{equation}
 U = \sum_{i=1}^n \frac{C_i}{D_i} \leq n ( 2^{\frac{1}{n}} - 1)
 \end{equation}
+\end{theoreme}
 
 \paragraph{
-\textbf{Condition necessaire et suffisante d'ordonnançabilité} Joseph et al ont proposé un test d’ordonnancabilité basé sur le pire
+\textbf{Condition necessaire et suffisante d'ordonnançabilité} Joseph et al \cite{JP86} ont proposé un test d’ordonnancabilité basé sur le pire
 temps de reponse $R_{i}$.  Le pire temps de réponse est le moment ou la tache $i$ de priorité $p$ terminera son exécution quand les taches les plus prioritaire sont actifs avec elle en même temps.\\
+}
+\begin{theoreme}
 soit $\Gamma$ = $\tau_{1},\tau_{2},. . . \tau_{n}$ un ensemble de $n$
-taches.  $\Gamma$ est ordonnancable sous deadline monotonic ssi:}
-
+taches.  $\Gamma$ est ordonnancable sous deadline monotonic ssi:
 \begin{equation}
 \forall \tau_{i} \in \Gamma / R_{i} \leq D_{i}
 \end{equation}
-
 \begin{equation}
 R_{i} = \\
 \left\lbrace
 \begin{array}{l}
 R_{i}^0=C_{i}
 \\
- R_{i}^{(k+1)}=C_{i}+\underset{j=1}{\sum}  \left \lceil 
+ R_{i}^{(k+1)}=C_{i}+\sum_{j \in pr(i)}  \left \lceil 
  \frac{R_{i}^{(k)}}{T_{j}} \right \rceil * C_{j}  
 \end{array}\right.
 \end{equation}
+\end{theoreme}
 
+\subsection{Algorithme d’ordonnancement à priorité dynamique}
+Les algorithmes à priorité dynamique affectent une priorité qui n'est plus une donnée statique.
+La priorité d'une tâche est mise à jour durant la vie du système en fonction de certains critères, les critères utilisés dépendant de l'algorithme utilisé.
+
+\subsubsection{Earliest Deadline First\cite{LL73}}
+\paragraph{
+Earliest Deadline First est un algorithme connu et étudié depuis longtemps \cite{LL73, Der74, Hor74}. Le principe de cet algorithme est d'accorder la priorité la plus grande à la tâche ayant une instance dont l'échéance absolue est la plus proche.
+L'avantage majeur de cet algorithme est qu'en présence d'un système de tâche à échéance sur requête, le taux d'utilisation maximum du processeur est de 100% (théorème 8).
+}
+\begin{theoreme}[\cite{LL73}]
+ Un système de n tâches à échéance contrainte est ordonnançable par Earliest Deadline First si et seulement si :
+ \begin{equation}
+ U \leq 1
+ \end{equation}
+\end{theoreme}
+
+\paragraph{
+\textbf{Condition necessaire et suffisante d'ordonnançabilité} R. Pellizzoni and G. Lipari \cite{JP86} ont proposé un test d’ordonnancabilité basée sur la fonction
+de la demande processeur DBF($\Gamma,t$) causée par des tâches activées et devant être terminées dans l’intervalle [0, t].}
+\begin{equation}
+DBF(\Gamma,t) = \sum_{\tau \in \Gamma}dbf(\tau,t)
+\end{equation}
+\begin{equation}
+dbf(\tau,t) = max \bigg( 0,\bigg( \lceil \frac{t - D_i}{T_i} \rceil + 1 \bigg) x C_i \bigg)
+\end{equation}
+ \paragraph{
+\textbf{Théorème 9 \cite{Der74}}. Earliest Deadline First est optimal pour ordonnancer des systèmes de tâches indépendantes lorsque le facteur d'utilisation U du système est inférieur ou égale à 1 (absence de surcharge).
+}
+\subsubsection{Least Laxity}
+\paragraph{
+L'algorithme Least Laxity \cite{Mok83}utilise la notion de laxité pour attribuer des priorités aux tâches.}
+\paragraph{
+\textbf{Définition 9}. La laxité (notée $L$) correspond à la longueur de l'intervalle de temps maximum pendant lequel la tâche peut ne pas avoir le processeur sans rater son échéance.}
+\begin{equation}
+L_i = D_i - C_i
+\end{equation}
+\paragraph{
+Par exemple, une tâche avec une laxité de 0 doit obligatoirement avoir le processeur jusqu'à sa terminaison sans quoi elle ratera son échéance et sera donc non ordonnançable.
+Le principe de l'algorithme est donc d'attribuer la plus haute priorité à l'instance dont la laxité est la plus faible, car c'est l'instance ayant le moins de marge possible. 
+Il est à noter que d'une part, cet algorithme nécessite une mise à jour des priorités des tâches à chaque instant, et mobilise dans ce but beaucoup de ressources de calcul, 
+mais qu'en plus, il provoque de nombreux changements de contexte, également coûteux en temps.}
+\paragraph{
+\textbf{Théorème 10 \cite{Mok83}}. 
+Tout comme EDF, LL est optimal pour des systèmes de tâches indépendantes. Toutefois, au vue de ses inconvénients vis-à-vis du nombre de changements de contexte et du calcul 
+des priorités nécessaire à chaque instant, LL est rarement utilisé en pratique.}
 \section{Ordonnancement Multiprocesseur}
+\paragraph{
+L'ordonnancement multiprocesseur se distingue de l'ordonnancement monoprocesseur par la présence de plusieurs processeurs sur lesquels peuvent s'exécuter les tâches. Se pose alors les problèmes suivants :}
+\begin{itemize}
+\item le problème de placement des tâches : sur quel(s) processeur(s) une tâche va-t-elle s'exécuter ?
+\item le problème de la migration des tâches : une tâche peut-elle changer de processeur pour s'exécuter ?
+\item le problème de l'ordonnancement des tâches : affectation des priorités.
+\end{itemize}
+Nous allons nous intéressé uniquement au problème de placement et d'ordonnancement des tâches, sans prendre en compte la migration et nous supposerons que les tâches sont indépendantes.
+
+\subsection{Classification}
+\paragraph{
+Les algorithmes d'ordonnancement peuvent être classés dans différentes catégories, en fonction de leurs caractéristiques :}
+\begin{itemize}
+\item stratégie globale : sur un système comprenant m processeurs, un algorithme d'ordonnancement utilisant une stratégie globale va affecter les m tâches les plus prioritaires aux m processeurs.
+\item stratégie par partitionnement : le principe d'un algorithme utilisant une stratégie par partitionnement est de placer chaque tâche sur un processeur, et ensuite d'exécuter sur chaque processeur un algorithme d'ordonnancement monoprocesseur.
+\end{itemize}
+Il est à noter qu'il n'y a pas une catégorie qui soit meilleure qu'une autre. Il existe des systèmes de tâches qui peuvent être ordonnancés en utilisant une stratégie globale mais pas avec une stratégie par partitionnement et inversement. On dit que ces algorithmes sont non comparables \cite{LW82}.
+
+\subsection{Optimalité}
+\textbf{Théorème 11 \cite{HL92}}. Il n'existe pas d'algorithme en-ligne optimal pour des systèmes multiprocesseurs. Toutefois, lorsqu'on restreint le cadre d'étude et que l'on ne considère uniquement des systèmes de tâches périodiques, alors il existe des algorithmes optimaux, comme les algorithmes de type Pfair par exemple.
+
+\subsection{Algorithme d'ordonnancement utilisant une stratégie par partitionnement}
+\subsubsection{Généralité}
+\paragraph{
+Les algorithmes utilisant une stratégie par partitionnement relèvent dans la plupart des cas du problème du bin-packing (Sac à dos), c'est-à-dire comment trouver un placement pour l'ensemble des tâches sur un nombre minimum de processeurs.
+Ce problème de partitionnement des tâches pour les placer sur les processeurs a été montré comme étant NP-difficile dans \cite{LW82}. Il n'existe donc pas d'algorithmes s'exécutant en temps polynomial permettant de trouver une solution optimale à ce problème. Toutefois, il existe des heuristiques permettant d'obtenir des résultats corrects en temps polynomial.}
+\subsubsection{First-Fit et Best-Fit}
+\paragraph{
+Parmi les heuristiques existantes pour résoudre ce type de problème, il existe l'heuristiques First Fit et Best Fit, qui reposent tous deux sur le même principe : on affecte chaque tâche dans l'ordre à un processeur, selon un critère d'acceptation.
+La différence entre les deux types d'algorithmes réside sur la manière dont est placée chaque tâche :}
+\begin{itemize}
+\item pour les algorithmes de type First Fit, la tâche est placée sur le premier processeur avec un ensemble de tache ordonnançable ;
+\item pour les algorithmes de type Best Fit, la tâche est placée sur le processeur avec un ensemble de tache ordonnançable et ayant le taux d'utilisation maximal.
+\end{itemize}
+
+Les algorithmes de type First Fit ou Best Fit ne sont pas les seuls existants il existe aussi Next Fit ou aussi Worst Fit.
+
+\subsection{Algorithme d'ordonnancement utilisant une stratégie globale}
+Les algorithmes d'ordonnancement utilisant une stratégie globale n'entrant pas dans le cadre de ce mémoire, nous ne présenterons que succinctement les algorithmes les plus utilisés.
+\subsubsection{Algorithme de type Pfair}
+\paragraph{Les algorithmes de type Pfair ont la particularité d'exécuter les tâches à un taux régulier. Un algorithme Pfair a une caractéristique de limiter les variations du taux d’utilisation 
+en s'assurant que le taux d'exécution de la tâche Ti reste voisin de ui, quelle que soit la longueur de l'intervalle considéré.}
+
+Parmi les algorithmes d'ordonnancement Pfair, nous pouvons citer :
+\begin{itemize}
+\item PF \cite{BCPV96}
+\item PD \cite{BGP95}
+\item PD2 \cite{AS00}
+\end{itemize}
+
 \section{Conclusion}
 \chapter{Etat de l'art}
 \section{Introduction}
+\section{Modélisation des tâches}
+\paragraph{
+Notre modélisation d’un système temps réel est basée sur celle proposée par Liu et Layland \cite{LL73}. Soit un système temps réel composé d’un ensemble de tâches nommé qui comprend n tâches périodiques dont les caractéristiques sont détaillées ci-dessous. Nous définissons dans cette section tous les termes qui seront utilisés en relation avec la notion d’ensemble de tâches.
+Tâche : Une tâche $\tau$ est définie comme l’exécution d’une suite d’instructions. Nous supposons que toutes les tâches sont indépendantes et que l’ordre dans lequel les tâches sont exécutées n’a pas de conséquence sur la bonne exécution du système du moment qu’elles respectent leurs contraintes temporelles. Nous faisons également l’hypothèse que les tâches sont synchrones, donc que toutes les tâches sont actives dès que le système débute son exécution, les tâches sont toutes libérées simultanément. Le modèle de tâches que nous utilisons est le modèle de tâches dit périodique pour l’ordonnancement fixe et sporadique pour l’ordonnancement dynamique.
+Travail (Job) : Chaque tâche libère périodiquement des travaux. Un travail est une suite d’instructions qui doit être réalisée avant une date fixée. Lorsqu’une tâche libère un travail, celui-ci est prêt à être exécuté et devient disponible pour l’algorithme d’ordonnancement. Une tâche τi libère ses travaux périodiquement suivant sa période Ti, un travail n’a donc pas de période associée. Ce modèle est appelé modèle de tâche périodique car chaque travail est libéré exactement lorsque la tâche atteint sa période. D’autres modélisations plus souples existent comme les systèmes de tâches sporadiques ou apériodiques. Pour les systèmes sporadiques, la période d’une tâche est la période de temps minimale entre deux libérations de travaux pour une tâche, ce qui signifie que le système ne peut savoir la date exacte où le travail va être libéré. Dans le cas de systèmes apériodiques, l’intervalle de temps entre deux libérations de travaux n’est soumis à aucune contrainte. Ces systèmes sont plus diﬃciles à étudier du fait de l’imprévisibilité de l’arrivée des tâches. 
+Hyperpériode : L’hyperpériode H de l’ensemble de tâches correspond au plus petit commun multiple de toutes les périodes de l’ensemble de tâches.
+$H = PPCM({T0_,T_1,…,T_n})$
+Le nombre de tâches dans un système temps réel embarqué est limité et les périodes de ces tâches ont en général des relations temporelles entre elles. Par exemple, il est peu probable que les périodes des tâches soient premières entre elles, les périodes des tâches sont souvent des harmoniques. En prenant un exemple concret, des tâches peuvent avoir des périodes de 1ms, 2ms, 5ms ou 10ms mais il est moins fréquent de trouver des tâches avec des périodes de 1.78ms et de 8.54ms. La valeur de l’hyperpériode ainsi que le nombre de travaux dans une hyperpériode restent donc naturellement raisonnables.
+Date Réveil : notée $O_i$, c’est la date où la tache libère son premier travail, chaque travail de la tâche est libéré à l’instant $O_i + kT_i avec K \in \mathbb{N}$
+Pire temps d’execution (Worst Case Execution Time WCET) : est la durée maximale de l’exécution de chacun de ses travaux. Le WCET de la tâche τi est noté Ci. Calculer le WCET d’une tâche est difficile et ce sujet est une thématique de recherche à lui tout seul. Nous renvoyons le lecteur à \cite{WEE+08} pour plus d’informations. Nous supposons que le WCET de chaque travail est connu.
+Échéance (Deadline) Chaque travail une fois libéré doit terminer son exécution avec une certaine date sous peine de violer son échéance. Nous notons Di l’échéance relative de la tâche τi. L’échéance absolue j.d du travail j sera donc la date de sa libération additionnée de cette échéance relative.
+Il existe trois types de modèles  de taches :}
+\begin{itemize}
+\item Modèles à « échéances implicites » où l’échéance de chaque travail égale à sa période $T_i = D_i$.
+\item Modèles à « échéances contraintes » où l’échéance de chaque travail est inférieure ou égale à sa période $D_i <= T_i$.
+\item le modèle à « échéances arbitraires » ne fixe aucune contrainte entre les échéances et les périodes des tâches.
+\end{itemize}
+Utilisation d’une tâche : L’utilisation d’une tâche est le rapport entre son WCET et sa période. L’utilisation $U_i$ de la tâche $\tau_{i} est donc \frac{C_i}{T_i}$
+Utilisation globale de l’ensemble de tâches. L’utilisation globale U de l’ensemble de tâches est la somme de toutes les utilisations individuelles des tâches de l’ensemble de tâches :
+\begin{equation}
+U = \sum_{i=1}^{n} U_i
+\end{equation}
+
+Toutes les notations relatives à l’ensemble de tâches sont résumées dans le Tableau 2.1. D’autres notations seront introduites par la suite.
+
 \section{Les modèles de consommation d'énerie DVFS et DPM}
+L’énergie consommée par un processeur est le produit de la puissance dissipée et du temps d’exécution. Nous utiliserons principalement la notion de consommation énergétique et non de puissance. Cette consommation énergétique est divisée en consommation statique et consommation dynamique. Nous détaillons dans cette section les modèles des consommations dynamique et statique et montrons que la consommation statique est récemment devenue plus importante que la consommation dynamique.
+\subsection{Consommation dynamique}
+La fréquence et la tension d’alimentation des processeurs sont liées. Lorsqu’un processeur possède plusieurs fréquences de fonctionnement, chaque fréquence peut fonctionner avec au maximum seulement une ou deux tensions d’alimentation et la consommation énergétique du processeur dépend à la fois de la fréquence et de la tension d’alimentation utilisées.
+
+La puissance dynamique est dissipée lors de la commutation des composants et dépend donc de la fréquence f du processeur. Elle peut être approximée selon la relation suivante \cite{CK07} : 
+\begin{equation}
+P_{dynamique} = C * f * V_{dd}^2 
+\end{equation}
+Où $C$ correspond à la capacité de sortie du circuit et $V_{dd}$ à la tension d’alimentation. 
+	
+Les solutions permettant de réduire la consommation dynamique dans les circuits s’attachent par conséquent à réduire la fréquence de fonctionnement. La relation précédente montre qu’il est moins économique d’un point de vue énergétique de faire fonctionner un circuit à pleine vitesse que de faire fonctionner un circuit à vitesse réduite pendant un laps de temps plus important.
+
+La technique permettant de réduire la vitesse du système est appelée DVFS (Dynamic Voltage and Frequency Scaling) et tire parti du fait que les processeurs ont plusieurs fréquences et plusieurs tensions de fonctionnement. De nombreux algorithmes d’ordonnancement ont été proposés utilisant cette solution \cite{WWDS94, YDS95, PS01}.
+\subsection{Consommation statique}
+
+La consommation statique des processeurs est en grande partie due aux courants de fuite. 
+Dans un circuit idéal, cette consommation statique est nulle mais, en réalité, un courant 
+de fuite existe et est responsable d’une consommation énergétique non négligeable. 
+Ce courant de fuite provient du fait que les transistors composant le circuit ne sont pas parfaits. 
+La consommation statique peut être modélisée comme une constante \cite{KAB+03, SJPL08}.
+Plusieurs solutions matérielles existent pour réduire la consommation statique. 
+L’idée générale est d’éteindre une partie du circuit qui n’est pas utilisée pour qu’aucun courant de fuite ne circule. 
+Cette solution est appelée Power Gating. Dans les circuits actuels, les puces peuvent être divisées en plusieurs parties, 
+chaque partie ayant la possibilité d’être éteinte indépendamment des autres parties du circuit. Certaines sources \cite{HXW+10} 
+affirme que l’énergie statique représente jusqu’à 70 % de la consommation énergétique totale dissipée par un processeur. 
+Plusieurs études confirment cette affirmation \cite{Bor99, SBA+01, KAB+03, ABM+04, HSC+11, BBMB13}. Des expériences ont également été faites 
+\cite{SRH05, SPH05, LSH10} en utilisant les algorithmes d’ordonnancement existants et les conclusions de ces études est que réduire uniquement 
+la consommation dynamique peut entraîner une hausse de la consommation énergétique globale car les composants sont actifs plus longtemps ce 
+qui entraîne une hausse de la consommation statique.
+
 \section{Les états C-states du processeur}
+Pour réduire la consommation statique des processeurs, 
+il est nécessaire d’utiliser leurs états basse-consommation lors de leurs périodes d’inactivité. 
+Nous appelons périodes d’inactivité les périodes de temps durant lesquelles un processeur est inactif et où aucune tâche n’est exécutée. 
+Les processeurs disposent maintenant de plusieurs états basse-consommation où un certain nombre de composants sont désactivés pour réduire la consommation énergétique. 
+Le problème lié à l’utilisation de ces états basse-consommation est qu’éteindre, rallumer ou changer d’état un processeur n’est pas anodin, que ce soit du point de vue 
+énergétique ou temporel. Nous définissons dans cette section quatre notions relatives aux états basse-consommation. Nous notons ns le nombre d’états basse-consommation 
+de chaque processeur et nous supposons que tous les processeurs possèdent les mêmes états basse-consommation.
+
+Consommation énergétique. Nous notons $Cons_s$ la consommation énergétique de l’état basse-consommation s. C’est la consommation énergétique dépensée lorsque le processeur 
+se trouve dans cet état basse-consommation. 
+Elle dépend du nombre de composants qui ont été désactivés. 
+Plus ce nombre est important, plus la consommation énergétique sera réduite.
+
+Délai de transition. Nous définissons le délai de transition d’un état basse-consommation comme le temps nécessaire pour revenir de cet état basse-consommation à l’état actif.
+ C’est le temps nécessaire pour réactiver tous les composants éteints durant l’état basse-consommation. 
+ Le délai de transition de l’état basse-consommation s est noté $Del_s$. 
+ Plus la consommation énergétique de l’état basse-consommation est faible, 
+ plus son délai de transition va être important car davantage de composants devront été réactivés.
+
+Pénalité énergétique. Nous notons $Pen_s$ la pénalité énergétique pour revenir de l’état basse-consommation s à l’état actif.
+Cette pénalité énergétique correspond à la consommation énergétique nécessaire pour réactiver tous les composants qui ont été 
+éteints lors de l’activation de l’état basse-consommation. Elle est consommée lorsque le processeur passe de l’état basse-consommation à l’état actif, 
+c’est-à-dire lors du délai de transition. Plus la consommation énergétique d’un état basse-consommation est faible, plus sa pénalité est importante.
+nous faisons l’hypothèse que l’évolution de la consommation énergétique lors du réveil du processeur est linéaire. En supposant que la consommation énergétique à l’état actif est de $Cons_{actif}$,
+la pénalité énergétique d’un état basse-consommation est donc donnée par la formule suivante :
+\begin{equation}
+Pen_s = \frac{1}{2} x Del_s x (Cons_{actif} - Cons_s)
+\end{equation}
+Nous faisons cette hypothèse car les pénalités énergétiques des états basse-consommation sont diﬃciles à obtenir, 
+les constructeurs ne fournissant généralement que les valeurs des délais de transition pour revenir des diﬀérents états basse-consommation 
+(e.g. \cite{STM, MPC}). Néanmoins, nos contributions ne dépendent pas de cette modélisation qui n’est utilisée que pour les évaluations et qui 
+peut être modifiée si les pénalités énergétiques des états basse-consommation sont connues.
+
+Break Even Time (BET). Nous définissons le BET comme la largeur minimale de la pé-riode d’inactivité pour qu’il soit possible d’activer un état basse-consommation \cite{AP11, CG06, DA08a}.
+ Chaque état basse-consommation possède donc son propre BET et nous nommons $BET_s$ le BET de l’état basse-consommation s. 
+ Le BET de l’état basse-consommation s correspond à la période de temps pour laquelle la consommation énergétique du processeur à l’état actif est égale à la consommation énergétique
+ dans l’état basse-consommation s (i.e. $Cons_s$) plus sa pénalité énergétique (i.e. $Pen_s$). Si la longueur d’une période d’inactivité est inférieure au BET d’un état basse-consommation
+ donné, il est alors plus eﬃcace énergétiquement de laisser le processeur dans son état actif que d’activer l’état basse-consommation en question. À noter que le BET ne permet pas de savoir 
+ si une contrainte temps réel va être violée si cet état basse-consommation est activé. C’est le délai de transition de l’état basse-consommation qui importe alors pour réveiller à temps le processeur.
+
+Comme vu ci-dessus, nous faisons l’hypothèse que la consommation énergétique évolue linéairement pour revenir de la consommation énergétique d’un état basse-consommation à celle de l’état actif. 
+Avec cette hypothèse, le BET et le délai de transition d’un état basse-consommation sont égaux. 
+En d’autre termes, il est toujours plus eﬃcace d’activer un état basse-consommation que de laisser le processeur dans l’état actif si la longueur de la période d’inactivité 
+est supérieure au délai de transition d’un état basse-consommation. De même que pour la pénalité énergétique, nous n’utilisons cette hypothèse que dans nos évaluations et 
+nos contributions séparent les notions de BET et de délai de transition.
+Exemples de processeurs
+
+La majorité des processeurs actuels disposent de plusieurs fréquences de fonctionnement et d’états basse-consommation pour réduire leur consommation énergétique, nous en détaillons quelques-uns ici. Comme notre objectif est de réduire la consommation statique, nous ne détaillons pas les fréquences disponibles. Nous détaillons en revanche les caractéristiques de chaque état basse-consommation, i.e. quels sont les composants éteints et quelles sont les étapes requises pour retrouver l’état actif.
+
+Parmi les processeurs utilisés dans la littérature, citons le Freescale MPC8536 \cite{MPC} utilisé par Awan et al. \cite{AP11, AP13, AYP13}. Ce processeur est basé sur une architecture PowerPC. Ses états basse-consommation sont détaillés dans le Tableau 2.4.
+
+
 \section{L'endormissement de processeur (Online VS Offline)}
 \section{Le Modèle d'endormissement de Dsouza}
 \section{Conclusion}

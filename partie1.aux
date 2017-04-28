@@ -1,50 +1,113 @@
 \relax 
-\@writefile{toc}{\contentsline {part}{I\hspace  {1em}Partie Theorique}{11}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {1}Introduction Au systeme temps réel}{13}}
+\providecommand\hyper@newdestlabel[2]{}
+\@writefile{toc}{\contentsline {part}{I\hspace  {1em}Partie Theorique}{11}{part.1}}
+\@writefile{lof}{\contentsline {xpart}{Partie Theorique}{13}{part.1}}
+\@writefile{lot}{\contentsline {xpart}{Partie Theorique}{13}{part.1}}
+\@writefile{toc}{\contentsline {xpart}{Partie Theorique}{13}{part.1}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {1}Introduction Au systeme temps réel}{13}{chapter.1}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {1.1}Introduction}{13}}
-\@writefile{toc}{\contentsline {section}{\numberline {1.2}Taxonomie sur les systèmes temps réel}{13}}
-\@writefile{toc}{\contentsline {paragraph}{Les systèmes temps réel dits critiques (ou dur) correspondent ont des systèmes pour lesquelles il est intolérable qu’une échéance soit manquée au risque de causer des conséquences graves, telles que des blessures ou des pertes humaines. Les centrales nucléaires ou le guidage de missiles représentent de tels systèmes à haute criticité. Dans le domaine de l’informatique embarqué, l’automobile et l’aéronautique regorgent de systèmes critiques à l’image des équipements déclencheurs d’airbags ou des logiciels de contrôle de vol de satellite. Il est crucial que les résultats soient disponibles au moment voulu et un résultat obtenu trop tard est inutilisable, à l’instar d’un système anti-missile qui recevrait la position d’un objet volant avec du retard.}{13}}
-\@writefile{toc}{\contentsline {paragraph}{Les systèmes temps réels mou sont des systèmes où on tolère les retards et ne requièrent pas un déterminisme temporel aussi fort que les systèmes temps réels dur. Par exemple, un logiciel de diffusion de flux vidéo produit un certain nombre d’images dans un intervalle de temps régulier. Le fait de manquer une ou plusieurs échéances ne provoque pas l’arrêt du système multimédia. La qualité de la vidéo est dégradée mais le service peut continuer de fonctionner sans risque. Donc les systèmes temps réels mou offre le meilleur service possible (notion de best eﬀort) et les retards dans l’obtention des résultats ne sont pas dramatiques.}{13}}
-\@writefile{toc}{\contentsline {paragraph}{A la frontière entre les systèmes temps réel dur et mou, les systèmes temps réel ferme tolèrent une certaine proportion d’échéances manquées. Ils ne considèrent que les résultats obtenus à temps et sont liés à la notion de qualité de service (QoS).}{13}}
+\@writefile{lof}{\contentsline {xchapter}{Introduction Au systeme temps réel}{13}{chapter.1}}
+\@writefile{lot}{\contentsline {xchapter}{Introduction Au systeme temps réel}{13}{chapter.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.1}Introduction}{14}{section.1.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.2}Taxonomie sur les systèmes temps réel}{14}{section.1.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.3}Ordonnancement monoprocesseur}{14}{section.1.3}}
 \citation{LL73}
 \citation{LL73}
 \citation{LL73}
+\citation{LW82}
+\citation{LW82}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.1}Algorithme d’ordonnancement à priorité fixe}{15}{subsection.1.3.1}}
+\@writefile{toc}{\contentsline {subsubsection}{Rate Monotonic \cite  {LL73}}{15}{section*.7}}
+\@writefile{lot}{\contentsline {table}{\numberline {1.1}{\ignorespaces ensemble de tache avec priorité affecté par Rate Monotonic}}{15}{table.1.1}}
+\newlabel{tab:exempleRM}{{1.1}{15}{ensemble de tache avec priorité affecté par Rate Monotonic}{table.1.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.1}{\ignorespaces Ordonnancement sous Rate Monotonic}}{15}{figure.1.1}}
+\newlabel{fig:exempleRM}{{1.1}{15}{Ordonnancement sous Rate Monotonic}{figure.1.1}{}}
+\citation{JP86}
 \citation{LL73}
-\@writefile{toc}{\contentsline {section}{\numberline {1.3}Ordonnancement monoprocesseur}{14}}
-\@writefile{toc}{\contentsline {paragraph}{Un algorithme d’ordonnancement est chargé de répartir les tâches sur un ou plusieurs processeurs : il décide quelle tâche sera exécutée sur tel processeur et pour combien de temps. }{14}}
-\@writefile{toc}{\contentsline {paragraph}{Nous définissons dans un premier temps les termes habituels concernant les systèmes temps réel.}{14}}
-\@writefile{toc}{\contentsline {paragraph}{ \textbf  {Hors-ligne en-ligne}. Un algorithme d’ordonnancement hors-ligne prend la totalité de ses décisions d’ordonnancement avant l’exécution du système. Au contraire, un ordonnancement en-ligne prend les décisions d’ordonnancement lors de l’exécution }{14}}
-\@writefile{toc}{\contentsline {paragraph}{ \textbf  {Priorités}. Les algorithmes d’ordonnancement temps réel peuvent être classés suivant leur utilisation des priorités pour choisir quelle tâche doit être ordonnancée. }{14}}
-\@writefile{toc}{\contentsline {paragraph}{ \textbf  {Préemptif / non préemptif}. Un algorithme d’ordonnancement préemptif est un algorithme d’ordonnancement qui peut arrêter l’exécution d’une tâche, i.e. la préempter, à tout moment lors de l’exécution. Au contraire, un algorithme d’ordonnancement non préemptif ne permet aucune préemption, un travail en cours d’exécution ne peut être arrêté.}{14}}
-\@writefile{toc}{\contentsline {paragraph}{ \textbf  {Ordonnançabilité / Faisabilité}. Un système de tâches est dit ordonnançable si un ordonnancement existe permettant de satisfaire toutes les contraintes temps réel. Un système de tâches est dit faisable s’il existe un algorithme d’ordonnancement permettant d’ordonnancer ce système de tâches sans aucune violation d’échéances.}{14}}
-\@writefile{toc}{\contentsline {paragraph}{ \textbf  {Optimalité}. Un algorithme d’ordonnancement est dit optimal s’il peut ordonnancer tous les ensembles de tâches ordonnançables par d’autres algorithmes d’ordonnancement existants.}{14}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.1}Algorithme d’ordonnancement à priorité fixe}{14}}
-\@writefile{toc}{\contentsline {subsubsection}{Rate Monotonic \cite  {LL73}}{14}}
-\@writefile{toc}{\contentsline {paragraph}{ Rate Monotonic est un algorithme à priorité fixe introduit par Liu et Layland dans \cite  {LL73}. Cet algorithme affecte des priorités aux tâches inversement proportionnel à leur période : plus leur période est petite, plus la tâche est prioritaire. Un exemple de système de tâche ordonnancée par Rate Monotonic est donné table 1.1. La figure 1.5 est une représentation graphique de l'ordonnancement correspondant.}{14}}
-\@writefile{toc}{\contentsline {paragraph}{ \textbf  {Théorème 3 \cite  {LL73}}. Rate Monotonic est optimal pour l'ordonnancement de systèmes de tâches synchrones, indépendantes et à échéance sur requête en présence de préemption.}{14}}
-\@writefile{toc}{\contentsline {paragraph}{ \textbf  {Théorème 4 \cite  {LL73} (Condition Suffisante)}. Un système temps réel composé de n tâches est ordonnançable par Rate Monotonic si : }{15}}
-\@writefile{toc}{\contentsline {subsubsection}{Deadline Monotonic }{15}}
-\@writefile{toc}{\contentsline {paragraph}{ Deadline Monotonic est un algorithme à priorité fixe introduit par Leung et Whitehead dans Cet algorithme est proche de celui de Rate Monotonic, à la différence que les priorités sont maintenant affectées en fonction de l'échéance relative de chaque tâche au lieu de leur période. Cet algorithme est optimal dans le cadre des algorithmes à priorité fixe pour des systèmes de tâches synchrones à échéance contrainte lorsque la préemption est autorisée. Monotonic et Deadline Monotonic se confondent. \\ \textbf  {Condition suffisante d'ordonnançabilité} La condition suffisante d'ordonnançabilité est inspirée de la condition suffisante d'ordonnançabilité de Liu et Layland (cf. théorème 4) :}{15}}
-\@writefile{toc}{\contentsline {paragraph}{ \textbf  {Théorème 6}. Un système temps réel composé de n tâches est ordonnançable par Deadline Monotonic si la condition suivante est vérifiée :}{15}}
-\@writefile{toc}{\contentsline {paragraph}{ \textbf  {Condition necessaire et suffisante d'ordonnançabilité} Joseph et al ont proposé un test d’ordonnancabilité basé sur le pire temps de reponse $R_{i}$. Le pire temps de réponse est le moment ou la tache $i$ de priorité $p$ terminera son exécution quand les taches les plus prioritaire sont actifs avec elle en même temps.\\ soit $\Gamma $ = $\tau _{1},\tau _{2},. . . \tau _{n}$ un ensemble de $n$ taches. $\Gamma $ est ordonnancable sous deadline monotonic ssi:}{15}}
-\@writefile{toc}{\contentsline {section}{\numberline {1.4}Ordonnancement Multiprocesseur}{15}}
-\@writefile{toc}{\contentsline {section}{\numberline {1.5}Conclusion}{15}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {2}Etat de l'art}{17}}
+\citation{LL73}
+\citation{Der74}
+\citation{Hor74}
+\@writefile{toc}{\contentsline {subsubsection}{Deadline Monotonic \cite  {LW82}}{16}{section*.8}}
+\@writefile{lot}{\contentsline {table}{\numberline {1.2}{\ignorespaces ensemble de tache avec priorité affecté par Deadline Monotonic}}{16}{table.1.2}}
+\newlabel{tab:exempleDM}{{1.2}{16}{ensemble de tache avec priorité affecté par Deadline Monotonic}{table.1.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.2}Algorithme d’ordonnancement à priorité dynamique}{16}{subsection.1.3.2}}
+\citation{LL73}
+\citation{BHR93}
+\citation{Der74}
+\citation{Mok83}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.2}{\ignorespaces Ordonnancement sous Deadline Monotonic}}{17}{figure.1.2}}
+\newlabel{fig:exempleDM}{{1.2}{17}{Ordonnancement sous Deadline Monotonic}{figure.1.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Earliest Deadline First\cite  {LL73}}{17}{section*.9}}
+\citation{Mok83}
+\@writefile{lot}{\contentsline {table}{\numberline {1.3}{\ignorespaces ensemble de tache }}{18}{table.1.3}}
+\newlabel{tab:exempleEDF}{{1.3}{18}{ensemble de tache}{table.1.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.3}{\ignorespaces Ordonnancement sous EDF}}{18}{figure.1.3}}
+\newlabel{fig:exempleEDF}{{1.3}{18}{Ordonnancement sous EDF}{figure.1.3}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Least Laxity}{18}{section*.10}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.4}Ordonnancement Multiprocesseur}{18}{section.1.4}}
+\citation{LW82}
+\citation{HL92}
+\citation{LW82}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.4.1}Classification}{19}{subsection.1.4.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.4.2}Optimalité}{19}{subsection.1.4.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.4.3}Algorithme d'ordonnancement utilisant une stratégie par partitionnement}{19}{subsection.1.4.3}}
+\@writefile{toc}{\contentsline {subsubsection}{Généralité}{19}{section*.11}}
+\citation{BCPV96}
+\citation{BGP95}
+\citation{AS00}
+\@writefile{toc}{\contentsline {subsubsection}{First-Fit et Best-Fit}{20}{section*.12}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.4.4}Algorithme d'ordonnancement utilisant une stratégie globale}{20}{subsection.1.4.4}}
+\@writefile{toc}{\contentsline {subsubsection}{Algorithme de type Pfair}{20}{section*.13}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.5}Conclusion}{20}{section.1.5}}
+\citation{LL73}
+\citation{WEE+08}
+\@writefile{toc}{\contentsline {chapter}{\numberline {2}Etat de l'art}{21}{chapter.2}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {2.1}Introduction}{17}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.2}Les modèles de consommation d'énerie DVFS et DPM}{17}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.3}Les états C-states du processeur}{17}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.4}L'endormissement de processeur (Online VS Offline)}{17}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.5}Le Modèle d'endormissement de Dsouza}{17}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.6}Conclusion}{17}}
+\@writefile{lof}{\contentsline {xchapter}{Etat de l'art}{21}{chapter.2}}
+\@writefile{lot}{\contentsline {xchapter}{Etat de l'art}{21}{chapter.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.1}Introduction}{21}{section.2.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}Modélisation des tâches}{21}{section.2.2}}
+\citation{CK07}
+\citation{WWDS94}
+\citation{YDS95}
+\citation{PS01}
+\citation{KAB+03}
+\citation{SJPL08}
+\citation{HXW+10}
+\citation{Bor99}
+\citation{SBA+01}
+\citation{KAB+03}
+\citation{ABM+04}
+\citation{HSC+11}
+\citation{BBMB13}
+\citation{SRH05}
+\citation{SPH05}
+\citation{LSH10}
+\@writefile{lot}{\contentsline {table}{\numberline {2.1}{\ignorespaces Notations}}{23}{table.2.1}}
+\newlabel{tab:recap}{{2.1}{23}{Notations}{table.2.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Les modèles de consommation d'énergie DVFS et DPM}{23}{section.2.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}Consommation dynamique}{23}{subsection.2.3.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}Consommation statique}{24}{subsection.2.3.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.4}Les états C-states du processeur}{24}{section.2.4}}
+\citation{STM}
+\citation{MPC}
+\citation{AP11}
+\citation{CG06}
+\citation{DA08a}
+\citation{MPC}
+\citation{AP11}
+\citation{AP13}
+\citation{AYP13}
+\@writefile{toc}{\contentsline {section}{\numberline {2.5}L'endormissement de processeur (Online VS Offline)}{26}{section.2.5}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.6}Le Modèle d'endormissement de Dsouza}{26}{section.2.6}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.7}Conclusion}{26}{section.2.7}}
 \@setckpt{partie1}{
-\setcounter{page}{18}
-\setcounter{equation}{0}
+\setcounter{page}{27}
+\setcounter{equation}{3}
 \setcounter{enumi}{0}
 \setcounter{enumii}{0}
 \setcounter{enumiii}{0}
@@ -53,15 +116,26 @@
 \setcounter{mpfootnote}{0}
 \setcounter{part}{1}
 \setcounter{chapter}{2}
-\setcounter{section}{6}
+\setcounter{section}{7}
 \setcounter{subsection}{0}
 \setcounter{subsubsection}{0}
 \setcounter{paragraph}{0}
 \setcounter{subparagraph}{0}
 \setcounter{figure}{0}
-\setcounter{table}{0}
+\setcounter{table}{1}
 \setcounter{AlgoLine}{0}
 \setcounter{algocfline}{0}
 \setcounter{algocfproc}{0}
 \setcounter{algocf}{0}
+\setcounter{theoreme}{0}
+\setcounter{mtc}{2}
+\setcounter{minitocdepth}{3}
+\setcounter{ptc}{3}
+\setcounter{parttocdepth}{2}
+\setcounter{myLabel}{3}
+\setcounter{Item}{0}
+\setcounter{Hfootnote}{0}
+\setcounter{Hy@AnnotLevel}{0}
+\setcounter{bookmark@seq@number}{23}
+\setcounter{section@level}{1}
 }
