@@ -16,7 +16,7 @@ Un algorithme d’ordonnancement est chargé de répartir les tâches sur un ou 
 \subsection*{Definition}
 \vspace{-1cm}
 Nous définissons dans un premier temps les termes habituels concernant les systèmes temps réel : \\
-\\ \indent \textbf{Hors-ligne en-ligne:} Un algorithme d’ordonnancement hors-ligne prend la totalité de ses décisions d’ordonnancement avant l’exécution du système. Au contraire, un ordonnancement en-ligne prend les décisions d’ordonnancement lors de l’exécution 
+\indent \textbf{Hors-ligne en-ligne:} Un algorithme d’ordonnancement hors-ligne prend la totalité de ses décisions d’ordonnancement avant l’exécution du système. Au contraire, un ordonnancement en-ligne prend les décisions d’ordonnancement lors de l’exécution 
 \\ \indent \textbf{Priorités:} Les algorithmes d’ordonnancement temps réel peuvent être classés suivant leur utilisation des priorités pour choisir quelle tâche doit être ordonnancée.
 \\ \indent \textbf{Préemptif / non préemptif:} Un algorithme d’ordonnancement préemptif est un algorithme d’ordonnancement qui peut arrêter l’exécution d’une tâche, i.e. la préempter, à tout moment lors de l’exécution. Au contraire, un algorithme d’ordonnancement non préemptif ne permet aucune préemption, un travail en cours d’exécution ne peut être arrêté.
 \\ \indent \textbf{Ordonnançabilité / Faisabilité:} Un système de tâches est dit ordonnançable si un ordonnancement existe permettant de satisfaire toutes les contraintes temps réel. Un système de tâches est dit faisable s’il existe un algorithme d’ordonnancement permettant d’ordonnancer ce système de tâches sans aucune violation d’échéances.
@@ -42,38 +42,35 @@ Rate Monotonic est un algorithme à priorité fixe introduit par Liu et Layland 
 \caption{ensemble de tache avec priorité affecté par Rate Monotonic} \label{tab:exempleRM}
 \end{table}
 
+\vspace{1cm}
+
 \begin{figure}[h]
 \begin{center}
 \begin{RTGrid}[height=4cm,width=12cm,labelsize=8pt,numbersize=6]{4}{13}
-
 \multido{\n=0+4}{3}{
 \TaskArrDead{2}{\n}{4}}
 \TaskExecution{2}{0}{1}
 \TaskExecution{2}{4}{5}
 \TaskExecution{2}{8}{9}
 \TaskExecution{2}{12}{13}
-
-
 \multido{\n=0+5}{2}{
 \TaskArrDead{3}{\n}{5}}
 \TaskExecution{3}{1}{2}
 \TaskExecution{3}{5}{6}
 \TaskExecution{3}{10}{11}
-
 \multido{\n=0+8}{1}{
 \TaskArrDead{4}{\n}{8}}
 \TaskExecution{4}{2}{4}
 \TaskExecution{4}{9}{10}
 \TaskExecution{4}{11}{12}
-
 \multido{\n=0+10}{1}{
 \TaskArrDead{1}{\n}{10}}
 \TaskExecution{1}{6}{7}
-
 \end{RTGrid}
 \caption{Ordonnancement sous Rate Monotonic} \label{fig:exempleRM}
 \end{center}
 \end{figure}
+\vspace{1cm}
 
 \begin{theoreme}
 Rate Monotonic est optimal pour l'ordonnancement de systèmes de tâches synchrones, indépendantes et à échéance sur requête en présence de préemption.
@@ -113,7 +110,7 @@ taches.  $\Gamma$ est ordonnancable sous deadline monotonic ssi:
 \forall \tau_{i} \in \Gamma / R_{i} \leq D_{i}
 \end{equation}
 \begin{equation}
-R_{i} = \\
+R_{i} = 
 \left\lbrace
 \begin{array}{l}
 R_{i}^0=C_{i}
@@ -137,6 +134,7 @@ R_{i}^0=C_{i}
 \end{center}
 \caption{ensemble de tache avec priorité affecté par Deadline Monotonic} \label{tab:exempleDM}
 \end{table}
+\vspace{1cm}
 
 \begin{figure}[h]
 \begin{center}
@@ -164,6 +162,7 @@ R_{i}^0=C_{i}
 \caption{Ordonnancement sous Deadline Monotonic} \label{fig:exempleDM}
 \end{center}
 \end{figure}
+\vspace{1cm}
 
 \subsection{Algorithme d’ordonnancement à priorité dynamique}
 \vspace{-1cm}
@@ -216,6 +215,7 @@ Earliest Deadline First est optimal pour ordonnancer des systèmes de tâches in
 \end{center}
 \caption{ensemble de tache } \label{tab:exempleEDF}
 \end{table}
+\vspace{1cm}
 
 \begin{figure}[h]
 \begin{center}
@@ -237,6 +237,7 @@ Earliest Deadline First est optimal pour ordonnancer des systèmes de tâches in
 \caption{Ordonnancement sous EDF} \label{fig:exempleEDF}
 \end{center}
 \end{figure}
+\vspace{1cm}
 
 \subsubsection{Least Laxity}
 \vspace{-1cm}
@@ -362,6 +363,8 @@ Toutes les notations relatives à l’ensemble de tâches sont résumées dans l
 \end{center}
 \caption{Notations} \label{tab:recap}
 \end{table}
+\vspace{1cm}
+
 \section{Les modèles de consommation d'énergie DVFS et DPM}
 \vspace{-1cm}
 L’énergie consommée par un processeur est le produit de la puissance dissipée et du temps d’exécution. Nous utiliserons principalement la notion de consommation énergétique et non de puissance. Cette consommation énergétique est divisée en consommation statique et consommation dynamique. Nous détaillons dans cette section les modèles des consommations dynamique et statique et montrons que la consommation statique est récemment devenue plus importante que la consommation dynamique.
@@ -394,6 +397,7 @@ qui entraîne une hausse de la consommation statique.
 
 \section{Les états C-states du processeur}
 \vspace{-1cm}
+\label{sec:cstate}
 Pour réduire la consommation statique des processeurs, 
 il est nécessaire d’utiliser leurs états basse-consommation lors de leurs périodes d’inactivité. 
 Nous appelons périodes d’inactivité les périodes de temps durant lesquelles un processeur est inactif et où aucune tâche n’est exécutée. 
@@ -448,5 +452,79 @@ Parmi les processeurs utilisés dans la littérature, citons le Freescale MPC853
 \vspace{-1cm}
 \section{Le Modèle d'endormissement de Dsouza}
 \vspace{-1cm}
+Anthony Rowe a proposé un algorithme d’ordonnancement appellé "Energy Saving Rate Harmonized Scheduling (ES RHS)" \cite{Rowe10} basé sur la période d’harmonisation qui améliore la consommation d’énergie pour l’architecture multiprocesseur.
+Dsouza l'a amelioré en proposant "ES RHS+" dans cette section nous définirons la periode harmonique, puis nous presenterons l'algorithme "Rate Harmonized Scheduling" et "Energy Saving Rate-Harmonized Scheduling" enfin nous terminerons par l'algorithme "Energy-Saving Rate-Harmonized Scheduling".
+
+\subsection{Période d’harmonisation}
+
+Soit un ensemble $\Gamma$ de tache de n taches périodiques indépendantes, l’ensemble de tâche est ordonnée selon les périodes de chaque tache de tel façon que $T_1 \leq T_2 \leq \dots \leq T_n$. 
+Un ensemble de taches $\{\tau_1, \tau_2, \dots, \tau_n \}$ est harmonique si il existe un $T_H$ tel que $\forall \tau_i / \frac{T_i}{T_h} \in \mathbb{Z}$
+
+\subsection{Algorithme d’ordonnancement « Energy-Saving Rate-Harmonized Scheduling »}
+
+En général RHS utilise un ensemble de Valeurs périodiques \{ $T_H^1,T_H^2,\dots ,T_H^3$ \} où $T_H^i \leq T_i$ pour i = 1 .. n, Et les valeurs sont harmoniques. Les périodes harmoniques sont appelées "périodes de base harmonisées", Et toute les taches ont le même temps de reveil de $\tau_1$ = $O_1$ = 0.
+\\ Les tâches $\{\tau_1, \tau_2, \dots, \tau_n \}$ dans l’ensemble tâches donné sont réveillées selon leurs arrivée comme dans le modèle classique Toutefois, chaque job de $\tau_i$ ne peut être exécutée que à sa prochaine frontière périodique la plus proche de $T_H^i$ \cite{Rowe10}.
+\\ \indent Dans le L’ordonnancement RHS de base, \{ $T_H^1 = T_H^2 = … = T_H^n = T_H$ \}, $T_H$ Est simplement appelé période d'harmonisation et $T_H \leq T_1$. Les tâches qui arrivent avant ou après les multiples entiers de $T_H$ ne sont pas autorisée à s'exécuter jusqu'à la prochaine limite la plus proche de quand ils sont lancés en fonction de leur priorité (voir figure). Les tâches qui ne sont pas admissibles sont retardées jusqu'à la prochaine limite.
+\\ \indent $T_H$ est choisi de manière à améliorer l'ordonnancement \cite{Rowe10}. Supposer $\Psi$ = \{ $\tau_j \mid T_j \lower 2T_1,j \neq 1$ \}. si $\Psi = \emptyset, T_H = T_1$. sinon $T_H = \frac{T_1}{2}$. 
+
+\begin{theoreme}[\cite{Rowe10}]
+un ensmeble de taches $\Gamma$ est faisable sous RHS si $U \leq 0.5$ .
+\end{theoreme}
+
+\begin{theoreme}
+le calcul du pire temps de reponse $W_k$ [23,24] dans le cas de RHS peut etre redéfini comme suit :
+\\ 
+\begin{equation}
+\begin{align*}
+W_0 & = C_i + T_H 
+\\ W_{k+1} & = C_i + T_H + \sum_{j = 1}^{i-1} \bigg \lceil \frac{W_k}{T_j}\bigg \rceil C_j
+\end{align*}
+\end{equation}
+\end{theoreme}
+
+\begin{theoreme}[cite{Rowe10}]
+Soit $\Gamma = \{\tau_1, \tau_2, \dots, \tau_n \}$ un ensemble de tache periodiques indépendantes. \\
+Si il existe une tache $\tau_i$ avec un pire temps de reponse $W_k$ tel que $W_k > D_i$ alors l'ensemble de tache $\Gamma$ est non ordonnançable.
+\end{theoreme}
+\subsection{Energy-Saving Rate-Harmonized Scheduling}
+comme vu dans la section \ref{sec:cstate}, les processeurs sont dotés de mode de basse consommation.
+par exemple: un processeur "power-aware" a :
+\vspace{0.5cm}
+\begin{itemize}
+\item[$\bullet$] mode actif avec une consommation d'énergie $PW_{active}$
+\item[$\bullet$] mode sommeil avec une consommation d'énergie $PW_{idle}$ et un temps de bascule $ST_{idle}$
+\item[$\bullet$] mode sommeil profond avec une consommation d'énergie $PW_{sleep}$ et un temps de bascule $ST_{sleep}$
+\end{itemize}
+\vspace{0.5cm}
+avec $PW_{active} > \PW_{idle} \gg \PW_{sleep} $ et $ \ST_{idle} \ll \ST_{sleep}$.
+\\ \indent quand il n'y a aucune tache préte à s'executer, le processeur et generalement en mode sommeil, cependant si il  y a une tache qui arrive avant $\ST_{sleep}$ unité de temps,il ne peut passer en mode sommeil.
+\\ \indent ES-RHS présente une propriété intéressante, où tous les periode de sommeil précède et est contiguë au sommeil profond durée peuvent toujours être fusionnée [10]. Par conséquent, en harmonisant
+les exécutions de tâches non harmoniques, ES-RHS peut produire des periode de sommeil optimal. D'souza \cite{DAR16} a redéfini la notion d'harmonisation pour ameliorer l'ordonnancemen ES-RHS.
+\subsection{Energy-Saving Rate-Harmonized Scheduling+}
+\indent Une tâche est susceptible d'être exécutée lorsque le processeur est occupé ou une limite de la période d'harmonisation a été atteinte. Cette redéfinition permet aux taches d'etre préte à s'executer plus tôt par rapport à l'ordonnanceur de ES-RHS \cite{Rowe10}.
+\\ la table \ref{tab:exempleRHS} et les figures \ref{fig:exempleRHS} et \ref{fig:exempleRHS+} illustrent la difference entre les deux ordonnanceur et l'apport de D'souza.
+
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{|c|c|c|}
+ \hline$\tau_i$ & $C_i$ & $T_i$ \\ 
+ \hline1 & 1 & 10 \\ 
+ \hline 2 & 4 & 23 \\ 
+ \hline 3 & 3 & 36 \\ 
+ \hline 
+ \end{tabular}
+\end{center}
+\caption{Ensemble de taches} \label{tab:exempleRHS}
+\end{table}
+
+\begin{center}
+\includegraphics[height=4cm,width=12cm]{rhs.png}
+\captionof{figure}{Energy-Saving RHS}
+\label{fig:exempleRHS}
+\includegraphics[height=4cm,width=12cm]{rhs+.png}
+\captionof{figure}{Energy-Saving RHS+}
+\label{fig:exempleRHS+}
+\end{center}
+
 \section{Conclusion}
 \vspace{-1cm}

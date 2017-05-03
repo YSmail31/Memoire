@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (MiKTeX 2.9.6210 64-bit) (preloaded format=xelatex 2017.3.4)  27 APR 2017 23:37
+This is XeTeX, Version 3.14159265-2.6-0.99996 (MiKTeX 2.9.6210 64-bit) (preloaded format=xelatex 2017.3.4)  3 MAY 2017 10:57
 entering extended mode
 **./Memoire.tex
 (Memoire.tex
@@ -1198,6 +1198,22 @@ JK)
 \Gin@req@height=\dimen146
 \Gin@req@width=\dimen147
 )
+(C:\Users\ismail\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption.sty
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+(C:\Users\ismail\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption3.sty
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen148
+\captionmargin@=\dimen149
+\captionwidth=\dimen150
+\caption@tempdima=\dimen151
+\caption@indent=\dimen152
+\caption@parindent=\dimen153
+\caption@hangindent=\dimen154
+)
+\c@ContinuedFloat=\count148
+)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
@@ -1208,17 +1224,17 @@ Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
 Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-\Gm@cnth=\count148
-\Gm@cntv=\count149
-\c@Gm@tempcnt=\count150
-\Gm@bindingoffset=\dimen148
-\Gm@wd@mp=\dimen149
-\Gm@odd@mp=\dimen150
-\Gm@even@mp=\dimen151
-\Gm@layoutwidth=\dimen152
-\Gm@layoutheight=\dimen153
-\Gm@layouthoffset=\dimen154
-\Gm@layoutvoffset=\dimen155
+\Gm@cnth=\count149
+\Gm@cntv=\count150
+\c@Gm@tempcnt=\count151
+\Gm@bindingoffset=\dimen155
+\Gm@wd@mp=\dimen156
+\Gm@odd@mp=\dimen157
+\Gm@even@mp=\dimen158
+\Gm@layoutwidth=\dimen159
+\Gm@layoutheight=\dimen160
+\Gm@layouthoffset=\dimen161
+\Gm@layoutvoffset=\dimen162
 \Gm@dimlist=\toks20
 
 ("C:\Program Files\MiKTeX 2.9\tex\xelatex\xetexconfig\geometry.cfg"))
@@ -1245,7 +1261,65 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-\c@theoreme=\count151
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2016/11/05 v2.16a AMS math features
+\@mathmargin=\skip78
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01 AMS text
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks28
+\ex@=\dimen163
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen164
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count152
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count153
+\leftroot@=\count154
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count155
+\DOTSCASE@=\count156
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box50
+\strutbox@=\box51
+\big@size=\dimen165
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count157
+\c@MaxMatrixCols=\count158
+\dotsspace@=\muskip16
+\c@parentequation=\count159
+\dspbrk@lvl=\count160
+\tag@help=\toks29
+\row@=\count161
+\column@=\count162
+\maxfields@=\count163
+\andhelp@=\toks30
+\eqnshift@=\dimen166
+\alignsep@=\dimen167
+\tagshift@=\dimen168
+\tagwidth@=\dimen169
+\totwidth@=\dimen170
+\lineht@=\dimen171
+\@envbody=\toks31
+\multlinegap=\skip79
+\multlinetaggap=\skip80
+\mathdisplay@stack=\toks32
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
+)
+\c@theoreme=\count164
 
 (C:\Users\ismail\AppData\Roaming\MiKTeX\2.9\tex\latex\minitoc\minitoc.sty
 Package: minitoc 2015/07/13 v61 Package minitoc
@@ -1256,17 +1330,17 @@ Package: mtcmess 2006/03/14
 Package minitoc Info: I0001
 (minitoc)             *** minitoc package, version 61 ***.
 \tf@mtc=\write3
-\mtcindent=\skip78
-\mtcskipamount=\skip79
+\mtcindent=\skip81
+\mtcskipamount=\skip82
 Package minitoc Info: I0005
 (minitoc)             compatible with hyperref.
 Package minitoc Info: I0023
 (minitoc)             part level macros available.
 Package minitoc Info: I0003
 (minitoc)             chapter level macros available.
-\mtc@toks=\toks28
-\mtc@strutbox=\box50
-\mtc@hstrutbox=\box51
+\mtc@toks=\toks33
+\mtc@strutbox=\box52
+\mtc@hstrutbox=\box53
 Package minitoc Info: I0002
 (minitoc)             Autoconfiguration of extensions.
 \openout3 = `Memoire.mtc0'.
@@ -1284,11 +1358,11 @@ Package minitoc Info: I0031
 
 \openout3 = `Memoire.mtc0'.
 
-\c@mtc=\count152
-\c@minitocdepth=\count153
-\c@ptc=\count154
-\c@parttocdepth=\count155
-\ptcindent=\skip80
+\c@mtc=\count165
+\c@minitocdepth=\count166
+\c@ptc=\count167
+\c@parttocdepth=\count168
+\ptcindent=\skip83
 Package minitoc Info: I0010
 (minitoc)             The english language is selected.
 (minitoc)              on input line 4909.
@@ -1332,9 +1406,9 @@ Package: multido 2004/05/17 package wrapper for PSTricks `multido.tex', (HV/RN)
 
 (C:\Users\ismail\AppData\Roaming\MiKTeX\2.9\tex\generic\multido\multido.tex
  v1.42, 2010/05/14 <tvz>
-\multido@count=\count156
-\multidocount=\count157
-\multido@stuff=\toks29
+\multido@count=\count169
+\multidocount=\count170
+\multido@stuff=\toks34
 )
 File: multido.tex 2010/05/14 v1.42 `multido' (tvz,hv)
 )
@@ -1363,32 +1437,32 @@ File: pst-xkey.tex 2005/11/25 v1.6 PSTricks specialization of xkeyval (HA)
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pstricks\pst-fp.tex"
 `pst-fp' v0.05, 2010/01/17 (hv)
-\pstFP@xs=\count158
-\pstFP@xia=\count159
-\pstFP@xib=\count160
-\pstFP@xfa=\count161
-\pstFP@xfb=\count162
-\pstFP@rega=\count163
-\pstFP@regb=\count164
-\pstFP@regs=\count165
-\pstFP@times=\count166
+\pstFP@xs=\count171
+\pstFP@xia=\count172
+\pstFP@xib=\count173
+\pstFP@xfa=\count174
+\pstFP@xfb=\count175
+\pstFP@rega=\count176
+\pstFP@regb=\count177
+\pstFP@regs=\count178
+\pstFP@times=\count179
 )
 (C:\Users\ismail\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfutil-c
 ommon.tex
-\pgfutil@everybye=\toks30
-\pgfutil@tempdima=\dimen156
-\pgfutil@tempdimb=\dimen157
+\pgfutil@everybye=\toks35
+\pgfutil@tempdima=\dimen172
+\pgfutil@tempdimb=\dimen173
 
 (C:\Users\ismail\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfutil-c
 ommon-lists.tex))
 (C:\Users\ismail\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfkeys.c
 ode.tex
-\pgfkeys@pathtoks=\toks31
-\pgfkeys@temptoks=\toks32
+\pgfkeys@pathtoks=\toks36
+\pgfkeys@temptoks=\toks37
 
 (C:\Users\ismail\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfkeysfi
 ltered.code.tex
-\pgfkeys@tmptoks=\toks33
+\pgfkeys@tmptoks=\toks38
 ))
 (C:\Users\ismail\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgffor.co
 de.tex
@@ -1398,29 +1472,29 @@ ex
 de.tex
 (C:\Users\ismail\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathutil.co
 de.tex
-\pgf@x=\dimen158
-\pgf@xa=\dimen159
-\pgf@xb=\dimen160
-\pgf@xc=\dimen161
-\pgf@y=\dimen162
-\pgf@ya=\dimen163
-\pgf@yb=\dimen164
-\pgf@yc=\dimen165
-\c@pgf@counta=\count167
-\c@pgf@countb=\count168
-\c@pgf@countc=\count169
-\c@pgf@countd=\count170
-\pgfutil@tempcnta=\count171
-\pgfutil@tempcntb=\count172
+\pgf@x=\dimen174
+\pgf@xa=\dimen175
+\pgf@xb=\dimen176
+\pgf@xc=\dimen177
+\pgf@y=\dimen178
+\pgf@ya=\dimen179
+\pgf@yb=\dimen180
+\pgf@yc=\dimen181
+\c@pgf@counta=\count180
+\c@pgf@countb=\count181
+\c@pgf@countc=\count182
+\c@pgf@countd=\count183
+\pgfutil@tempcnta=\count184
+\pgfutil@tempcntb=\count185
 )
 (C:\Users\ismail\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathparser.
 code.tex
-\pgfmath@dimen=\dimen166
-\pgfmath@count=\count173
-\pgfmath@box=\box52
-\pgfmath@toks=\toks34
-\pgfmath@stack@operand=\toks35
-\pgfmath@stack@operation=\toks36
+\pgfmath@dimen=\dimen182
+\pgfmath@count=\count186
+\pgfmath@box=\box54
+\pgfmath@toks=\toks39
+\pgfmath@stack@operand=\toks40
+\pgfmath@stack@operation=\toks41
 )
 (C:\Users\ismail\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctio
 ns.code.tex
@@ -1442,62 +1516,62 @@ ns.misc.code.tex)
 ns.integerarithmetics.code.tex)))
 (C:\Users\ismail\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfloat.c
 ode.tex
-\c@pgfmathroundto@lastzeros=\count174
+\c@pgfmathroundto@lastzeros=\count187
 ))
-\pgffor@iter=\dimen167
-\pgffor@skip=\dimen168
-\pgffor@stack=\toks37
-\pgffor@toks=\toks38
+\pgffor@iter=\dimen183
+\pgffor@skip=\dimen184
+\pgffor@stack=\toks42
+\pgffor@toks=\toks43
 )
-\psLoopIndex=\count175
+\psLoopIndex=\count188
 
 `PSTricks' v2.71  <2016/12/23> (tvz)
-\pst@dima=\dimen169
-\pst@dimb=\dimen170
-\pst@dimc=\dimen171
-\pst@dimd=\dimen172
-\pst@dimg=\dimen173
-\pst@dimh=\dimen174
-\pst@dimm=\dimen175
-\pst@dimn=\dimen176
-\pst@dimo=\dimen177
-\pst@dimp=\dimen178
-\pst@hbox=\box53
-\pst@ibox=\box54
-\pst@boxg=\box55
-\pst@cnta=\count176
-\pst@cntb=\count177
-\pst@cntc=\count178
-\pst@cntd=\count179
-\pst@cntg=\count180
-\pst@cnth=\count181
-\pst@cntm=\count182
-\pst@cntn=\count183
-\pst@cnto=\count184
-\pst@cntp=\count185
-\@zero=\count186
-\pst@toks=\toks39
+\pst@dima=\dimen185
+\pst@dimb=\dimen186
+\pst@dimc=\dimen187
+\pst@dimd=\dimen188
+\pst@dimg=\dimen189
+\pst@dimh=\dimen190
+\pst@dimm=\dimen191
+\pst@dimn=\dimen192
+\pst@dimo=\dimen193
+\pst@dimp=\dimen194
+\pst@hbox=\box55
+\pst@ibox=\box56
+\pst@boxg=\box57
+\pst@cnta=\count189
+\pst@cntb=\count190
+\pst@cntc=\count191
+\pst@cntd=\count192
+\pst@cntg=\count193
+\pst@cnth=\count194
+\pst@cntm=\count195
+\pst@cntn=\count196
+\pst@cnto=\count197
+\pst@cntp=\count198
+\@zero=\count199
+\pst@toks=\toks44
 
 (C:\Users\ismail\AppData\Roaming\MiKTeX\2.9\tex\xelatex\xetex-pstricks\pstricks
 .con ("C:\Program Files\MiKTeX 2.9\tex\generic\pstricks\xdvipdfmx.cfg"))
-\psunit=\dimen179
-\psxunit=\dimen180
-\psyunit=\dimen181
-\pst@C@@rType=\count187
-\pslinewidth=\dimen182
-\psk@startLW=\dimen183
-\psk@endLW=\dimen184
-\pst@customdefs=\toks40
-\pslinearc=\dimen185
-\pst@symbolStep=\dimen186
-\pst@symbolWidth=\dimen187
-\pst@symbolLinewidth=\dimen188
-\everypsbox=\toks41
-\psframesep=\dimen189
-\pslabelsep=\dimen190
-\sh@wgridXunit=\dimen191
-\sh@wgridYunit=\dimen192
-\pst@shift=\dimen193
+\psunit=\dimen195
+\psxunit=\dimen196
+\psyunit=\dimen197
+\pst@C@@rType=\count266
+\pslinewidth=\dimen198
+\psk@startLW=\dimen199
+\psk@endLW=\dimen256
+\pst@customdefs=\toks45
+\pslinearc=\dimen257
+\pst@symbolStep=\dimen258
+\pst@symbolWidth=\dimen259
+\pst@symbolLinewidth=\dimen260
+\everypsbox=\toks46
+\psframesep=\dimen261
+\pslabelsep=\dimen262
+\sh@wgridXunit=\dimen263
+\sh@wgridYunit=\dimen264
+\pst@shift=\dimen265
 
 (C:\Users\ismail\AppData\Roaming\MiKTeX\2.9\tex\xelatex\xetex-pstricks\pstricks
 .con ("C:\Program Files\MiKTeX 2.9\tex\generic\pstricks\xdvipdfmx.cfg"
@@ -1507,19 +1581,19 @@ File: pstricks.tex 2016/12/23 v2.71 `PSTricks' (tvz,hv)
  ("C:\Program Files\MiKTeX 2.9\tex\generic\pstricks\pst-fp.tex")
 File: pst-fp.tex 2016/12/23 v2.71 `PST-fp' (hv)
 )
-\sx=\dimen194
-\sy=\dimen195
-\hy=\dimen196
-\xx=\dimen197
-\yy=\dimen198
-\xxx=\dimen199
-\yyy=\dimen256
-\nsx=\count188
-\nsy=\count189
-\nhl=\count190
-\nvl=\count191
-\tmp=\count192
-\c@myLabel=\count193
+\sx=\dimen266
+\sy=\dimen267
+\hy=\dimen268
+\xx=\dimen269
+\yy=\dimen270
+\xxx=\dimen271
+\yyy=\dimen272
+\nsx=\count267
+\nsy=\count268
+\nhl=\count269
+\nvl=\count270
+\tmp=\count271
+\c@myLabel=\count272
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
 Package: hyperref 2016/06/24 v6.83q Hypertext links for LaTeX
@@ -1573,14 +1647,14 @@ Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
-\@linkdim=\dimen257
-\Hy@linkcounter=\count194
-\Hy@pagecounter=\count195
+\@linkdim=\dimen273
+\Hy@linkcounter=\count273
+\Hy@pagecounter=\count274
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
 File: pd1enc.def 2016/06/24 v6.83q Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count196
+\Hy@SavedSpaceFactor=\count275
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -1592,18 +1666,18 @@ Package hyperref Info: Plain pages OFF on input line 4501.
 Package hyperref Info: Backreferencing OFF on input line 4506.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4735.
-\c@Hy@tempcnt=\count197
+\c@Hy@tempcnt=\count276
 
 (C:\Users\ismail\AppData\Roaming\MiKTeX\2.9\tex\latex\url\url.sty
-\Urlmuskip=\muskip16
+\Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5088.
-\XeTeXLinkMargin=\dimen258
+\XeTeXLinkMargin=\dimen274
 Requested font "pzdr" at 0.00002pt
-\Fld@menulength=\count198
-\Field@Width=\dimen259
-\Fld@charsize=\dimen260
+\Fld@menulength=\count277
+\Field@Width=\dimen275
+\Fld@charsize=\dimen276
 Package hyperref Info: Hyper figures OFF on input line 6342.
 Package hyperref Info: Link nesting OFF on input line 6347.
 Package hyperref Info: Hyper index ON on input line 6350.
@@ -1613,9 +1687,9 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6367.
 Package hyperref Info: PDF/A mode OFF on input line 6372.
 LaTeX Info: Redefining \ref on input line 6412.
 LaTeX Info: Redefining \pageref on input line 6416.
-\Hy@abspage=\count199
-\c@Item=\count266
-\c@Hfootnote=\count267
+\Hy@abspage=\count278
+\c@Item=\count279
+\c@Hfootnote=\count280
 )
 
 Package hyperref Message: Driver (autodetected): hxetex.
@@ -1630,11 +1704,11 @@ File: puenc.def 2016/06/24 v6.83q Hyperref: PDF Unicode definition (HO)
 Package: stringenc 2016/05/16 v1.11 Convert strings between diff. encodings (HO
 )
 )
-\pdfm@box=\box56
-\c@Hy@AnnotLevel=\count268
-\HyField@AnnotCount=\count269
-\Fld@listcount=\count270
-\c@bookmark@seq@number=\count271
+\pdfm@box=\box58
+\c@Hy@AnnotLevel=\count281
+\HyField@AnnotCount=\count282
+\Fld@listcount=\count283
+\c@bookmark@seq@number=\count284
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
@@ -1645,43 +1719,122 @@ Package rerunfilecheck Info: Feature \pdfmdfivesum is not available
 tly
 (rerunfilecheck)             and the loading of the package is aborted.
 )
-\Hy@SectionHShift=\skip81
+\Hy@SectionHShift=\skip84
+)
+(C:\Users\ismail\AppData\Roaming\MiKTeX\2.9\tex\latex\ms\ragged2e.sty
+Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
+
+
+LaTeX Warning: Command \@arrayparboxrestore  has changed.
+               Check if current package is valid.
+
+(C:\Users\ismail\AppData\Roaming\MiKTeX\2.9\tex\latex\ms\everysel.sty
+Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
+)
+(C:\Users\ismail\AppData\Roaming\MiKTeX\2.9\tex\latex\footmisc\footmisc.sty
+Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
+\FN@temptoken=\toks47
+\footnotemargin=\dimen277
+\c@pp@next@reset=\count285
+Package footmisc Info: Declaring symbol style bringhurst on input line 855.
+Package footmisc Info: Declaring symbol style chicago on input line 863.
+Package footmisc Info: Declaring symbol style wiley on input line 872.
+Package footmisc Info: Declaring symbol style lamport-robust on input line 883.
+
+Package footmisc Info: Declaring symbol style lamport* on input line 903.
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
+.
+)
+\CenteringLeftskip=\skip85
+\RaggedLeftLeftskip=\skip86
+\RaggedRightLeftskip=\skip87
+\CenteringRightskip=\skip88
+\RaggedLeftRightskip=\skip89
+\RaggedRightRightskip=\skip90
+\CenteringParfillskip=\skip91
+\RaggedLeftParfillskip=\skip92
+\RaggedRightParfillskip=\skip93
+\JustifyingParfillskip=\skip94
+\CenteringParindent=\skip95
+\RaggedLeftParindent=\skip96
+\RaggedRightParindent=\skip97
+\JustifyingParindent=\skip98
+)
+(C:\Users\ismail\AppData\Roaming\MiKTeX\2.9\tex\latex\tocloft\tocloft.sty
+Package: tocloft 2013/05/02 v2.3f parameterised ToC, etc., typesetting
+Package tocloft Info: The document has chapter divisions on input line 44.
+\cftparskip=\skip99
+\cftbeforetoctitleskip=\skip100
+\cftaftertoctitleskip=\skip101
+\cftbeforepartskip=\skip102
+\cftpartnumwidth=\skip103
+\cftpartindent=\skip104
+\cftbeforechapskip=\skip105
+\cftchapindent=\skip106
+\cftchapnumwidth=\skip107
+\cftbeforesecskip=\skip108
+\cftsecindent=\skip109
+\cftsecnumwidth=\skip110
+\cftbeforesubsecskip=\skip111
+\cftsubsecindent=\skip112
+\cftsubsecnumwidth=\skip113
+\cftbeforesubsubsecskip=\skip114
+\cftsubsubsecindent=\skip115
+\cftsubsubsecnumwidth=\skip116
+\cftbeforeparaskip=\skip117
+\cftparaindent=\skip118
+\cftparanumwidth=\skip119
+\cftbeforesubparaskip=\skip120
+\cftsubparaindent=\skip121
+\cftsubparanumwidth=\skip122
+\cftbeforeloftitleskip=\skip123
+\cftafterloftitleskip=\skip124
+\cftbeforefigskip=\skip125
+\cftfigindent=\skip126
+\cftfignumwidth=\skip127
+\c@lofdepth=\count286
+\c@lotdepth=\count287
+\cftbeforelottitleskip=\skip128
+\cftafterlottitleskip=\skip129
+\cftbeforetabskip=\skip130
+\cfttabindent=\skip131
+\cfttabnumwidth=\skip132
 )
 (Memoire.aux (remerciments.aux) (resume.aux) (abstract.aux) (listeSymbole.aux)
-(introduction.aux) (partie1.aux) (partie2.aux) (conclusion.aux))
+(introduction.aux) (partie1.aux))
 \openout1 = `Memoire.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 24.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 30.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 30.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Info: Redefining \dots on input line 24.
-LaTeX Info: Redefining \up on input line 24.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Info: Redefining \dots on input line 30.
+LaTeX Info: Redefining \up on input line 30.
 
 
 Package frenchb.ldf Warning: Add \usepackage{fontspec} to the
-(frenchb.ldf)                preamble of your document, on input line 24.
+(frenchb.ldf)                preamble of your document, on input line 30.
 
 .................................................
 . fontspec info: "setup-math"
@@ -1690,68 +1843,70 @@ Package frenchb.ldf Warning: Add \usepackage{fontspec} to the
 .................................................
 \symlegacymaths=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 24.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 24.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 24.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 24.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 24.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 24.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 24.
-LaTeX Font Info:    Redeclaring math accent \check on input line 24.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 24.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 24.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 24.
-LaTeX Font Info:    Redeclaring math symbol \colon on input line 24.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 24.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 24.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 24.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 24.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 24.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 24.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 24.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 24.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 24.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 24.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 24.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 24.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 24.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 30.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 30.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 30.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 30.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 30.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 30.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 30.
+LaTeX Font Info:    Redeclaring math accent \check on input line 30.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 30.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 30.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 30.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 30.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 30.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 30.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 30.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 30.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 30.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 30.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 30.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 30.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 30.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 30.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 30.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 30.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 24.
+(Font)              `operators' in the math version `normal' on input line 30.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/LinLibertine(0)/m/n on input line 24
+(Font)                  OT1/cmr/m/n --> TU/LinLibertine(0)/m/n on input line 30
 .
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 24.
+(Font)              `operators' in the math version `bold' on input line 30.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/LinLibertine(0)/m/n on input line 2
-4.
+(Font)                  OT1/cmr/bx/n --> TU/LinLibertine(0)/m/n on input line 3
+0.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  TU/LinLibertine(0)/m/n --> TU/LinLibertine(0)/m/n on in
-put line 24.
+put line 30.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 (Font)                  OT1/cmr/m/it --> TU/LinLibertine(0)/m/it on input line 
-24.
+30.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
 (Font)                  OT1/cmr/bx/n --> TU/LinLibertine(0)/bx/n on input line 
-24.
+30.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/LinBiolinum(0)/m/n on input line 24
+(Font)                  OT1/cmss/m/n --> TU/LinBiolinum(0)/m/n on input line 30
 .
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/LinLibertine(5)/m/n on input line 2
-4.
+(Font)                  OT1/cmtt/m/n --> TU/LinLibertine(5)/m/n on input line 3
+0.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  TU/LinLibertine(0)/m/n --> TU/LinLibertine(0)/bx/n on i
-nput line 24.
+nput line 30.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> TU/LinLibertine(0)/bx/it on input lin
-e 24.
+e 30.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 (Font)                  OT1/cmss/bx/n --> TU/LinBiolinum(0)/bx/n on input line 
-24.
+30.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> TU/LinLibertine(5)/bx/n on input line 
-24.
+30.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
+Package caption Info: End \AtBeginDocument code.
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
 * driver: pdftex
@@ -1785,9 +1940,19 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+\c@minilofdepth=\count288
+\c@minilotdepth=\count289
+\c@partlofdepth=\count290
+\c@partlotdepth=\count291
+\c@sectlofdepth=\count292
+\c@sectlotdepth=\count293
 Package minitoc(hints) Info: I0049
 (minitoc(hints))             ==> You requested the hints option. 
 (minitoc(hints))             Some hints are eventually given below.
+Package minitoc(hints) Info: I0047
+(minitoc(hints))             --- The tocloft package is loaded. 
+(minitoc(hints))             See the minitoc package documentation 
+(minitoc(hints))             for specific precautions.
 
 Package minitoc(hints) Warning: W0030
 (minitoc(hints))                --- The \part command is altered 
@@ -1808,53 +1973,33 @@ Package minitoc(hints) Warning: W0023
 (minitoc(hints))                --- It may be the consequence 
 (minitoc(hints))                of loading the ``hyperref'' package.
 
-\AtBeginShipoutBox=\box57
-Package hyperref Info: Link coloring OFF on input line 24.
+\AtBeginShipoutBox=\box59
+Package hyperref Info: Link coloring OFF on input line 30.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count272
+\c@section@level=\count294
 )
-LaTeX Info: Redefining \ref on input line 24.
-LaTeX Info: Redefining \pageref on input line 24.
-LaTeX Info: Redefining \nameref on input line 24.
+LaTeX Info: Redefining \ref on input line 30.
+LaTeX Info: Redefining \pageref on input line 30.
+LaTeX Info: Redefining \nameref on input line 30.
 
 (Memoire.out) (Memoire.out)
 \@outlinefile=\write4
 \openout4 = `Memoire.out'.
 
+Package ragged2e Info: ABD: executing \RaggedRight on input line 30.
+ ABD: EverySelectfont initializing macros
+LaTeX Info: Redefining \selectfont on input line 30.
 Package minitoc Info: I0024
-(minitoc)             PREPARING MINITOCS FROM Memoire.toc on input line 27.
-\openout3 = `Memoire.mtc'.
-
-Package minitoc Info: I0033
-(minitoc)             Writing Memoire.mtc1.
-\openout3 = `Memoire.mtc1'.
-
-Package minitoc Info: I0033
-(minitoc)             Writing Memoire.mtc2.
-\openout3 = `Memoire.mtc2'.
-
-Package minitoc Info: I0033
-(minitoc)             Writing Memoire.mtc3.
-\openout3 = `Memoire.mtc3'.
-
-Package minitoc Info: I0033
-(minitoc)             Writing Memoire.mtc4.
-\openout3 = `Memoire.mtc4'.
-
-Package minitoc Info: I0033
-(minitoc)             Writing Memoire.mtc5.
-\openout3 = `Memoire.mtc5'.
-
-\openout3 = `Memoire.mtc'.
-
+(minitoc)             PREPARING MINITOCS FROM Memoire.toc on input line 33.
 \openout2 = `remerciments.aux'.
 
- (remerciments.tex)
+
+(remerciments.tex)
 \openout2 = `resume.aux'.
 
  (resume.tex)
@@ -1869,45 +2014,19 @@ Requested font "[LinLibertine_RB.otf]/OT:script=latn;language=DFLT;mapping=tex-
 text;+tnum;+lnum;" at 24.88pt
  -> C:/Users/ismail/AppData/Roaming/MiKTeX/2.9/fonts/opentype/public/libertine/
 LinLibertine_RB.otf
+ (Memoire.toc)
+\tf@toc=\write5
+\openout5 = `Memoire.toc'.
 
-(Memoire.toc
-Requested font "[LinLibertine_R.otf]/OT:script=latn;language=DFLT;mapping=tex-t
-ext;+tnum;+lnum;" at 12.0pt
- -> C:/Users/ismail/AppData/Roaming/MiKTeX/2.9/fonts/opentype/public/libertine/
-LinLibertine_R.otf
-Requested font "[LinLibertine_RB.otf]/OT:script=latn;language=DFLT;mapping=tex-
-text;+tnum;+lnum;" at 12.0pt
- -> C:/Users/ismail/AppData/Roaming/MiKTeX/2.9/fonts/opentype/public/libertine/
-LinLibertine_RB.otf
-Requested font "[LinLibertine_RB.otf]/OT:script=latn;language=DFLT;mapping=tex-
-text;+tnum;+lnum;" at 10.0pt
- -> C:/Users/ismail/AppData/Roaming/MiKTeX/2.9/fonts/opentype/public/libertine/
-LinLibertine_RB.otf
-Requested font "[LinLibertine_R.otf]/OT:script=latn;language=DFLT;mapping=tex-t
-ext;+tnum;+lnum;" at 7.0pt
- -> C:/Users/ismail/AppData/Roaming/MiKTeX/2.9/fonts/opentype/public/libertine/
-LinLibertine_R.otf
-Requested font "[LinLibertine_R.otf]/OT:script=latn;language=DFLT;mapping=tex-t
-ext;+tnum;+lnum;" at 5.0pt
- -> C:/Users/ismail/AppData/Roaming/MiKTeX/2.9/fonts/opentype/public/libertine/
-LinLibertine_R.otf
-Requested font "cmex7" at 7.0pt
-Requested font "cmex7" at 5.0pt
-LaTeX Font Info:    Try loading font information for U+msa on input line 7.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-Requested font "msam10" at 10.0pt
-Requested font "msam7" at 7.0pt
-Requested font "msam5" at 5.0pt
-LaTeX Font Info:    Try loading font information for U+msb on input line 7.
+ (Memoire.lof)
+\tf@lof=\write6
+\openout6 = `Memoire.lof'.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Requested font "msbm10" at 10.0pt
-Requested font "msbm7" at 7.0pt
-Requested font "msbm5" at 5.0pt
+
+(Memoire.lot)
+\tf@lot=\write7
+\openout7 = `Memoire.lot'.
+
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\se-ascii-print.def"
 File: se-ascii-print.def 2016/05/16 v1.11 stringenc: Printable ASCII characters
@@ -1921,45 +2040,27 @@ File: se-ascii-print.def 2016/05/16 v1.11 stringenc: Printable ASCII characters
 
 
 
-
 ]
-LaTeX Font Info:    Font shape `TU/LinLibertine(0)/m/sl' in size <10> not avail
-able
-(Font)              Font shape `TU/LinLibertine(0)/m/it' tried instead on input
- line 43.
-Requested font "[LinLibertine_RI.otf]/OT:script=latn;language=DFLT;mapping=tex-
-text;+tnum;+lnum;" at 10.0pt
- -> C:/Users/ismail/AppData/Roaming/MiKTeX/2.9/fonts/opentype/public/libertine/
-LinLibertine_RI.otf
- [2])
-\tf@toc=\write5
-\openout5 = `Memoire.toc'.
-
- [3] [4
-
-] (Memoire.lof)
-\tf@lof=\write6
-\openout6 = `Memoire.lof'.
-
- [5] [6
-
-] (Memoire.lot)
-\tf@lot=\write7
-\openout7 = `Memoire.lot'.
-
- [7]
 \openout2 = `listeSymbole.aux'.
 
  (listeSymbole.tex)
 \openout2 = `introduction.aux'.
 
+ (introduction.tex
+LaTeX Font Info:    Font shape `TU/LinLibertine(0)/m/sl' in size <10> not avail
+able
+(Font)              Font shape `TU/LinLibertine(0)/m/it' tried instead on input
+ line 1.
+Requested font "[LinLibertine_RI.otf]/OT:script=latn;language=DFLT;mapping=tex-
+text;+tnum;+lnum;" at 10.0pt
+ -> C:/Users/ismail/AppData/Roaming/MiKTeX/2.9/fonts/opentype/public/libertine/
+LinLibertine_RI.otf
+ [2
 
-(introduction.tex [8
 
 
 
-
-] [9] [10])
+] [3] [4])
 \openout2 = `partie1.aux'.
 
  (partie1.tex
@@ -1971,11 +2072,11 @@ Requested font "[LinLibertine_RB.otf]/OT:script=latn;language=DFLT;mapping=tex-
 text;+tnum;+lnum;" at 20.74pt
  -> C:/Users/ismail/AppData/Roaming/MiKTeX/2.9/fonts/opentype/public/libertine/
 LinLibertine_RB.otf
- [11
+ [5
 
 
 
-] [12]
+] [6]
 Chapitre 1.
 \openout3 = `Memoire.mtc'.
 
@@ -1989,23 +2090,57 @@ Requested font "[LinLibertine_R.otf]/OT:script=latn;language=DFLT;mapping=tex-t
 ext;+tnum;+lnum;" at 6.0pt
  -> C:/Users/ismail/AppData/Roaming/MiKTeX/2.9/fonts/opentype/public/libertine/
 LinLibertine_R.otf
+Requested font "[LinLibertine_R.otf]/OT:script=latn;language=DFLT;mapping=tex-t
+ext;+tnum;+lnum;" at 5.0pt
+ -> C:/Users/ismail/AppData/Roaming/MiKTeX/2.9/fonts/opentype/public/libertine/
+LinLibertine_R.otf
 Requested font "cmmi9" at 9.0pt
 Requested font "cmmi6" at 6.0pt
 Requested font "cmsy9" at 9.0pt
 Requested font "cmsy6" at 6.0pt
 Requested font "cmex9" at 9.0pt
 Requested font "cmex7" at 6.0pt
+Requested font "cmex7" at 5.0pt
+LaTeX Font Info:    Try loading font information for U+msa on input line 4.
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
 Requested font "msam10" at 9.0pt
 Requested font "msam7" at 6.0pt
+Requested font "msam5" at 5.0pt
+LaTeX Font Info:    Try loading font information for U+msb on input line 4.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
 Requested font "msbm10" at 9.0pt
 Requested font "msbm7" at 6.0pt
+Requested font "msbm5" at 5.0pt
 Requested font "cmr9" at 9.0pt
 Requested font "cmr6" at 6.0pt
-(Memoire.mtc1
+Requested font "[LinLibertine_R.otf]/OT:script=latn;language=DFLT;mapping=tex-t
+ext;+tnum;+lnum;" at 12.0pt
+ -> C:/Users/ismail/AppData/Roaming/MiKTeX/2.9/fonts/opentype/public/libertine/
+LinLibertine_R.otf
+Requested font "[LinLibertine_RB.otf]/OT:script=latn;language=DFLT;mapping=tex-
+text;+tnum;+lnum;" at 12.0pt
+ -> C:/Users/ismail/AppData/Roaming/MiKTeX/2.9/fonts/opentype/public/libertine/
+LinLibertine_RB.otf
+ (Memoire.mtc1
 Requested font "[LinLibertine_RB.otf]/OT:script=latn;language=DFLT;mapping=tex-
 text;+tnum;+lnum;" at 9.0pt
  -> C:/Users/ismail/AppData/Roaming/MiKTeX/2.9/fonts/opentype/public/libertine/
 LinLibertine_RB.otf
+
+
+LaTeX Warning: Citation `LL73' on page 7 undefined on input line 5.
+
+
+LaTeX Warning: Citation `LW82' on page 7 undefined on input line 6.
+
+
+LaTeX Warning: Citation `LL73' on page 7 undefined on input line 8.
+
 )
 Requested font "[LinLibertine_R.otf]/OT:script=latn;language=DFLT;mapping=tex-t
 ext;+tnum;+lnum;" at 14.4pt
@@ -2015,23 +2150,41 @@ Requested font "[LinLibertine_RB.otf]/OT:script=latn;language=DFLT;mapping=tex-
 text;+tnum;+lnum;" at 14.4pt
  -> C:/Users/ismail/AppData/Roaming/MiKTeX/2.9/fonts/opentype/public/libertine/
 LinLibertine_RB.otf
-
-Underfull \vbox (badness 1527) has occurred while \output is active []
-
- [13
+ [7
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 18--24
+Requested font "[LinLibertine_RB.otf]/OT:script=latn;language=DFLT;mapping=tex-
+text;+tnum;+lnum;" at 10.0pt
+ -> C:/Users/ismail/AppData/Roaming/MiKTeX/2.9/fonts/opentype/public/libertine/
+LinLibertine_RB.otf
+ [8]
 
- []
+LaTeX Warning: Citation `LL73' on page 9 undefined on input line 26.
 
-[14]
+
+LaTeX Warning: Citation `LL73' on page 9 undefined on input line 28.
+
+
+LaTeX Warning: Reference `tab:exempleRM' on page 9 undefined on input line 29.
+
+
+LaTeX Warning: Reference `fig:exempleRM' on page 9 undefined on input line 29.
+
+Requested font "[LinLibertine_R.otf]/OT:script=latn;language=DFLT;mapping=tex-t
+ext;+tnum;+lnum;" at 7.0pt
+ -> C:/Users/ismail/AppData/Roaming/MiKTeX/2.9/fonts/opentype/public/libertine/
+LinLibertine_R.otf
+Requested font "cmex7" at 7.0pt
+Requested font "msam10" at 10.0pt
+Requested font "msam7" at 7.0pt
+Requested font "msbm10" at 10.0pt
+Requested font "msbm7" at 7.0pt
 Requested font "[LinLibertine_R.otf]/OT:script=latn;language=DFLT;mapping=tex-t
 ext;+tnum;+lnum;+smcp;" at 10.0pt
  -> C:/Users/ismail/AppData/Roaming/MiKTeX/2.9/fonts/opentype/public/libertine/
 LinLibertine_R.otf
-LaTeX Font Info:    Try loading font information for T1+phv on input line 47.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1phv.fd"
+LaTeX Font Info:    Try loading font information for T1+phv on input line 49.
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1phv.fd"
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 Requested font "phvr8t" at 10.0pt
@@ -2047,79 +2200,361 @@ Requested font "cmex8" at 8.0pt
 Requested font "msam10" at 8.0pt
 Requested font "msbm10" at 8.0pt
 Requested font "cmr8" at 8.0pt
- [15]
-Underfull \hbox (badness 10000) in paragraph at lines 106--108
+ [9]
 
+LaTeX Warning: Citation `LL73' on page 10 undefined on input line 79.
+
+
+LaTeX Warning: Citation `LW82' on page 10 undefined on input line 85.
+
+
+LaTeX Warning: Citation `LW82' on page 10 undefined on input line 87.
+
+
+LaTeX Warning: Citation `JP86' on page 10 undefined on input line 103.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[10]
+
+LaTeX Warning: Citation `LL73' on page 11 undefined on input line 172.
+
+
+LaTeX Warning: Citation `LL73' on page 11 undefined on input line 174.
+
+
+LaTeX Warning: Citation `Der74' on page 11 undefined on input line 174.
+
+
+LaTeX Warning: Citation `Hor74' on page 11 undefined on input line 174.
+
+
+LaTeX Warning: Citation `LL73' on page 11 undefined on input line 177.
+
+
+LaTeX Warning: Citation `BHR93' on page 11 undefined on input line 185.
+
+[11]
+
+LaTeX Warning: Citation `Der74' on page 12 undefined on input line 203.
+
+
+LaTeX Warning: Citation `Mok83' on page 12 undefined on input line 244.
+
+[12]
+
+LaTeX Warning: Citation `Mok83' on page 13 undefined on input line 255.
+
+
+Overfull \hbox (0.37862pt too wide) in paragraph at lines 265--266
+[]\TU/LinLibertine(0)/m/n/10 le problème de la migration des tâches : une tâche
+ peut-elle changer de processeur pour s’exé- 
  []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[16]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: Citation `LW82' on page 13 undefined on input line 278.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: Citation `HL92' on page 13 undefined on input line 282.
 
-[17] [18]
-Overfull \hbox (0.5887pt too wide) in paragraph at lines 268--269
-[]\TU/LinLibertine(0)/m/n/10 Nous allons nous intéressé uniquement au problème 
-de placement et d’ordonnancement des tâches,
- []
 
-[19] [20]
+LaTeX Warning: Citation `LW82' on page 13 undefined on input line 290.
+
+[13]
+
+LaTeX Warning: Citation `BCPV96' on page 14 undefined on input line 312.
+
+
+LaTeX Warning: Citation `BGP95' on page 14 undefined on input line 313.
+
+
+LaTeX Warning: Citation `AS00' on page 14 undefined on input line 314.
+
+[14]
 Chapitre 2.
 \openout3 = `Memoire.mtc'.
 
 \openout3 = `Memoire.mtc'.
 
-(Memoire.mtc2)
-Overfull \hbox (0.61969pt too wide) in paragraph at lines 323--333
-\TU/LinLibertine(0)/m/n/10 taine date sous peine de violer son échéance. Nous n
-otons Di l’échéance relative de la tâche τi. L’échéance
+(Memoire.mtc2
+Overfull \hbox (9.86835pt too wide) in paragraph at lines 9--9
+ [][] [][]\TU/LinLibertine(0)/m/n/9 Algorithme d’ordonnancement « Energy-Saving
+ Rate-Harmonized Scheduling 
  []
 
-[21
+)
+
+LaTeX Warning: Citation `LL73' on page 15 undefined on input line 324.
+
+[15
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 334--335
 
+LaTeX Warning: Citation `WEE+08' on page 16 undefined on input line 332.
+
+[16]
+
+LaTeX Warning: Reference `tab:recap' on page 17 undefined on input line 350.
+
+
+LaTeX Warning: Citation `CK07' on page 17 undefined on input line 374.
+
+[17]
+
+LaTeX Warning: Citation `WWDS94' on page 18 undefined on input line 380.
+
+
+LaTeX Warning: Citation `YDS95' on page 18 undefined on input line 380.
+
+
+LaTeX Warning: Citation `PS01' on page 18 undefined on input line 380.
+
+
+LaTeX Warning: Citation `KAB+03' on page 18 undefined on input line 387.
+
+
+LaTeX Warning: Citation `SJPL08' on page 18 undefined on input line 387.
+
+
+LaTeX Warning: Citation `HXW+10' on page 18 undefined on input line 391.
+
+
+LaTeX Warning: Citation `Bor99' on page 18 undefined on input line 393.
+
+
+LaTeX Warning: Citation `SBA+01' on page 18 undefined on input line 393.
+
+
+LaTeX Warning: Citation `KAB+03' on page 18 undefined on input line 393.
+
+
+LaTeX Warning: Citation `ABM+04' on page 18 undefined on input line 393.
+
+
+LaTeX Warning: Citation `HSC+11' on page 18 undefined on input line 393.
+
+
+LaTeX Warning: Citation `BBMB13' on page 18 undefined on input line 393.
+
+
+LaTeX Warning: Citation `SRH05' on page 18 undefined on input line 394.
+
+
+LaTeX Warning: Citation `SPH05' on page 18 undefined on input line 394.
+
+
+LaTeX Warning: Citation `LSH10' on page 18 undefined on input line 394.
+
+
+Overfull \hbox (28.09023pt too wide) in paragraph at lines 409--413
+[]\TU/LinLibertine(0)/m/n/10 Consommation énergétique. Nous notons $\OML/cmm/m/
+it/10 Cons[]$ \TU/LinLibertine(0)/m/n/10 la consommation énergétique de l’état 
+basse-consommation 
  []
 
-[22]
-
-LaTeX Warning: Citation `BBMB13' on page 23 undefined on input line 390.
-
-[23]
-Overfull \hbox (9.26888pt too wide) in paragraph at lines 416--422
-\TU/LinLibertine(0)/m/n/10 tif, c’est-à-dire lors du délai de transition. Plus 
-la consommation énergétique d’un état basse-consommation
+[18]
+Overfull \hbox (19.27832pt too wide) in paragraph at lines 420--426
+[]\TU/LinLibertine(0)/m/n/10 Pénalité énergétique. Nous notons $\OML/cmm/m/it/1
+0 Pen[]$ \TU/LinLibertine(0)/m/n/10 la pénalité énergétique pour revenir de l’é
+tat basse-consommation 
  []
 
-[24]
-Overfull \hbox (10.76128pt too wide) in paragraph at lines 430--436
+
+LaTeX Warning: Citation `STM' on page 19 undefined on input line 431.
+
+
+LaTeX Warning: Citation `MPC' on page 19 undefined on input line 431.
+
+
+LaTeX Warning: Citation `AP11' on page 19 undefined on input line 434.
+
+
+LaTeX Warning: Citation `CG06' on page 19 undefined on input line 434.
+
+
+LaTeX Warning: Citation `DA08a' on page 19 undefined on input line 434.
+
+
+Overfull \hbox (22.42952pt too wide) in paragraph at lines 434--440
 \TU/LinLibertine(0)/m/n/10 consommation possède donc son propre BET et nous nom
 mons $\OML/cmm/m/it/10 BET[]$ \TU/LinLibertine(0)/m/n/10 le BET de l’état basse
--consommation
+-consommation 
  []
 
-) [25] [26]
+[19]
+Overfull \hbox (14.86636pt too wide) in paragraph at lines 448--449
+\TU/LinLibertine(0)/m/n/10 quences disponibles. Nous détaillons en revanche les
+ caractéristiques de chaque état basse-consommation, 
+ []
+
+
+LaTeX Warning: Citation `MPC' on page 20 undefined on input line 450.
+
+
+LaTeX Warning: Citation `AP11' on page 20 undefined on input line 450.
+
+
+LaTeX Warning: Citation `AP13' on page 20 undefined on input line 450.
+
+
+LaTeX Warning: Citation `AYP13' on page 20 undefined on input line 450.
+
+
+LaTeX Warning: Citation `Rowe10' on page 20 undefined on input line 455.
+
+
+LaTeX Warning: Citation `Rowe10' on page 20 undefined on input line 466.
+
+[20]
+
+LaTeX Warning: Citation `Rowe10' on page 21 undefined on input line 468.
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   T
+l.468 ...r $\Psi$ = \{ $\tau_j \mid T_j \lower 2T_
+                                                  1,j \neq 1$ \}. si $\Psi =...
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! A <box> was supposed to be here.
+<to be read again> 
+                   T
+l.468 ...r $\Psi$ = \{ $\tau_j \mid T_j \lower 2T_
+                                                  1,j \neq 1$ \}. si $\Psi =...
+I was expecting to see \hbox or \vbox or \copy or \box or
+something like that. So you might find something missing in
+your output. But keep trying; you can fix this later.
+
+
+LaTeX Warning: Citation `Rowe10' on page 21 undefined on input line 470.
+
+
+! Package amsmath Error: Erroneous nesting of equation structures;
+(amsmath)                trying to recover with `aligned'.
+
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.481 \end{align*}
+                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Reference `sec:cstate' on page 21 undefined on input line 490.
+
+
+Overfull \hbox (4.84633pt too wide) in paragraph at lines 490--493
+[]\TU/LinLibertine(0)/m/n/10 comme vu dans la section [], les processeurs sont 
+dotés de mode de basse consommation. par exemple : 
+ []
+
+! Undefined control sequence.
+l.499 avec $PW_{active} > \PW
+                             _{idle} \gg \PW_{sleep} $ et $ \ST_{idle} \ll \...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.499 avec $PW_{active} > \PW_{idle} \gg \PW
+                                            _{sleep} $ et $ \ST_{idle} \ll \...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.499 ...} > \PW_{idle} \gg \PW_{sleep} $ et $ \ST
+                                                  _{idle} \ll \ST_{sleep}$.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.499 ...\gg \PW_{sleep} $ et $ \ST_{idle} \ll \ST
+                                                  _{sleep}$.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \ST 
+                    
+l.500 ...i il  y a une tache qui arrive avant $\ST
+                                                  _{sleep}$ unité de temps,...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `DAR16' on page 21 undefined on input line 502.
+
+[21]
+
+LaTeX Warning: Citation `Rowe10' on page 22 undefined on input line 504.
+
+
+LaTeX Warning: Reference `tab:exempleRHS' on page 22 undefined on input line 50
+5.
+
+
+LaTeX Warning: Reference `fig:exempleRHS' on page 22 undefined on input line 50
+5.
+
+
+LaTeX Warning: Reference `fig:exempleRHS+' on page 22 undefined on input line 5
+05.
+
+File: rhs.png Graphic file (type QTm)
+<use  "rhs.png" >
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 522.
+See the caption package documentation for explanation.
+
+File: rhs+.png Graphic file (type QTm)
+<use  "rhs+.png" >
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 525.
+See the caption package documentation for explanation.
+
+[22]) [23]
 \openout2 = `partie2.aux'.
 
- (partie2.tex [27
+ (partie2.tex [24
 
 
 
-] [28]
+] [25] [26]
 Chapitre 3.
 \openout3 = `Memoire.mtc'.
 
 \openout3 = `Memoire.mtc'.
 
-(Memoire.mtc3) [29
+(Memoire.mtc3) [27
 
-] [30
+] [28
 
 ]
 Chapitre 4.
@@ -2127,23 +2562,23 @@ Chapitre 4.
 
 \openout3 = `Memoire.mtc'.
 
-(Memoire.mtc4) [31] [32
+(Memoire.mtc4) [29] [30
 
 ]
 Chapitre 5.
-) [33]
+) [31]
 \openout2 = `conclusion.aux'.
 
- (conclusion.tex [34
+ (conclusion.tex [32
 
 
 
-] [35] [36]) (Memoire.bbl [37
+] [33] [34]) (Memoire.bbl [35
 
 
 ]
 Invalid UTF-8 byte or sequence at line 119 replaced by U+FFFD.
- [38]
+ [36]
 Missing character: There is no ^^97 in font [LinLibertine_R.otf]/OT:script=latn
 ;language=DFLT;mapping=tex-text;+tnum;+lnum;!
 
@@ -2163,18 +2598,24 @@ Package minitoc Info: I0009
 
 
 
+Package minitoc(hints) Warning: W0068
+(minitoc(hints))                You have used \minitoc but not 
+(minitoc(hints))                \tableofcontents
+(minitoc(hints))                nor \faketableofcontents.
+
+
 Package minitoc(hints) Warning: W0024
 (minitoc(hints))                Some hints have been written 
 (minitoc(hints))                in the Memoire.log file.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 40.
-[39]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 40.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 46.
+[37]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 46.
  (Memoire.aux (remerciments.aux) (resume.aux) (abstract.aux)
 (listeSymbole.aux) (introduction.aux) (partie1.aux) (partie2.aux)
 (conclusion.aux))
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 40.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 40.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 46.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 46.
 
 
 LaTeX Warning: There were undefined references.
@@ -2182,19 +2623,19 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 40.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 46.
  )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 38491 strings out of 427899
- 733796 string characters out of 3153118
- 763652 words of memory out of 3000000
- 41757 multiletter control sequences out of 15000+200000
+ 40522 strings out of 427899
+ 765570 string characters out of 3153118
+ 792050 words of memory out of 3000000
+ 43756 multiletter control sequences out of 15000+200000
  19522 words of font info for 82 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
- 49i,10n,83p,10376b,33077s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 53i,11n,92p,10376b,35066s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Memoire.pdf (39 pages).
+Output written on Memoire.pdf (37 pages).

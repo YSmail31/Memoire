@@ -4,10 +4,15 @@
 \usepackage[T1]{fontenc}
 \usepackage[frenchb]{babel}
 \usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{caption}
 \begin{document}
-\tableofcontents
-\section{Semaine 1}
-\lipsum[1-5]
-\section{Semaine 2}
-\lipsum[6-10]
+\begin{center}
+\includegraphics[height=4cm,width=12cm]{C:/Users/ismail/Pictures/rhs.png}
+\captionof{figure}{Energy-Saving RHS}
+\label{fig:exempleRHS}
+\includegraphics[height=4cm,width=12cm]{C:/Users/ismail/Pictures/rhs+.png}
+\captionof{figure}{Energy-Saving RHS+}
+\label{fig:exempleRHS+}
+\end{center}
 \end{document}
