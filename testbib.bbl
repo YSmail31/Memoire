@@ -1,0 +1,15 @@
+\begin{thebibliography}{1}
+
+\bibitem{DAR16}
+Sandeep D'Souza, Anand Bhat, and Ragunathan Rajkumar.
+\newblock Sleep scheduling for energy-savings in multi-core processors.
+\newblock In {\em ECRTS}, pages 226--236. IEEE Computer Society, 2016.
+
+\bibitem{Rowe10}
+A.~Rowe, K.~Lakshmanan, H.~Zhu, and R.~Rajkumar.
+\newblock Rate-harmonized scheduling and its applicability to energy
+  management.
+\newblock {\em IEEE Transactions on Industrial Informatics}, 6(3):265--275, Aug
+  2010.
+
+\end{thebibliography}

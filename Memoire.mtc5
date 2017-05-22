@@ -1,3 +1,9 @@
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {5.1}La génération des taches}{\reset@font\mtcSfont 33}{section.5.1}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {5.1}La génération des taches}{\reset@font\mtcSfont 32}{section.5.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.1.1}Cas monoprocesseur}{\reset@font\mtcSSfont 32}{subsection.5.1.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Algorithmes UUnifast}{\reset@font\mtcSSSfont 32}{section*.21}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Génération des périodes}{\reset@font\mtcSSSfont 32}{section*.22}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Génération des échéances}{\reset@font\mtcSSSfont 33}{section*.23}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.1.2}Cas multiprocesseur}{\reset@font\mtcSSfont 33}{subsection.5.1.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Algorithme UUnifast-Discard}{\reset@font\mtcSSSfont 33}{section*.24}}
 {\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {5.2}La simulation}{\reset@font\mtcSfont 33}{section.5.2}}
 {\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {5.3}Discussions}{\reset@font\mtcSfont 33}{section.5.3}}

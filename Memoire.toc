@@ -1,50 +1,36 @@
 \select@language {french}
 \select@language {french}
+\contentsline {section}{\numberline {0.1}Liste des symboles}{3}{section.0.1}
 \partbegin 
-\contentsline {part}{I\hspace {1em}Partie Theorique}{5}{part.1}
-\contentsline {xpart}{Partie Theorique}{7}{part.1}
-\contentsline {chapter}{\numberline {1}Introduction Au systeme temps réel}{7}{chapter.1}
-\contentsline {section}{\numberline {1.1}Introduction}{8}{section.1.1}
-\contentsline {section}{\numberline {1.2}Taxonomie sur les systèmes temps réel}{8}{section.1.2}
-\contentsline {section}{\numberline {1.3}Ordonnancement monoprocesseur}{8}{section.1.3}
-\contentsline {subsection}{\numberline {1.3.1}Algorithme d’ordonnancement à priorité fixe}{9}{subsection.1.3.1}
-\contentsline {subsubsection}{Rate Monotonic \cite {LL73}}{9}{section*.4}
-\contentsline {subsubsection}{Deadline Monotonic \cite {LW82}}{10}{section*.7}
-\contentsline {subsection}{\numberline {1.3.2}Algorithme d’ordonnancement à priorité dynamique}{11}{subsection.1.3.2}
-\contentsline {subsubsection}{Earliest Deadline First\cite {LL73}}{11}{section*.10}
-\contentsline {subsubsection}{Least Laxity}{12}{section*.13}
-\contentsline {section}{\numberline {1.4}Ordonnancement Multiprocesseur}{13}{section.1.4}
-\contentsline {subsection}{\numberline {1.4.1}Classification}{13}{subsection.1.4.1}
-\contentsline {subsection}{\numberline {1.4.2}Optimalité}{13}{subsection.1.4.2}
-\contentsline {subsection}{\numberline {1.4.3}Algorithme d'ordonnancement utilisant une stratégie par partitionnement}{14}{subsection.1.4.3}
-\contentsline {subsubsection}{Généralité}{14}{section*.14}
-\contentsline {subsubsection}{First-Fit et Best-Fit}{14}{section*.15}
-\contentsline {subsection}{\numberline {1.4.4}Algorithme d'ordonnancement utilisant une stratégie globale}{14}{subsection.1.4.4}
-\contentsline {subsubsection}{Algorithme de type Pfair}{14}{section*.16}
-\contentsline {section}{\numberline {1.5}Conclusion}{14}{section.1.5}
-\contentsline {chapter}{\numberline {2}Etat de l'art}{15}{chapter.2}
-\contentsline {section}{\numberline {2.1}Introduction}{15}{section.2.1}
-\contentsline {section}{\numberline {2.2}Modélisation des tâches}{15}{section.2.2}
-\contentsline {section}{\numberline {2.3}Les modèles de consommation d'énergie DVFS et DPM}{17}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Consommation dynamique}{17}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Consommation statique}{18}{subsection.2.3.2}
-\contentsline {section}{\numberline {2.4}Les états C-states du processeur}{18}{section.2.4}
-\contentsline {section}{\numberline {2.5}L'endormissement de processeur (Online VS Offline)}{20}{section.2.5}
-\contentsline {section}{\numberline {2.6}Le Modèle d'endormissement de Dsouza}{20}{section.2.6}
-\contentsline {subsection}{\numberline {2.6.1}Algorithme d’ordonnancement « Energy-Saving Rate-Harmonized Scheduling »}{21}{subsection.2.6.1}
-\contentsline {subsection}{\numberline {2.6.2}Energy-Saving Rate-Harmonized Scheduling}{21}{subsection.2.6.2}
-\contentsline {subsection}{\numberline {2.6.3}Energy-Saving Rate-Harmonized Scheduling+}{22}{subsection.2.6.3}
-\contentsline {section}{\numberline {2.7}Conclusion}{23}{section.2.7}
-\contentsline {part}{II\hspace {1em}Contributions et Implementation}{25}{part.2}
-\contentsline {xpart}{Contributions et Implementation}{27}{part.2}
-\contentsline {chapter}{\numberline {3}Endormissement de tache sous priorité Fixe}{27}{chapter.3}
-\contentsline {section}{\numberline {3.1}Le cas monoprocesseur}{27}{section.3.1}
-\contentsline {section}{\numberline {3.2}Le cas multiprocesseur}{27}{section.3.2}
-\contentsline {chapter}{\numberline {4}Endormissement de tache sous priorité dynamique}{29}{chapter.4}
-\contentsline {section}{\numberline {4.1}Le cas monoprocesseur}{29}{section.4.1}
-\contentsline {section}{\numberline {4.2}Le cas multiprocesseur}{29}{section.4.2}
-\contentsline {chapter}{\numberline {5}Expérimentations}{31}{chapter.5}
-\contentsline {section}{\numberline {5.1}La génération des taches}{31}{section.5.1}
-\contentsline {section}{\numberline {5.2}La simulation}{31}{section.5.2}
-\contentsline {section}{\numberline {5.3}Discussions}{31}{section.5.3}
-\partbegin 
+\contentsline {part}{{\fontencoding {TU}\selectfont I}\hspace {1em}Partie Theorique}{8}{part.1}
+\contentsline {xpart}{Partie Theorique}{10}{part.1}
+\contentsline {chapter}{\numberline {1}Introduction Au systeme temps réel}{10}{chapter.1}
+\contentsline {section}{\numberline {1.1}Introduction}{11}{section.1.1}
+\contentsline {section}{\numberline {1.2}Taxonomie sur les systèmes temps réel}{11}{section.1.2}
+\contentsline {section}{\numberline {1.3}Modélisation des tâches}{11}{section.1.3}
+\contentsline {section}{\numberline {1.4}Ordonnancement monoprocesseur}{13}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.1}Algorithme d’ordonnancement à priorité fixe}{13}{subsection.1.4.1}
+\contentsline {subsubsection}{Rate Monotonic \cite {LL73}}{13}{section*.5}
+\contentsline {subsubsection}{Deadline Monotonic \cite {LW82}}{14}{section*.8}
+\contentsline {subsection}{\numberline {1.4.2}Algorithme d’ordonnancement à priorité dynamique}{15}{subsection.1.4.2}
+\contentsline {subsubsection}{Earliest Deadline First\cite {LL73}}{15}{section*.11}
+\contentsline {section}{\numberline {1.5}Ordonnancement Multiprocesseur}{17}{section.1.5}
+\contentsline {subsection}{\numberline {1.5.1}Classification}{17}{subsection.1.5.1}
+\contentsline {subsection}{\numberline {1.5.2}Optimalité}{17}{subsection.1.5.2}
+\contentsline {subsection}{\numberline {1.5.3}Algorithme d'ordonnancement utilisant une stratégie par partitionnement}{18}{subsection.1.5.3}
+\contentsline {subsubsection}{Généralité}{18}{section*.14}
+\contentsline {subsubsection}{First-Fit et Best-Fit}{18}{section*.15}
+\contentsline {section}{\numberline {1.6}Conclusion}{18}{section.1.6}
+\contentsline {chapter}{\numberline {2}Etat de l'art}{20}{chapter.2}
+\contentsline {section}{\numberline {2.1}Introduction}{20}{section.2.1}
+\contentsline {section}{\numberline {2.2}Les modèles de consommation d'énergie DVFS et DPM}{20}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Consommation dynamique}{21}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Consommation statique}{21}{subsection.2.2.2}
+\contentsline {section}{\numberline {2.3}Les états C-states du processeur}{22}{section.2.3}
+\contentsline {section}{\numberline {2.4}L'endormissement de processeur (Online VS Offline)}{23}{section.2.4}
+\contentsline {section}{\numberline {2.5}Le Modèle d'endormissement de Dsouza}{23}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Période d’harmonisation}{24}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}Algorithme d’ordonnancement « Energy-Saving Rate-Harmonized Scheduling »}{24}{subsection.2.5.2}
+\contentsline {subsection}{\numberline {2.5.3}Energy-Saving Rate-Harmonized Scheduling}{24}{subsection.2.5.3}
+\contentsline {subsection}{\numberline {2.5.4}Energy-Saving Rate-Harmonized Scheduling+}{25}{subsection.2.5.4}
+\contentsline {section}{\numberline {2.6}Conclusion}{26}{section.2.6}

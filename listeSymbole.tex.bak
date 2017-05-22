@@ -11,5 +11,5 @@
 	\item[$\taskset$] ensemble de tâches
 	\item[$\freq$] Fréquence opérationnel 
 	\item[$\coeff$] Coefficient d'énergie
-	\item[$\volt$] Tension d’alimentation
+	\item[$\volt$] Voltage opérationnel
 \end{description}

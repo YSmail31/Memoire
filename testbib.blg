@@ -1,0 +1,7 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: testbib.aux
+The style file: plain.bst
+Database file #1: bib.bib
+A bad cross reference---entry "DAR16"
+refers to entry "conf/ecrts/2016", which doesn't exist
+Warning--I didn't find a database entry for "conf/ecrts/2016"
+(There was 1 error message)
