@@ -565,19 +565,19 @@ un ensmeble de taches $\taskset$ est faisable sous RHS si $U \leq 0.5$ .
 \end{theoreme}
 
 \begin{theoreme}
-le calcul du pire temps de reponse $W_k$ [23,24] dans le cas de RHS peut etre redéfini comme suit :
+le calcul du pire temps de reponse $\resp{i}{}$ [23,24] dans le cas de RHS peut etre redéfini comme suit :
 \\ 
 %\begin{equation}
 \begin{align}
-W_0 & = \wcet{i} + \periode{H} 
-\\ W_{k+1} & = \wcet{i} + \periode{H} + \sum_{j = 1}^{i-1} \bigg \lceil \frac{W_k}{\periode{j}}\bigg \rceil \wcet{j}
+\resp{i}{0} & = \wcet{i} + \periode{H} 
+\\ \resp{i}{k+1} & = \wcet{i} + \periode{H} + \sum_{j = 1}^{i-1} \bigg \lceil \frac{\resp{i}{k}}{\periode{j}}\bigg \rceil \wcet{j}
 \end{align}
 %\end{equation}
 \end{theoreme}
 
 \begin{theoreme}[\cite{Rowe10}]
 Soit $\taskset = \{\tache{1}, \tache{2}, \dots, \tache{n} \}$ un ensemble de tache periodiques indépendantes. \\
-Si il existe une tache $\tache{i}$ avec un pire temps de reponse $W_k$ tel que $W_k > \deadline{i}$ alors l'ensemble de tache $\taskset$ est non ordonnançable.
+Si il existe une tache $\tache{i}$ avec un pire temps de reponse $\resp{i}{}$ tel que $\resp{i}{} > \deadline{i}$ alors l'ensemble de tache $\taskset$ est non ordonnançable.
 \end{theoreme}
 \subsection{Energy-Saving Rate-Harmonized Scheduling}
 comme vu dans la section \ref{sec:cstate}, les processeurs sont dotés de mode de basse consommation.

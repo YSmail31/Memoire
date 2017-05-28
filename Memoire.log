@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (MiKTeX 2.9.6210 64-bit) (preloaded format=xelatex 2017.3.4)  22 MAY 2017 00:19
+This is XeTeX, Version 3.14159265-2.6-0.99996 (MiKTeX 2.9.6210 64-bit) (preloaded format=xelatex 2017.3.4)  28 MAY 2017 14:18
 entering extended mode
 **./Memoire.tex
 (Memoire.tex
@@ -2074,9 +2074,7 @@ File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
 (C:\Users\ismail\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlayer\tikz\
 libraries\tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
-))) (Memoire.aux (remerciments.aux)
-(resume.aux) (abstract.aux) (listeSymbole.aux) (introduction.aux) (partie1.aux)
-)
+))) (Memoire.aux (partie2.aux))
 \openout1 = `Memoire.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
@@ -2095,7 +2093,8 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
 LaTeX Font Info:    ... okay on input line 48.
 LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 48.
 LaTeX Font Info:    Try loading font information for LGR+cmr on input line 48.
- (C:\Users\ismail\AppData\Roaming\MiKTeX\2.9\tex\latex\cbfonts-fd\lgrcmr.fd
+
+(C:\Users\ismail\AppData\Roaming\MiKTeX\2.9\tex\latex\cbfonts-fd\lgrcmr.fd
 File: lgrcmr.fd 2016/03/04 v1.1 Greek European Computer Regular
 )
 LaTeX Font Info:    ... okay on input line 48.
@@ -2281,7 +2280,7 @@ Package minitoc Info: I0024
 (minitoc)             PREPARING MINITOCS FROM Memoire.toc on input line 51.
 
 {\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \n
-umberline {0.1}Liste des symboles}{\reset@font\mtcSfont 3}{section.0.1}}
+umberline {0.1}Liste des symboles}{\reset@font\mtcSfont 4}{section.0.1}}
 \openout3 = `Memoire.mtc'.
 
 Package minitoc Info: I0033
@@ -2292,153 +2291,25 @@ Package minitoc Info: I0033
 (minitoc)             Writing Memoire.mtc2.
 \openout3 = `Memoire.mtc2'.
 
-\openout2 = `remerciments.aux'.
+Package minitoc Info: I0033
+(minitoc)             Writing Memoire.mtc3.
+\openout3 = `Memoire.mtc3'.
 
-(remerciments.tex)
-\openout2 = `resume.aux'.
+Package minitoc Info: I0033
+(minitoc)             Writing Memoire.mtc4.
+\openout3 = `Memoire.mtc4'.
 
- (resume.tex)
-\openout2 = `abstract.aux'.
+Package minitoc Info: I0033
+(minitoc)             Writing Memoire.mtc5.
+\openout3 = `Memoire.mtc5'.
 
- (abstract.tex)
-Requested font "[LinLibertine_R.otf]/OT:script=latn;language=DFLT;mapping=tex-t
-ext;+tnum;+lnum;" at 24.88pt
- -> C:/Users/ismail/AppData/Roaming/MiKTeX/2.9/fonts/opentype/public/libertine/
-LinLibertine_R.otf
-Requested font "[LinLibertine_RB.otf]/OT:script=latn;language=DFLT;mapping=tex-
-text;+tnum;+lnum;" at 24.88pt
- -> C:/Users/ismail/AppData/Roaming/MiKTeX/2.9/fonts/opentype/public/libertine/
-LinLibertine_RB.otf
- (Memoire.toc
-Requested font "[LinLibertine_R.otf]/OT:script=latn;language=DFLT;mapping=tex-t
-ext;+tnum;+lnum;" at 7.0pt
- -> C:/Users/ismail/AppData/Roaming/MiKTeX/2.9/fonts/opentype/public/libertine/
-LinLibertine_R.otf
-Requested font "[LinLibertine_R.otf]/OT:script=latn;language=DFLT;mapping=tex-t
-ext;+tnum;+lnum;" at 5.0pt
- -> C:/Users/ismail/AppData/Roaming/MiKTeX/2.9/fonts/opentype/public/libertine/
-LinLibertine_R.otf
-Requested font "cmex7" at 7.0pt
-Requested font "cmex7" at 5.0pt
-LaTeX Font Info:    Try loading font information for U+msa on input line 3.
+\openout2 = `partie2.aux'.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-Requested font "msam10" at 10.0pt
-Requested font "msam7" at 7.0pt
-Requested font "msam5" at 5.0pt
-LaTeX Font Info:    Try loading font information for U+msb on input line 3.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Requested font "msbm10" at 10.0pt
-Requested font "msbm7" at 7.0pt
-Requested font "msbm5" at 5.0pt
-Requested font "[LinLibertine_R.otf]/OT:script=latn;language=DFLT;mapping=tex-t
-ext;+tnum;+lnum;" at 12.0pt
- -> C:/Users/ismail/AppData/Roaming/MiKTeX/2.9/fonts/opentype/public/libertine/
-LinLibertine_R.otf
-Requested font "[LinLibertine_RB.otf]/OT:script=latn;language=DFLT;mapping=tex-
-text;+tnum;+lnum;" at 12.0pt
- -> C:/Users/ismail/AppData/Roaming/MiKTeX/2.9/fonts/opentype/public/libertine/
-LinLibertine_RB.otf
-Requested font "[LinLibertine_R.otf]/OT:script=latn;language=DFLT;mapping=tex-t
-ext;+tnum;+lnum;" at 8.0pt
- -> C:/Users/ismail/AppData/Roaming/MiKTeX/2.9/fonts/opentype/public/libertine/
-LinLibertine_R.otf
-Requested font "[LinLibertine_R.otf]/OT:script=latn;language=DFLT;mapping=tex-t
-ext;+tnum;+lnum;" at 6.0pt
- -> C:/Users/ismail/AppData/Roaming/MiKTeX/2.9/fonts/opentype/public/libertine/
-LinLibertine_R.otf
-Requested font "cmmi12" at 12.0pt
-Requested font "cmmi8" at 8.0pt
-Requested font "cmmi6" at 6.0pt
-Requested font "cmsy10" at 12.0pt
-Requested font "cmsy8" at 8.0pt
-Requested font "cmsy6" at 6.0pt
-Requested font "cmex10" at 12.0pt
-Requested font "cmex8" at 8.0pt
-Requested font "cmex7" at 6.0pt
-Requested font "msam10" at 12.0pt
-Requested font "msam10" at 8.0pt
-Requested font "msam7" at 6.0pt
-Requested font "msbm10" at 12.0pt
-Requested font "msbm10" at 8.0pt
-Requested font "msbm7" at 6.0pt
-Requested font "cmr12" at 12.0pt
-Requested font "cmr8" at 8.0pt
-Requested font "cmr6" at 6.0pt
-Requested font "[LinLibertine_RB.otf]/OT:script=latn;language=DFLT;mapping=tex-
-text;+tnum;+lnum;" at 10.0pt
- -> C:/Users/ismail/AppData/Roaming/MiKTeX/2.9/fonts/opentype/public/libertine/
-LinLibertine_RB.otf
-)
-\tf@toc=\write6
-\openout6 = `Memoire.toc'.
-
- (Memoire.lof
+(partie2.tex
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\se-ascii-print.def"
 File: se-ascii-print.def 2016/05/16 v1.11 stringenc: Printable ASCII characters
 
 )
-[1
-
-
-
-
-
-
-
-])
-\tf@lof=\write7
-\openout7 = `Memoire.lof'.
-
- (Memoire.lot)
-\tf@lot=\write8
-\openout8 = `Memoire.lot'.
-
- [2]
-\openout2 = `listeSymbole.aux'.
-
- (listeSymbole.tex
-Requested font "[LinLibertine_R.otf]/OT:script=latn;language=DFLT;mapping=tex-t
-ext;+tnum;+lnum;" at 14.4pt
- -> C:/Users/ismail/AppData/Roaming/MiKTeX/2.9/fonts/opentype/public/libertine/
-LinLibertine_R.otf
-Requested font "[LinLibertine_RB.otf]/OT:script=latn;language=DFLT;mapping=tex-
-text;+tnum;+lnum;" at 14.4pt
- -> C:/Users/ismail/AppData/Roaming/MiKTeX/2.9/fonts/opentype/public/libertine/
-LinLibertine_RB.otf
-)
-LaTeX Font Info:    Font shape `TU/LinLibertine(0)/m/sl' in size <10> not avail
-able
-(Font)              Font shape `TU/LinLibertine(0)/m/it' tried instead on input
- line 58.
-Requested font "[LinLibertine_RI.otf]/OT:script=latn;language=DFLT;mapping=tex-
-text;+tnum;+lnum;" at 10.0pt
- -> C:/Users/ismail/AppData/Roaming/MiKTeX/2.9/fonts/opentype/public/libertine/
-LinLibertine_RI.otf
- [3
-
-]
-\openout2 = `introduction.aux'.
-
- (introduction.tex [4
-
-
-
-] [5]
-Requested font "[LinLibertine_R.otf]/OT:script=latn;language=DFLT;mapping=tex-t
-ext;+tnum;+lnum;+smcp;" at 10.0pt
- -> C:/Users/ismail/AppData/Roaming/MiKTeX/2.9/fonts/opentype/public/libertine/
-LinLibertine_R.otf
-
-[6]) [7]
-\openout2 = `partie1.aux'.
-
- (partie1.tex
 Requested font "[LinLibertine_R.otf]/OT:script=latn;language=DFLT;mapping=tex-t
 ext;+tnum;+lnum;" at 20.74pt
  -> C:/Users/ismail/AppData/Roaming/MiKTeX/2.9/fonts/opentype/public/libertine/
@@ -2447,11 +2318,16 @@ Requested font "[LinLibertine_RB.otf]/OT:script=latn;language=DFLT;mapping=tex-
 text;+tnum;+lnum;" at 20.74pt
  -> C:/Users/ismail/AppData/Roaming/MiKTeX/2.9/fonts/opentype/public/libertine/
 LinLibertine_RB.otf
- [8
+Requested font "[LinLibertine_RB.otf]/OT:script=latn;language=DFLT;mapping=tex-
+text;+tnum;+lnum;" at 24.88pt
+ -> C:/Users/ismail/AppData/Roaming/MiKTeX/2.9/fonts/opentype/public/libertine/
+LinLibertine_RB.otf
+
+[1
 
 
 
-] [9]
+] [2]
 Chapitre 1.
 \openout3 = `Memoire.mtc'.
 
@@ -2461,129 +2337,173 @@ Requested font "[LinLibertine_R.otf]/OT:script=latn;language=DFLT;mapping=tex-t
 ext;+tnum;+lnum;" at 9.0pt
  -> C:/Users/ismail/AppData/Roaming/MiKTeX/2.9/fonts/opentype/public/libertine/
 LinLibertine_R.otf
+Requested font "[LinLibertine_R.otf]/OT:script=latn;language=DFLT;mapping=tex-t
+ext;+tnum;+lnum;" at 6.0pt
+ -> C:/Users/ismail/AppData/Roaming/MiKTeX/2.9/fonts/opentype/public/libertine/
+LinLibertine_R.otf
+Requested font "[LinLibertine_R.otf]/OT:script=latn;language=DFLT;mapping=tex-t
+ext;+tnum;+lnum;" at 5.0pt
+ -> C:/Users/ismail/AppData/Roaming/MiKTeX/2.9/fonts/opentype/public/libertine/
+LinLibertine_R.otf
 Requested font "cmmi9" at 9.0pt
+Requested font "cmmi6" at 6.0pt
 Requested font "cmsy9" at 9.0pt
+Requested font "cmsy6" at 6.0pt
 Requested font "cmex9" at 9.0pt
+Requested font "cmex7" at 6.0pt
+Requested font "cmex7" at 5.0pt
+LaTeX Font Info:    Try loading font information for U+msa on input line 4.
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
 Requested font "msam10" at 9.0pt
+Requested font "msam7" at 6.0pt
+Requested font "msam5" at 5.0pt
+LaTeX Font Info:    Try loading font information for U+msb on input line 4.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
 Requested font "msbm10" at 9.0pt
+Requested font "msbm7" at 6.0pt
+Requested font "msbm5" at 5.0pt
 Requested font "cmr9" at 9.0pt
-(Memoire.mtc1
+Requested font "cmr6" at 6.0pt
+Requested font "[LinLibertine_R.otf]/OT:script=latn;language=DFLT;mapping=tex-t
+ext;+tnum;+lnum;" at 12.0pt
+ -> C:/Users/ismail/AppData/Roaming/MiKTeX/2.9/fonts/opentype/public/libertine/
+LinLibertine_R.otf
+Requested font "[LinLibertine_RB.otf]/OT:script=latn;language=DFLT;mapping=tex-
+text;+tnum;+lnum;" at 12.0pt
+ -> C:/Users/ismail/AppData/Roaming/MiKTeX/2.9/fonts/opentype/public/libertine/
+LinLibertine_RB.otf
+ (Memoire.mtc1
 Requested font "[LinLibertine_RB.otf]/OT:script=latn;language=DFLT;mapping=tex-
 text;+tnum;+lnum;" at 9.0pt
  -> C:/Users/ismail/AppData/Roaming/MiKTeX/2.9/fonts/opentype/public/libertine/
 LinLibertine_RB.otf
 
 
-LaTeX Warning: Citation `LL73' on page 10 undefined on input line 6.
+LaTeX Warning: Citation `LL73' on page 3 undefined on input line 6.
 
 
-LaTeX Warning: Citation `LW82' on page 10 undefined on input line 7.
+LaTeX Warning: Citation `LW82' on page 3 undefined on input line 7.
 
 
-LaTeX Warning: Citation `LL73' on page 10 undefined on input line 9.
+LaTeX Warning: Citation `LL73' on page 3 undefined on input line 9.
 
-) [10
+)
+Requested font "[LinLibertine_R.otf]/OT:script=latn;language=DFLT;mapping=tex-t
+ext;+tnum;+lnum;" at 14.4pt
+ -> C:/Users/ismail/AppData/Roaming/MiKTeX/2.9/fonts/opentype/public/libertine/
+LinLibertine_R.otf
+Requested font "[LinLibertine_RB.otf]/OT:script=latn;language=DFLT;mapping=tex-
+text;+tnum;+lnum;" at 14.4pt
+ -> C:/Users/ismail/AppData/Roaming/MiKTeX/2.9/fonts/opentype/public/libertine/
+LinLibertine_RB.otf
+ [3
 
 ]
+Requested font "[LinLibertine_R.otf]/OT:script=latn;language=DFLT;mapping=tex-t
+ext;+tnum;+lnum;" at 7.0pt
+ -> C:/Users/ismail/AppData/Roaming/MiKTeX/2.9/fonts/opentype/public/libertine/
+LinLibertine_R.otf
+Requested font "cmex7" at 7.0pt
+Requested font "msam10" at 10.0pt
+Requested font "msam7" at 7.0pt
+Requested font "msbm10" at 10.0pt
+Requested font "msbm7" at 7.0pt
+ (dmup.tex
+Requested font "[LinLibertine_RB.otf]/OT:script=latn;language=DFLT;mapping=tex-
+text;+tnum;+lnum;" at 10.0pt
+ -> C:/Users/ismail/AppData/Roaming/MiKTeX/2.9/fonts/opentype/public/libertine/
+LinLibertine_RB.otf
+Requested font "[LinLibertine_RB.otf]/OT:script=latn;language=DFLT;mapping=tex-
+text;+tnum;+lnum;" at 7.0pt
+ -> C:/Users/ismail/AppData/Roaming/MiKTeX/2.9/fonts/opentype/public/libertine/
+LinLibertine_RB.otf
+)
 
-LaTeX Warning: Citation `LL73' on page 11 undefined on input line 15.
+LaTeX Warning: Reference `fig:exempledmupapr' on page 4 undefined on input line
+ 19.
 
-[11]
+Requested font "[LinLibertine_R.otf]/OT:script=latn;language=DFLT;mapping=tex-t
+ext;+tnum;+lnum;+smcp;" at 10.0pt
+ -> C:/Users/ismail/AppData/Roaming/MiKTeX/2.9/fonts/opentype/public/libertine/
+LinLibertine_R.otf
 
-LaTeX Warning: Citation `WEE+08' on page 12 undefined on input line 24.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[12]
-
-LaTeX Warning: Citation `LL73' on page 13 undefined on input line 76.
-
-
-LaTeX Warning: Citation `LL73' on page 13 undefined on input line 78.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-LaTeX Font Info:    Try loading font information for T1+phv on input line 99.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 36.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1phv.fd"
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 Requested font "phvr8t" at 10.0pt
 Requested font "phvr8t" at 6.0pt
 Requested font "phvr8t" at 8.0pt
+Requested font "[LinLibertine_R.otf]/OT:script=latn;language=DFLT;mapping=tex-t
+ext;+tnum;+lnum;" at 8.0pt
+ -> C:/Users/ismail/AppData/Roaming/MiKTeX/2.9/fonts/opentype/public/libertine/
+LinLibertine_R.otf
+Requested font "cmmi8" at 8.0pt
+Requested font "cmsy8" at 8.0pt
+Requested font "cmex8" at 8.0pt
+Requested font "msam10" at 8.0pt
+Requested font "msbm10" at 8.0pt
+Requested font "cmr8" at 8.0pt
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Citation `LL73' on page 13 undefined on input line 129.
-
-
-LaTeX Warning: Citation `LW82' on page 13 undefined on input line 135.
-
-
-LaTeX Warning: Citation `LW82' on page 13 undefined on input line 137.
-
-[13]
-
-LaTeX Warning: Citation `JP86' on page 14 undefined on input line 153.
-
-[14]
-
-LaTeX Warning: Citation `LL73' on page 15 undefined on input line 222.
-
-
-LaTeX Warning: Citation `LL73' on page 15 undefined on input line 224.
-
-
-LaTeX Warning: Citation `Der74' on page 15 undefined on input line 224.
-
-
-LaTeX Warning: Citation `Hor74' on page 15 undefined on input line 224.
-
-
-LaTeX Warning: Citation `LL73' on page 15 undefined on input line 227.
-
-[15]
-
-LaTeX Warning: Citation `BHR93' on page 16 undefined on input line 247.
-
-
-LaTeX Warning: Citation `Der74' on page 16 undefined on input line 257.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Overfull \hbox (0.37862pt too wide) in paragraph at lines 319--320
-[]\TU/LinLibertine(0)/m/n/10 le problème de la migration des tâches : une tâche
- peut-elle changer de processeur pour s’exé- 
+Overfull \hbox (10.47061pt too wide) in paragraph at lines 68--71
+[]\TU/LinLibertine(0)/m/n/10 Dans cette section nous allons inserer un ensemble
+ de tâches d’endormissement $\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 ^^\[]; ^^\[]; :
+::; ^^\[]\OMS/cmsy/m/n/10 g$ 
  []
 
-[16]
+LaTeX Font Info:    Font shape `TU/LinLibertine(0)/m/sl' in size <10> not avail
+able
+(Font)              Font shape `TU/LinLibertine(0)/m/it' tried instead on input
+ line 71.
+Requested font "[LinLibertine_RI.otf]/OT:script=latn;language=DFLT;mapping=tex-
+text;+tnum;+lnum;" at 10.0pt
+ -> C:/Users/ismail/AppData/Roaming/MiKTeX/2.9/fonts/opentype/public/libertine/
+LinLibertine_RI.otf
+[4]
+Overfull \hbox (2.10912pt too wide) in paragraph at lines 73--74
+[]\TU/LinLibertine(0)/m/n/10 Insertion Globale : Tous les processeur ont une mê
+me tache d’endormissement $\OML/cmm/m/it/10 ^^\[] \OT1/cmr/m/n/10 = \OML/cmm/m/
+it/10 ^^\[] \OT1/cmr/m/n/10 = 
+ []
 
-LaTeX Warning: Citation `LW82' on page 17 undefined on input line 333.
+(dmmpl.tex) (dmmpg.tex [5])
+
+LaTeX Warning: Reference `tab:exempledmmp' on page 6 undefined on input line 78
+.
 
 
-LaTeX Warning: Citation `HL92' on page 17 undefined on input line 337.
+LaTeX Warning: Reference `fig:exempledmmpl' on page 6 undefined on input line 7
+8.
 
 
-LaTeX Warning: Citation `LW82' on page 17 undefined on input line 345.
-
-[17]
-
-LaTeX Warning: Reference `fig:exemplFF' on page 18 undefined on input line 357.
+LaTeX Warning: Reference `fig:exempledmmpg' on page 6 undefined on input line 7
+8.
 
 
+Overfull \hbox (8.55626pt too wide) in paragraph at lines 94--186
+ [] 
+ []
 
-LaTeX Warning: Reference `fig:exemplBF' on page 18 undefined on input line 357.
 
+Overfull \hbox (8.55626pt too wide) in paragraph at lines 191--283
+ [] 
+ []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[18] [19]
+[6] [7]
 Chapitre 2.
 \openout3 = `Memoire.mtc'.
 
@@ -2595,155 +2515,44 @@ Overfull \hbox (9.86835pt too wide) in paragraph at lines 9--9
  Rate-Harmonized Scheduling 
  []
 
-) [20
+) [8
+
+] (edfup.tex)
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+(edfmpl.tex [9]) (edfmpg.tex)
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (8.55626pt too wide) in paragraph at lines 364--450
+ [] 
+ []
+
+[10]
+Overfull \hbox (8.55626pt too wide) in paragraph at lines 456--544
+ [] 
+ []
+
+[11]
+Chapitre 3.
+
+LaTeX Warning: Citation `Goossens01' on page 12 undefined on input line 564.
+
+
+LaTeX Warning: Citation `Goossens01' on page 12 undefined on input line 566.
+
+[12
 
 ]
 
-LaTeX Warning: Citation `CK07' on page 21 undefined on input line 464.
+LaTeX Warning: Citation `DB11' on page 13 undefined on input line 577.
 
 
-LaTeX Warning: Citation `WWDS94' on page 21 undefined on input line 470.
+LaTeX Warning: Citation `Emb10' on page 13 undefined on input line 580.
 
-
-LaTeX Warning: Citation `YDS95' on page 21 undefined on input line 470.
-
-
-LaTeX Warning: Citation `PS01' on page 21 undefined on input line 470.
-
-
-LaTeX Warning: Citation `KAB+03' on page 21 undefined on input line 477.
-
-
-LaTeX Warning: Citation `SJPL08' on page 21 undefined on input line 477.
-
-
-LaTeX Warning: Citation `HXW+10' on page 21 undefined on input line 481.
-
-
-LaTeX Warning: Citation `Bor99' on page 21 undefined on input line 483.
-
-
-LaTeX Warning: Citation `SBA+01' on page 21 undefined on input line 483.
-
-
-LaTeX Warning: Citation `KAB+03' on page 21 undefined on input line 483.
-
-
-LaTeX Warning: Citation `ABM+04' on page 21 undefined on input line 483.
-
-
-LaTeX Warning: Citation `HSC+11' on page 21 undefined on input line 483.
-
-
-LaTeX Warning: Citation `BBMB13' on page 21 undefined on input line 483.
-
-
-LaTeX Warning: Citation `SRH05' on page 21 undefined on input line 484.
-
-
-LaTeX Warning: Citation `SPH05' on page 21 undefined on input line 484.
-
-
-LaTeX Warning: Citation `LSH10' on page 21 undefined on input line 484.
-
-[21]
-Overfull \hbox (28.09023pt too wide) in paragraph at lines 499--503
-[]\TU/LinLibertine(0)/m/n/10 Consommation énergétique. Nous notons $\OML/cmm/m/
-it/10 Cons[]$ \TU/LinLibertine(0)/m/n/10 la consommation énergétique de l’état 
-basse-consommation 
- []
-
-
-Overfull \hbox (19.27832pt too wide) in paragraph at lines 510--516
-[]\TU/LinLibertine(0)/m/n/10 Pénalité énergétique. Nous notons $\OML/cmm/m/it/1
-0 Pen[]$ \TU/LinLibertine(0)/m/n/10 la pénalité énergétique pour revenir de l’é
-tat basse-consommation 
- []
-
-
-LaTeX Warning: Citation `STM' on page 22 undefined on input line 521.
-
-
-LaTeX Warning: Citation `MPC' on page 22 undefined on input line 521.
-
-
-LaTeX Warning: Citation `AP11' on page 22 undefined on input line 524.
-
-
-LaTeX Warning: Citation `CG06' on page 22 undefined on input line 524.
-
-
-LaTeX Warning: Citation `DA08a' on page 22 undefined on input line 524.
-
-
-Overfull \hbox (19.5441pt too wide) in paragraph at lines 524--530
-\TU/LinLibertine(0)/m/n/10 consommation possède donc son propre BET et nous nom
-mons $\OML/cmm/m/it/10 BET$ \TU/LinLibertine(0)/m/n/10 le BET de l’état basse-c
-onsommation 
- []
-
-[22]
-Overfull \hbox (14.86636pt too wide) in paragraph at lines 538--539
-\TU/LinLibertine(0)/m/n/10 quences disponibles. Nous détaillons en revanche les
- caractéristiques de chaque état basse-consommation, 
- []
-
-
-LaTeX Warning: Citation `MPC' on page 23 undefined on input line 540.
-
-
-LaTeX Warning: Citation `AP11' on page 23 undefined on input line 540.
-
-
-LaTeX Warning: Citation `AP13' on page 23 undefined on input line 540.
-
-
-LaTeX Warning: Citation `AYP13' on page 23 undefined on input line 540.
-
-
-LaTeX Warning: Citation `Rowe10' on page 23 undefined on input line 545.
-
-[23]
-
-LaTeX Warning: Citation `Rowe10' on page 24 undefined on input line 556.
-
-
-LaTeX Warning: Citation `Rowe10' on page 24 undefined on input line 558.
-
-
-LaTeX Warning: Citation `Rowe10' on page 24 undefined on input line 560.
-
-
-LaTeX Warning: Citation `Rowe10' on page 24 undefined on input line 575.
-
-
-Overfull \hbox (6.83633pt too wide) in paragraph at lines 580--583
-[]\TU/LinLibertine(0)/m/n/10 comme vu dans la section []2.3[], les processeurs 
-sont dotés de mode de basse consommation. par exemple : 
- []
-
-[24]
-
-LaTeX Warning: Citation `DAR16' on page 25 undefined on input line 592.
-
-
-LaTeX Warning: Citation `Rowe10' on page 25 undefined on input line 594.
-
-File: rhs.png Graphic file (type QTm)
-<use  "rhs.png" >
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 612.
-See the caption package documentation for explanation.
-
-File: rhs+.png Graphic file (type QTm)
-<use  "rhs+.png" >
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 615.
-See the caption package documentation for explanation.
-
-[25]) [26]
+) [13]
 Package minitoc Info: I0009
 (minitoc)             Listing minitoc auxiliary files. 
 (minitoc)             Creating the Memoire.maf file.
@@ -2763,8 +2572,7 @@ Package minitoc(hints) Warning: W0024
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 65.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 65.
-(Memoire.aux (remerciments.aux) (resume.aux) (abstract.aux) (listeSymbole.aux)
-(introduction.aux) (partie1.aux))
+(Memoire.aux (partie2.aux))
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 65.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 65.
 
@@ -2774,6 +2582,9 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 65.
  )
 (\end occurred inside a group at level 1)
@@ -2781,12 +2592,12 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 65.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 45749 strings out of 427899
- 882057 string characters out of 3153118
- 904663 words of memory out of 3000000
- 48861 multiletter control sequences out of 15000+200000
- 18840 words of font info for 88 fonts, out of 3000000 for 9000
+ 45700 strings out of 427899
+ 881763 string characters out of 3153118
+ 938610 words of memory out of 3000000
+ 48844 multiletter control sequences out of 15000+200000
+ 17238 words of font info for 82 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
- 54i,12n,92p,10376b,39411s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 54i,18n,92p,10376b,39464s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Memoire.pdf (26 pages).
+Output written on Memoire.pdf (13 pages).

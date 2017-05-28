@@ -1,7 +1,7 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (MiKTeX 2.9.6210 64-bit) (preloaded format=xelatex 2017.3.4)  28 MAY 2017 13:34
+This is XeTeX, Version 3.14159265-2.6-0.99996 (MiKTeX 2.9.6210 64-bit) (preloaded format=xelatex 2017.3.4)  28 MAY 2017 13:33
 entering extended mode
-**./test.tex
-(test.tex
+**./t2.tex
+(t2.tex
 LaTeX2e <2017/01/01> patch level 1
 Babel <3.9r> and hyphenation patterns for 75 language(s) loaded.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\book.cls"
@@ -392,8 +392,8 @@ Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks28
 \verbatim@line=\toks29
 \verbatim@in@stream=\read2
-) (test.aux)
-\openout1 = `test.aux'.
+) (t2.aux)
+\openout1 = `t2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
 LaTeX Font Info:    ... okay on input line 5.
@@ -448,20 +448,21 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 9.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 9.
+Missing character: There is no ; in font nullfont!
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [1
 
-] [2] (test.aux) ) 
+] [2] (t2.aux) ) 
 Here is how much of TeX's memory you used:
  11065 strings out of 427899
- 223319 string characters out of 3153118
- 380411 words of memory out of 3000000
+ 223299 string characters out of 3153118
+ 373266 words of memory out of 3000000
  14809 multiletter control sequences out of 15000+200000
  3672 words of font info for 18 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
- 55i,9n,54p,419b,688s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,9n,54p,417b,688s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on test.pdf (2 pages).
+Output written on t2.pdf (2 pages).

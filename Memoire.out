@@ -1,27 +1,18 @@
-\BOOKMARK [1][-]{section.0.1}{Liste\040des\040symboles}{}% 1
-\BOOKMARK [-1][-]{part.1}{I\040Partie\040Theorique}{}% 2
-\BOOKMARK [0][-]{chapter.1}{Introduction Au systeme temps réel}{part.1}% 3
-\BOOKMARK [1][-]{section.1.1}{Introduction}{chapter.1}% 4
-\BOOKMARK [1][-]{section.1.2}{Taxonomie sur les systèmes temps réel}{chapter.1}% 5
-\BOOKMARK [1][-]{section.1.3}{Modélisation des tâches}{chapter.1}% 6
-\BOOKMARK [1][-]{section.1.4}{Ordonnancement\040monoprocesseur}{chapter.1}% 7
-\BOOKMARK [2][-]{subsection.1.4.1}{Algorithme d’ordonnancement à priorité fixe}{section.1.4}% 8
-\BOOKMARK [2][-]{subsection.1.4.2}{Algorithme d’ordonnancement à priorité dynamique}{section.1.4}% 9
-\BOOKMARK [1][-]{section.1.5}{Ordonnancement\040Multiprocesseur}{chapter.1}% 10
-\BOOKMARK [2][-]{subsection.1.5.1}{Classification}{section.1.5}% 11
-\BOOKMARK [2][-]{subsection.1.5.2}{Optimalité}{section.1.5}% 12
-\BOOKMARK [2][-]{subsection.1.5.3}{Algorithme d'ordonnancement utilisant une stratégie par partitionnement}{section.1.5}% 13
-\BOOKMARK [1][-]{section.1.6}{Conclusion}{chapter.1}% 14
-\BOOKMARK [0][-]{chapter.2}{Etat\040de\040l'art}{part.1}% 15
-\BOOKMARK [1][-]{section.2.1}{Introduction}{chapter.2}% 16
-\BOOKMARK [1][-]{section.2.2}{Les modèles de consommation d'énergie DVFS et DPM}{chapter.2}% 17
-\BOOKMARK [2][-]{subsection.2.2.1}{Consommation\040dynamique}{section.2.2}% 18
-\BOOKMARK [2][-]{subsection.2.2.2}{Consommation\040statique}{section.2.2}% 19
-\BOOKMARK [1][-]{section.2.3}{Les états C-states du processeur}{chapter.2}% 20
-\BOOKMARK [1][-]{section.2.4}{L'endormissement\040de\040processeur\040\(Online\040VS\040Offline\)}{chapter.2}% 21
-\BOOKMARK [1][-]{section.2.5}{Le Modèle d'endormissement de Dsouza}{chapter.2}% 22
-\BOOKMARK [2][-]{subsection.2.5.1}{Période d’harmonisation}{section.2.5}% 23
-\BOOKMARK [2][-]{subsection.2.5.2}{Algorithme d’ordonnancement « Energy-Saving Rate-Harmonized Scheduling »}{section.2.5}% 24
-\BOOKMARK [2][-]{subsection.2.5.3}{Energy-Saving\040Rate-Harmonized\040Scheduling}{section.2.5}% 25
-\BOOKMARK [2][-]{subsection.2.5.4}{Energy-Saving\040Rate-Harmonized\040Scheduling+}{section.2.5}% 26
-\BOOKMARK [1][-]{section.2.6}{Conclusion}{chapter.2}% 27
+\BOOKMARK [-1][-]{part.1}{I\040Contributions\040et\040Implementation}{}% 1
+\BOOKMARK [0][-]{chapter.1}{Endormissement de tache sous priorité Fixe}{part.1}% 2
+\BOOKMARK [1][-]{section.1.1}{modéle de tâches}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.2}{Le\040cas\040monoprocesseur}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.3}{Le\040cas\040multiprocesseur}{chapter.1}% 5
+\BOOKMARK [0][-]{chapter.2}{Endormissement de tache sous priorité dynamique}{part.1}% 6
+\BOOKMARK [1][-]{section.2.1}{modéle de tâches}{chapter.2}% 7
+\BOOKMARK [1][-]{section.2.2}{Limitation\040de\040nombre\040de\040preemption}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.3}{Le\040cas\040monoprocesseur}{chapter.2}% 9
+\BOOKMARK [1][-]{section.2.4}{Le\040cas\040multiprocesseur}{chapter.2}% 10
+\BOOKMARK [1][-]{section.2.5}{insertion\040locale}{chapter.2}% 11
+\BOOKMARK [1][-]{section.2.6}{insertion\040globale}{chapter.2}% 12
+\BOOKMARK [0][-]{chapter.3}{Expérimentations}{part.1}% 13
+\BOOKMARK [1][-]{section.3.1}{La génération des taches}{chapter.3}% 14
+\BOOKMARK [2][-]{subsection.3.1.1}{Cas\040monoprocesseur}{section.3.1}% 15
+\BOOKMARK [2][-]{subsection.3.1.2}{Cas\040multiprocesseur}{section.3.1}% 16
+\BOOKMARK [1][-]{section.3.2}{La\040simulation}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.3}{Discussions}{chapter.3}% 18
