@@ -253,8 +253,6 @@ ordonnançable par Deadline Monotonic dans un multiprocesseur à 2 processeur en
 \draw[fill=yellow] (8.4,1) rectangle (8.9,2) ;
 \draw[fill=yellow] (10.5,1) rectangle (11,2) ;
 
-
-
 \draw [->](0,-1) -- coordinate (x axis mid) (12.5,-1);
 \draw (0,-1) -- (0,-1.5) node[fill=white,rotate=90] {0};
 \draw (1,-1) -- (1,-1.5) node[fill=white,rotate=90] {10};
@@ -296,8 +294,9 @@ Soit $\taskset = \{\tache{1},\tache{2},...,\tache{n}\}$ un ensemble de tache, ch
 \item[$\bullet$] l'ensemble de tâches $\taskset$ est ordonnançable avec l'algorithme EarliestDeadlineFirst
 \end{itemize}
 \section{Limitation de nombre de preemption}
+\input{limPreamp.tex} 
 \section{Le cas monoprocesseur}
-\input{edfup.tex}
+%\input{edfup.tex}
 
 \begin{table}[!h]
 \begin{center}

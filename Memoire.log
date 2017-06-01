@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (MiKTeX 2.9.6210 64-bit) (preloaded format=xelatex 2017.3.4)  28 MAY 2017 14:18
+This is XeTeX, Version 3.14159265-2.6-0.99996 (MiKTeX 2.9.6210 64-bit) (preloaded format=xelatex 2017.3.4)  1 JUN 2017 13:34
 entering extended mode
 **./Memoire.tex
 (Memoire.tex
@@ -2496,7 +2496,7 @@ Overfull \hbox (8.55626pt too wide) in paragraph at lines 94--186
  []
 
 
-Overfull \hbox (8.55626pt too wide) in paragraph at lines 191--283
+Overfull \hbox (8.55626pt too wide) in paragraph at lines 191--281
  [] 
  []
 
@@ -2517,7 +2517,7 @@ Overfull \hbox (9.86835pt too wide) in paragraph at lines 9--9
 
 ) [8
 
-] (edfup.tex)
+] (limPreamp.tex)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -2526,31 +2526,31 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (8.55626pt too wide) in paragraph at lines 364--450
+Overfull \hbox (8.55626pt too wide) in paragraph at lines 363--449
  [] 
  []
 
 [10]
-Overfull \hbox (8.55626pt too wide) in paragraph at lines 456--544
+Overfull \hbox (8.55626pt too wide) in paragraph at lines 455--543
  [] 
  []
 
 [11]
 Chapitre 3.
 
-LaTeX Warning: Citation `Goossens01' on page 12 undefined on input line 564.
+LaTeX Warning: Citation `Goossens01' on page 12 undefined on input line 563.
 
 
-LaTeX Warning: Citation `Goossens01' on page 12 undefined on input line 566.
+LaTeX Warning: Citation `Goossens01' on page 12 undefined on input line 565.
 
 [12
 
 ]
 
-LaTeX Warning: Citation `DB11' on page 13 undefined on input line 577.
+LaTeX Warning: Citation `DB11' on page 13 undefined on input line 576.
 
 
-LaTeX Warning: Citation `Emb10' on page 13 undefined on input line 580.
+LaTeX Warning: Citation `Emb10' on page 13 undefined on input line 579.
 
 ) [13]
 Package minitoc Info: I0009
@@ -2582,9 +2582,6 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 65.
  )
 (\end occurred inside a group at level 1)
@@ -2593,8 +2590,8 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 65.
 ### bottom level 
 Here is how much of TeX's memory you used:
  45700 strings out of 427899
- 881763 string characters out of 3153118
- 938610 words of memory out of 3000000
+ 881775 string characters out of 3153118
+ 938845 words of memory out of 3000000
  48844 multiletter control sequences out of 15000+200000
  17238 words of font info for 82 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
