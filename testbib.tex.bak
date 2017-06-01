@@ -1,7 +1,0 @@
-\documentclass{book}
-\begin{document}
-\cite{DAR16}
-\cite{Rowe10}
-\bibliographystyle{plain}
-\bibliography{bib}
-\end{document}
