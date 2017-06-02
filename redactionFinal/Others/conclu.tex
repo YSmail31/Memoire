@@ -1,0 +1,133 @@
+\chapter*{Conclusion \& perspectives}
+\addchaptertocentry{Conclusion \& Perspactives}
+\section*{Conclusions}
+In this thesis, we investigate the choices for parallelization and
+allocation of a set of real-time tasks to different types of multicore
+platforms. As parallelization consists of decomposing a task into
+several sub-task that cooperate to solve the same problem, an overhead
+is assigned to parallel execution. These overheads are mainly due to
+the sub-task creation, termination and synchronization.
+
+The parallel real-time models proposed recently in the literature do
+not take into account several realistic parameters such as the
+parallelization costs, the static/dynamic parallel grain size
+definition and does not take into account heterogeneous cores in
+computing platforms such as ARM bigLITTLE.  Moreover, only few works
+consider the parallelization and reducing the energy
+consumption. Especially because of the slow developement of battery
+technologies against the increasing energy demand in nowadays systems
+such as CPS. Hence, In this thesis we had chosen to focus on the
+limits of the models proposed in the litterature to cope with the
+nowadays computing needs.
+
+Particularly, in chapter 4 we addressed the problem with a simple
+moldable task model that does not take into account parallelization
+costs, but that solves already the problem of the representation of
+difference parallel grain size for the same task. We proposed two
+solutions for the problem: an exact solution by modeling the problem
+as a linear problem and it was solved using lp\_solve solver, and an
+heuristic that by experimentation shown that the obtained results were
+very close to optimal ones.  
+
+In the 5$^{th}$ chapter we first build a realistic timing and energy
+models for a parallel execution on heterogeneous platforms. Based on
+different parallelization techniques such those proposed in Cilk or
+OpenMP. We proposed a task model that takes into account the
+parallelization costs. The problem consists in allocating a set of
+task modeled by a realistic parallel model to a set of heterogeneous
+cores with the ability to calibrate the core frequency and state to
+reduce the energy consumption. The problem in hand now is very hard
+and was solved by expressing it as a Mixed Integer Non Linear problem
+and only small-size problem could be solved using Knitro
+Solver. Hence, we proposed a heuristic that allow to have
+quasi-optimal solutions in a very short time.
+
+As the two proposed models where for moldable tasks, and are not
+expressive enough to cope with the increasing complexity of CPS
+applications and their dynamic behavior, we proposed in Chapter 6 a
+methodology to present parallel tasks with di-graphs. The proposed
+model was very expressive against the models proposed in the
+literrature. We addressed also the problem of allocating such tasks to
+a set of identical cores with the ability of setting the core
+frequency and state. The problem here is very hard, and finding an
+optimal solution for a very small problems is very computational. Thus
+we proposed several techniques, methods, and mathematical proofs to
+reduce the complexity of the problem. The proposed methods where used
+to propose a heuristic that solves the problem in a reasonable
+time. The results obtained by testing a very large set of expirements
+have shown that our model and scheduling heuristics are effective
+against less expressive models and that it can be used to reduce the
+energy consumption.
+\section*{Limitations \& perspectives}
+\subsection*{Shared ressources}
+In this thesis we addressed the problem of parallelization under the
+assumption that parallel threads communication waiting time is
+bounded, and that it is included in the worst case execution time
+analysis. In the last chapter, the communication between tasks are
+expressed by the precedence order between different instances of a
+task. However, this parameter is bounded by the worst case which is
+very pessimistic. It may be possible to apply shared resources
+techniques proposed in the litterature of real-time scheduling to
+reproduce more realistic.
+\subsection*{Global scheduling}
+All our contributions reported in this thesis concern only partitioned
+scheduling. The basic idea is that for heterogeneous computing
+platforms, job-level migration is not allowed especially at job
+migration because the timing analysis of the preempted thread at the
+preemption point can not be done. However, it may be possible to allow
+migration of the same thread for the cores of same group.
+
+\subsection*{Dynamic voltage and frequency scaling}
+When a parallel thread ended its execution shorter than the worst case
+execution time, a slack time is engendred by these early end. Thus, it
+may be convenient to recalibrate dynamically the core frequency to
+allow to have less slack time, and may be save energy.
+
+%\subsection*{Open MP design codes}
+%\subsection*{WCET estimation for parallel tasks}
+
+\chapter*{Personal publications}
+\addchaptertocentry{Personal publications}
+\begin{enumerate}
+\item H.E. Zahaf, A.E. Benyamina, R. Olejnik, Giuseppe Lipari, Pierre Boulet
+  ``Modeling parallel tasks with di-graphs'', RTNS2016 \cite{me1}
+
+\item H.E. Zahaf, A.E. Benyamina, R. Olejnik, Giuseppe Lipari
+  ``Energy-efficient partitionning for periodic soft Real-Time Tasks
+  on single-ISA heterogeneous Architectures'', under final revision to
+  Journal Of System Architecture \cite{me2}
+
+\item H.E. Zahaf, R. Olejnik, G. Lipari, A.E Benyamina , "Modelling
+  the Energy Consumption of Soft Real-Time Tasks on Heterogeneous
+  Computing Architectures", EEHCO'2016: Energy Efficiency with
+  Heterogenous Computing, Prague, January 15-16, 2016\cite{me3}
+
+\item H.E. Zahaf, R. Olejnik, G. Lipari, A.E Benyamina , "Energy-aware
+  parallel tasks scheduling on multicore architectures", ACACES
+  Workshop'2015: Advanced Computer Architecture and Compilation for
+  High-Performance and Embedded Systems, Fiuggi , July 12-18, 2015
+  \cite{me4}
+  
+\item H.E. Zahaf, R. Olejnik, G. Lipari, A.E Benyamina , "Energy-aware
+  moldable real-time task scheduling on uniform architectures",
+  EDiS'2015: Embedded and Distributed Systems, Oran, November 15-16,
+  2015 \cite{me5}
+    
+\item H.E. Zahaf, A.E. Benyamina, R. Olejnik "Intensive Real-Time Task
+  Scheduling on Uniform Multiprocessors", Models, Optimization, and
+  Mathematical analysis (MOMA), Special Issue
+  IWMCS'2014,ISSN2253-0665(2014), Vol 2, Issue 1, Pages 3-13,\cite{me6}
+  
+\item H.E. Zahaf, A.E. Benyamina, R. Olejnik "Intensive Real-Time Task
+  Scheduling on Uniform Multiprocessors",The 2 nd international
+  Workshop on Mathamatics and Computer Science IWMCS'2014, december
+  1-3, 2014, Tiaret, Algeria.\cite{me7}
+    
+\item H.E. Zahaf, A.E. Benyamina, R. Olejnik "Energy-Aware Work Load
+  for Real-Time MapReduce Environment",The 1st doctorial days of
+  LAPECI, Oran, September 28-29, 2014, Oran, Algeria.\cite{me8}
+
+\item H.E. Zahaf, A.E. Benyamina, R. Olejnik "Smart cities, Scenarios
+  and Applications (Poster)", National Exhibition of Valuation Research
+  Result Programmes, April 8-9, 2014, Oran, Algeria.\cite{me9}
+\end{enumerate}

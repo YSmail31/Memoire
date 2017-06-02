@@ -1,0 +1,134 @@
+\chapter*{Introduction}
+\addchaptertocentry{Introduction}
+\section*{Context}
+The internet of things (IoT) is a network of physical devices,
+vehicles, buildings and other embedded items with electronics,
+software, sensors, and network connectivity that enables these objects
+to collect and exchange data. The IoT allows objects to be sensed and
+controlled remotely across existing network infrastructure, creating
+opportunities for more direct integration of the physical world into
+computer-based systems, and resulting in improved efficiency, accuracy
+and economic benefit. When IoT is augmented with sensors and
+actuators, the technology becomes an instance of the more general
+class of cyber-physical systems (CPS) (please refer to \cite{baheti2011cyber}).
+
+A CPS is therefore a system composed of physical entities such as
+mechanisms controlled or monitored by computer-based
+algorithms. Today, a precursor generation of cyber-physical systems
+can be found in areas as diverse as aerospace, automotive, chemical
+processes, civil infrastructure, energy, health-care, manufacturing,
+transportation, entertainment, and consumer appliances.
+
+CPS is generating an unprecedented volume and variety of data, by the
+time the data makes its way to the cloud for analysis, the opportunity
+to trigger a reply might be \textit{late}. The basic idea is to
+analyze the most \textit{time-sensitive} data at the network edge,
+close to where it is generated instead of sending vast amounts of data
+to the cloud. The reply can be triggered \textit{quick} enough to
+ensure the system constraints. Only, the pre-processing results are
+sent later to the cloud for historical analysis and longer-term
+storage. Thus, a CPS should (\cite{cisco:cps}):
+\begin{itemize}
+\item Minimize latency: Milliseconds matter when you are trying to
+  prevent manufacturing line shutdowns or restore electrical
+  service. Analyzing data close to the device that collected the data
+  can make the difference between averting disaster and a cascading
+  system failure.
+
+\item Conserve network bandwidth: Offshore oil rigs generate 500 GB of
+  data weekly. Commercial jets generate 10 TB for every 30 minutes of
+  flight. It is not practical to transport vast amounts of data from
+  thousands or hundreds of thousands of edge devices to the cloud. Nor
+  is it necessary, because many critical analyses do not require cloud
+  scale processing and storage.
+
+\item Operate reliably: CPS data is increasingly used for decisions
+  affecting citizen safety and critical infrastructure. The integrity
+  and availability of the infrastructure and data cannot be in
+  question.
+
+\end{itemize}
+
+This computing model is known as \textit{Fog Computing} or
+\textit{Edge computing} (see \cite{bonomi2012fog}). Fog computing uses
+one or a collaborative multitude of near-user edge devices to carry
+out a substantial amount of storage, communication, and control,
+configuration, measurement and management.
+
+The embedded platforms used for supporting fog computing are often
+multicore systems and many of CPS applications can be easily
+parallelized by distributing data across the parallel computing
+elements. Reducing power consumption in these systems is a very
+serious problem especially when processing elements operate on battery
+power. Even when they are connected to the electric grid, we need to
+keep the consumption as low as it is possible.  Multicore technology
+can help us in achieving timeliness and low power consumption
+systems. In fact, even when the computational load is not very high,
+multicore processors are more energy efficient than an equivalent
+single-core platform as reported by \cite{wolf2012computers}.
+
+Critical processings done in CPS systems such as electrical
+grid control must deliver responses in a pre-determined time
+window. Thus, a large spectrum of CPS applications real-time
+applications.
+
+Therefore, in this thesis we will be interested in parallelizing real-time
+application to multiprocessor architectures in the goal of reducing
+the energy consumption. 
+
+\section*{Contributions}
+In this thesis, we will be interested in particular in parallelization
+techniques, real-time scheduling techniques, energy reduction
+techniques for a set of real-time tasks expressed with different models on several types of
+multicore architectures. Mainly our contributions consist in proposing 
+realistic and expressive task models and efficient feasibility tests for these
+task models on multicore architectures.  Based on the proposed
+tests, we propose methodologies to reduce the energy consumption for
+identical, uniform and heterogeneous cores. Thus the main
+contributions of this thesis are:
+\begin{enumerate}
+\item The Free-To-Cut FTC task model, 
+\item The allocation of FTC tasks to uniform architectures: exact and
+  sufficient feasibility tests,
+\item The Cut-point task model (CPM),
+\item A methodology to build a realistic timing, power and energy
+  models
+\item The allocation of cut-point tasks to heterogeneous multicore
+  architectures: exact and sufficient feasibility tests,
+\item Modelling parallel task with di-graphs,
+\item The allocation of di-graph parallel tasks to identical cores
+  platform: a sufficient feasibility test.
+\end{enumerate}
+
+
+\section*{Organization} 
+This thesis is structured as follows. In the first chapter, we give a
+quick overview on multicore systems, parallel programming and energy
+consumption techniques. In this chapter, we illustrate how parallel
+systems are seen for non-real-time systems. The second chapter will be
+reserved to real-time systems theory, and practice. This chapter is
+divided mainly into two parts: in the first, we talk mainly on
+real-time systems scheduling theory, and in the second part, we will
+show how a simple real-time task model can be implemented in a
+real-time operating system. We will talk later in chapter 3 about the
+context of our work and the motivations that pushed us to be
+interested in the parallelization of real-time task on multicore
+architecture, and we will state some work that has been done in this
+field of research in real-time systems. In the chapter 4, we present a
+simple and non-realistic parallel real-time task model that we call,
+Free-To-Cut task model. We propose a corresponding feasibility test,
+and exact scheduler and a heuristic to allocate such tasks to a
+uniform multicore architecture. The chapter 5, will be reserved into
+an extension of the model in chapter 4, to a realistic model. In
+addition, we will be interested on allocating a set of task of the
+extended model to heterogeneous multicore platform. In this chapter,
+we present the results of a large set of experiments that has been
+conducted on an ARM big.LITTLE processor to build task, architecture
+and energy models. We propose an other feasibility test for these
+tasks on heterogeneous architectures. We will show that obtaining an
+optimal solution of these problem is hard for only medium size
+problem, and we will propose heuristics that allows to obtain
+quasi-optimal solutions in a reasonable time. In the last chapter, we
+present a very expressive parallel task model that extend the di-graph
+the one proposed by \cite{stigge2011digraph}. We propose a sufficient
+feasibility test for the extended model to a set of identical cores.

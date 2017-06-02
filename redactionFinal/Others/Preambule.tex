@@ -1,0 +1,52 @@
+%\usepackage[english]{babel}
+%\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows,fit,shapes}
+\usepackage{pgfplots}
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+\usepackage{caption}
+\usepackage{minitoc}
+\usepackage{multirow}
+\usepackage{subcaption}
+\usetikzlibrary{calc}
+\usepackage{relsize}
+\usepackage{url}
+\usepackage{amsthm}
+\usepackage{rtsched}
+\tikzset{fontscale/.style = {font=\relsize{#1}}}    
+\usepackage{adjustbox}
+\ifdefined\CommentVersion
+  \usepackage{marginnote}
+  \usepackage{color}
+  \usepackage{soul}
+  \newcommand{\marginX}{\marginnote{\huge{\quad\quad\textbf{!}\quad\quad}}}
+  \newcommand{\he}[1]{{\color{green}\marginX{}[\textbf{Houssam}: #1]}}
+  \newcommand{\gl}[1]{{\color{magenta}\marginX{}[\textbf{Giuseppe}: #1]}}
+  \newcommand{\ro}[1]{{\color{blue}\marginX{}[\textbf{Richard}: #1]}}
+  \setstcolor{blue}
+  %\newcommand{\added}[1]{{\color{blue} #1}}
+  %\newcommand{\substituted}[2]{\st{#1}{\color{blue}#2}}
+  %\newcommand{\deleted}[1]{\st{#1}}
+\else
+  \newcommand{\he}[1]{}
+  \newcommand{\gl}[1]{}
+  \newcommand{\ro}[1]{}
+  %\newcommand{\added}[1]{{#1}}
+  %\newcommand{\deleted}[1]{}
+  %\newcommand{\substitute}[2]{#2}
+\fi
+\usepackage{capt-of}
+\usepackage{mathtools}
+\usepackage{amsmath,amsfonts,amssymb}
+\usetikzlibrary{plotmarks}
+\tikzset{
+    scale plot marks/.is choice,
+    scale plot marks/false/.code={
+        \def\pgfuseplotmark##1{\pgftransformresetnontranslations\csname pgf@plot@mark@##1\endcsname}
+    },
+    scale plot marks/true/.style={},
+    scale plot marks/.default=true
+}

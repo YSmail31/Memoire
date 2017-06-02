@@ -1,0 +1,76 @@
+Cyber physical systems (CPS) and Internet of Objects (IoT) are
+generating an unprecedented volume and variety of data that needs to
+be collected and stored on the cloud before being processed. By the
+time the data makes its way to the cloud for analysis, the opportunity
+to trigger a reply might be late.
+
+
+One approach to solve this problem is to analyze the most
+time-sensitive data at the network edge, close to where it is
+generated. Thus, only the pre-processed results are sent to the
+cloud. This computation model is know as *Fog Computing* or *Edge
+computing*. Critical CPS applications using the fog computing model
+may have real-time constraints because results must be delivered in a
+pre-determined time window. Furthermore, in many relevant applications
+of CPS, the processing can be parallelized by applying the same
+processing on different sub-sets of data at the same time by the mean
+parallel programming techniques. This allow to achieve a shorter
+response time, and then, a larger slack time, which can be used to
+reduce energy consumption.
+
+ 
+In this thesis we focus on the problem of scheduling a set of parallel
+tasks on multicore processors, with the goal of reducing the energy
+consumption while all deadlines are met. We propose several realistic
+task models on architectures with identical and heterogeneous cores,
+and we develop algorithms for allocating threads to processors, select
+the core frequencies, and perform schedulability analysis. The
+proposed task models can be realized by using OpenMP-like APIs.
+
+
+%
+%In this thesis, we explore design choices in running in parallel
+%real-time tasks on multiprocessor architectures. In a smart city, a
+%huge number sensors (temperature, pressure, camera, etc.)  generate a
+%huge amount of data. These data are processed in remote sites, thus
+%generating a large network traffic. The \emph{Fog computing} comes as
+%a solution to reduce network traffic and proposes to process data
+%locally where they are collected to extract the important features and
+%send only these features to a remote central site.  These processings
+%must respond within a specified time in order to trigger a
+%\emph{reply}, which implies on such processings timing constraints.
+%These processings handle often multidimensional data, and can be easy
+%parallelized, thus taking benifits from multicore architectures in
+%order to improve both response time and reduce energy
+%consumption. Especially when these systems are operated by battery
+%power.
+%
+%Modern multicore architectures allow to control both frequencies and
+%core states by the mean of dynamic voltage and frequency scaling
+%(DVFS) and Dynamic Power Management (DPM), so the frequency and core
+%state can be set to reduce the energy consumption while the system
+%still meeting timing requirements. In a real-time system, scheduling
+%analysis are done based on the execution time analysis. The execution
+%time of a task depend on several parameters like cache-size,
+%cache-heirarchy, memory, operating frequency, etc. Thus, parallelizing
+%a task and changing the frequency can bring more complexity on the
+%worst case execution time evaluation. Thus, in this work we propose
+%different task models to adapt the classic real-time task model to a
+%parallel task model and the frequency changes. Thus, we define
+%\emph{Free-To-Cut} model (\ftc), \emph{Cut-Point} model \cp~ and
+%\emph{Cut-Point with Memory access} (\cpm). So in this work, we focus
+%on finding the compromise between the respect of timing requirements
+%and energy consumption. We consider different types of hardware
+%architectures like Intel \textit{i}\emph{x}, ARM big.LITTLE and
+%SNAPDragon.
+%
+%In this work, we must deal with two problems (i) task allocation, (ii)
+%selecting the frequencies. The problem is NP-hard. Thus, we propose an
+%exact scheduling algorithm by the mean of Linear programming (LP),
+%Integer Linear Programming (ILP), Mixed Integer Linear programming
+%(MILP) and Mixed integer Non Linear Programming (NLP). We show that it
+%is impractical to use solvers like CPLEX, Knitro, lpsolve to solve
+%these problems because it is time consuming. Thus, we propose
+%differents heuristics that allows to have a quasi-optimal
+%solutions. We will show also, that our heuristics outperform classic
+%allocation heuristics.

@@ -1,0 +1,157 @@
+\def\CommentVersion{}
+\documentclass[11pt, francais, singlespacing, headsepline,oneside]{MastersDoctoralThesis}
+%\usepackage[utf8]{inputenc} % Required for inputting international characters
+%\usepackage[T1]{fontenc} % Output font encoding for international characters
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage[francais]{babel}
+
+\usepackage{palatino} % Use the Palatino font by default
+
+\usepackage[backend=bibtex,style=authoryear,natbib=true]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
+
+\addbibresource{mybib.bib} % The filename of the bibliography
+\usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
+
+%----------------------------------------------------------------------------------------
+%	MARGIN SETTINGS
+%----------------------------------------------------------------------------------------
+
+
+
+\geometry{
+	paper=a4paper, % Change to letterpaper for US letter
+	inner=2.5cm, % Inner margin
+	outer=2.5cm, % Outer margin
+	bindingoffset=0cm, % Binding offset
+	top=1cm, % Top margin
+	bottom=1cm, % Bottom margin
+	%showframe,% show how the type block is set on the page
+}
+
+%----------------------------------------------------------------------------------------
+%	THESIS INFORMATION
+%----------------------------------------------------------------------------------------
+
+\thesistitle{Endormissement blabla} 
+\supervisor{Dr. Abou El Hassan Benyamina \\ Dr. Houssam-Eddine ZAHAF } % Your supervisor's name,
+                                          % this is used in the title
+                                          % page, print it elsewhere
+                                          % with \supname
+\degree{Master} % Your degree name, this is used in the
+                              % title page and abstract, print it
+                              % elsewhere with \degreename
+\author{Ismail \textsc{Yemmi}} % Your name, this is used in
+                                       % the title page and abstract,
+                                       % print it elsewhere
+                                       % with \authorname
+\addresses{50, avenue de Haley, Parce Scientifique de la haute borne, villeneuve d'ascq, 59650} 
+
+\subject{Informatique} % Your subject area, this is not currently
+                           % used anywhere in the template, print it
+                           % elsewhere with \subjectname
+\keywords{} % Keywords for your thesis, this is not currently used
+            % anywhere in the template, print it elsewhere
+            % with \keywordnames
+\university{Université d'Oran 1}                                                                   % with \univname
+\department{\textsc{Informatique}} % Your department's name and URL, this
+                              % is used in the title page and
+                              % abstract, print it elsewhere
+                              % with \deptname
+\grouping{\href{http://www.cristal.univ-lille.fr/emeraude/}{Emeraude}} 
+\faculty{Informatique} % Your faculty's name and URL, this is used
+                           % in the title page and abstract, print it
+                           % elsewhere with \facname
+
+\hypersetup{pdftitle=\ttitle} % Set the PDF's title to your title
+\hypersetup{pdfauthor=\authorname} % Set the PDF's author to your name
+\hypersetup{pdfkeywords=\keywordnames} % Set the PDF's keywords to
+                                       % your keywords
+\input{Others/Preambule}		
+\input{Others/CommandesPerso}	
+
+\author{Ismail \scshape{Yemmi}}
+\title{Endormissement de taches blah blah}
+\begin{document}
+\frontmatter % Use roman page numbering style (i, ii, iii, iv...) for
+             % the pre-content pages
+\pagestyle{plain} % Default to the plain heading style until the
+                  % thesis style is called for the body content
+\begin{titlepage}
+\begin{center}
+{\scshape\LARGE \univname\par}\vspace{1.5cm} % University name
+\textsc{\Large }\\[0.5cm] % Thesis type
+\HRule \\[0.4cm] % Horizontal line
+{\huge \bfseries \ttitle\par}\vspace{0.4cm} % Thesis title
+\HRule \\[1.5cm] % Horizontal line
+\begin{minipage}[t]{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Auteur:}\\
+\authorname
+\end{flushleft}
+\end{minipage}
+\begin{minipage}[t]{0.4\textwidth}
+\begin{flushright} \large
+\emph{Encadrants:} \\
+\supname 
+\end{flushright}
+\end{minipage}\\[3cm]
+ 
+\large \textit{Pour l'Obtention du Diplome \\ de \degreename~en}\\[0.3cm] 
+\deptname\\[2cm] % Research group name and department name
+\begin{center}
+22 Juin 2017
+\end{center}
+%\includegraphics{Logo} % University/department logo - uncomment to place it
+\begin{tabular}{llr}
+\hline
+\hline
+Nom de Jury & Grade, Université, Belgium, Pays & Fonction \\
+Nom de Jury & Grade, Université, Belgium, Pays & Fonction \\
+Nom de Jury & Grade, Université, Belgium, Pays & Fonction \\
+Nom de Jury & Grade, Université, Belgium, Pays & Fonction \\
+\hline
+\end{tabular}
+\vfill
+\end{center}
+\end{titlepage}
+
+\newpage
+\dominitoc
+\mainmatter % Begin numeric (1,2,3...) page numbering
+\begin{abstract}
+\addchaptertocentry{\abstractname} % Add the abstract to the table of contents
+\input{Others/abstract}
+\end{abstract}
+
+
+%\begingroup
+%\let\cleardoublepage\clearpage
+\tableofcontents
+\tableofcontents
+\listoffigures
+\listoftables
+%\endgroup
+
+
+\pagestyle{thesis} % Return the page headers back to the "thesis" style
+
+\newtheorem{mydef}{Definition}
+\newtheorem{theoreme}{Theorème}    
+\newtheorem{mylemma}{Lemma}     
+\input{Others/symbols.tex}
+\adjustmtc
+\input{Others/intro}
+\adjustmtc
+\adjustmtc
+%\backmatter
+\part{Partie Théorique}
+\input{part1/chapter1.tex}
+\input{part1/chapter2.tex}
+\part{Contributions}
+\input{part2/chapter3.tex}
+\input{part2/chapter4.tex}
+\input{part2/chapter5.tex}
+\printbibliography[heading=bibintoc]
+\end{document}

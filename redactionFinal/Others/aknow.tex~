@@ -1,0 +1,46 @@
+\begin{acknowledgements}
+\addchaptertocentry{\acknowledgementname} % Add the acknowledgements to the table of contents
+\vspace{30 pt}
+The research lead in this thesis is the property of both University of
+Lille1, and University of Oran 1. The works that will be presented has
+been done in two research teams: {O}ptimization dans les {R}eseaux de
+{T}ransport {E}t {S}ystemes {E}mbarques (ORTESE) team of the
+laboratory ``Laboratoire d'Architetures Paralleles, Embarquees et du
+Calcul Intensif'' LAPECI of university of Oran 1 and, emeraude team of
+``Centre de Recherche en Informatique, Signal et Automatique de
+Lille'' CRIStAL laboratory of university of Lille.  The research were
+held at IRCICA, ``Institut de Recherche en Composants logiciels et
+materiels pour l'Information et la Communication Avancee'' and LAPECI
+laboratory.\vspace{10 pt}\\
+
+This research has been funded in part by IRCICA and PHC Curien under
+the direction of Abou El Hassen BENYAMINA and Richard
+OLEJNIK. Giuseppe LIPARI has participated in directing the thesis and
+has importatnt impact on the choices taken during the last two years.
+I am very glad and grateful to my directors Hassan and Richard with a
+very special thank and admiration to Giuseppe LIPARI for his
+scientific and human support.
+\vspace{15 pt} \\ I would thank also the member of my jury. Firstly,
+J\"{o}el Goossens and Benyattou Mohamed for accepting and putting time
+even in their very full agenda, to read and evaluate my work. I thank
+also Sophie Quinton, Samira Chouraqui and Lebbah Yahia to be members
+of my jury and accept to examine the research presented in this
+disseration.
+
+\vspace{15 pt} I will always remember the great times that I have
+passed in Emeraude and ORTESE teams. I will always keep in my memories
+Philippe Devienne, Pierre Boulet, Clement Balabriga, Pierre Falez,
+Yassine SidLakhdar, Loukil Lakhdar, Abbassia Deba, Aroui Abdelkader,
+$\cdots$. A special thank to Antoine Bertout for discussions that we
+had about everything and nothing, and the great moment that we shared
+in playing football. A special thank to all IRCICA and IRI colleagues,
+Anne So, Ahmed, Xavier lepallec and all the people that I could not
+cite all names.
+\vspace{20 pt}\\ A special thought to my family, My Father Charef and
+my both mothers, the one who gave me life and to the one that made me
+the man I am today. A special thank to my brothers: Farida, Ismail,
+Salah, Oum Elkhier, Nassima, Hanane, Wafaa, Rajaa, my nephews, and to
+my friends, especially mohammed maloufi, Azzouz Joseph and Amrane
+Kichou.  A very special thought to Sawsen, the woman that made my life
+different. Thank you for being there, you are a treasure for me.
+\end{acknowledgements}
