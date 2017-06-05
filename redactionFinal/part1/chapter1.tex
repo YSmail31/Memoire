@@ -1,21 +1,33 @@
 \chapter{Introduction Au systeme temps réel}
 \minitoc
 \section{Introduction}
+
+Un système temps réel est capable de contrôler (ou piloter) un procédé
+physique afin d'assurer la correction de son fonctionnement en
+fonction de l'évolution de l'environnement qui l'entour. Les systèmes
+temps réel doivent etre capable de prendre en compte de contraintes
+temporelles dont le respect est aussi important que l'exactitude du
+résultat, autrement dit le système ne doit pas simplement délivrer des
+résultats exacts, il doit les délivrer dans des délais impartis.  Dans
+ce chapitre nous présentons un survol des systèmes temps réel: leurs
+leur modélisation (modèles de taches, ordonanncements), leur
+implantation, $\cdots$ sur des plateformes monoprocesseurs et
+multiprocesseurs.
+
 \section{Taxonomie sur les systèmes temps réel}
 \subsection*{Différents niveaux de criticité}
-
-Les systèmes temps réel dits critiques (ou dur) correspondent ont des
-systèmes pour lesquelles il est intolérable qu’une échéance soit
-manquée au risque de causer des conséquences graves, telles que des
-blessures ou des pertes humaines. Les centrales nucléaires ou le
-guidage de missiles représentent de tels systèmes à haute
-criticité. Dans le domaine de l’informatique embarqué, l’automobile et
-l’aéronautique regorgent de systèmes critiques à l’image des
-équipements déclencheurs d’airbags ou des logiciels de contrôle de vol
-de satellite. Il est crucial que les résultats soient disponibles au
-moment voulu et un résultat obtenu trop tard est inutilisable, à
-l’instar d’un système anti-missile qui recevrait la position d’un
-objet volant avec du retard.
+Les systèmes temps réel \emph{critiques} (ou \emph{dur}) correspondent
+aux systèmes pour lesquelles il est intolérable qu’une contraintes
+temps réel soitent violée et la violation de cette derniere risque de
+causer des conséquences graves telles que des blessures ou des pertes
+humaines. Les centrales nucléaires ou le guidage de missiles
+représentent de tels systèmes à haute criticité. Dans le domaine de
+l’informatique embarqué, l’automobile et l’aéronautique regorgent de
+systèmes critiques à l’image des équipements déclencheurs d’airbags ou
+des logiciels de contrôle de vol de satellite. Il est crucial que les
+résultats soient disponibles au moment voulu et un résultat obtenu
+trop tard est inutilisable, à l’instar d’un système anti-missile qui
+recevrait la position d’un objet volant avec du retard.
 
 Les systèmes temps réels mou sont des systèmes où on tolère les
 retards et ne requièrent pas un déterminisme temporel aussi fort que
@@ -34,12 +46,15 @@ manquées. Ils ne considèrent que les résultats obtenus à temps et sont
 liés à la notion de qualité de service (QoS).
 
 \section{Modélisation des tâches}
-Liu et Layland \cite{LL73} ont proposé une modelisation d'un systemes
-temps réel Soit un système temps réel composé d’un ensemble de tâches
-nommé $\taskset{}$ qui comprend n tâches périodiques dont les
-caractéristiques sont détaillées ci-dessous. Nous définissons dans
-cette section tous les termes qui seront utilisés en relation avec la
-notion d’ensemble de tâches.
+Les systèmes temps réel sont des systèmes qui interagissent avec
+l'environnement. Ainsi, les fonctionnalités d'un système temps réel
+sont réccurentes, et peuvent s'executer durant tout la vie du
+système. Liu et Layland \cite{LL73} sont les premiers à proposer une
+modelisation d'un systemes temps réel comme suit:
+
+\noindent Soit $\taskset{}$ un système temps réel composé d’un
+ensemble de $n$ tâches (fonctionnalitées). Les t\^aches sont
+périodiques, et leurs caractéristiques sont détaillées ci-dessous.
 \begin{description}
 \item[Tâche :] Une tâche $\task{}$ est définie comme l’exécution
   d’une suite d’instructions. Nous supposons que toutes les tâches
@@ -48,92 +63,86 @@ notion d’ensemble de tâches.
   du moment qu’elles respectent leurs contraintes temporelles. Nous
   faisons également l’hypothèse que les tâches sont synchrones, donc
   que toutes les tâches sont actives dès que le système débute son
-  exécution, les tâches sont toutes libérées simultanément. Le modèle
-  de tâches que nous utilisons est le modèle de tâches dit périodique
-  pour l’ordonnancement fixe et sporadique pour l’ordonnancement
-  dynamique.
+  exécution, les tâches sont toutes libérées simultanément.
+  
 \item[Travail (Job) :] Chaque tâche libère périodiquement des
   travaux. Un travail est une suite d’instructions qui doit être
   réalisée avant une date fixée. Lorsqu’une tâche libère un travail,
   celui-ci est prêt à être exécuté et devient disponible pour
-  l’algorithme d’ordonnancement. Une tâche $\task{i}$ libère ses travaux
-  périodiquement suivant sa période Ti, un travail n’a donc pas de
-  période associée. Ce modèle est appelé modèle de tâche périodique
-  car chaque travail est libéré exactement lorsque la tâche atteint sa
-  période. D’autres modélisations plus souples existent comme les
-  systèmes de tâches sporadiques ou apériodiques. Pour les systèmes
-  sporadiques, la période d’une tâche est la période de temps minimale
-  entre deux libérations de travaux pour une tâche, ce qui signifie
-  que le système ne peut savoir la date exacte où le travail va être
-  libéré. Dans le cas de systèmes apériodiques, l’intervalle de temps
-  entre deux libérations de travaux n’est soumis à aucune
-  contrainte. Ces systèmes sont plus difficiles à étudier du fait de
-  l’imprévisibilité de l’arrivée des tâches.
-\item[Hyperpériode :] L’hyperpériode H de l’ensemble de tâches
-  correspond au plus petit commun multiple de toutes les périodes de
-  l’ensemble de tâches.  $H =
-  PPCM(\{\period{0},\period{1},\cdots,\period{n}\})$ Le nombre de
-  tâches dans un système temps réel embarqué est limité et les
-  périodes de ces tâches ont en général des relations temporelles
-  entre elles. Par exemple, il est peu probable que les périodes des
-  tâches soient premières entre elles, les périodes des tâches sont
-  souvent des harmoniques. En prenant un exemple concret, des tâches
-  peuvent avoir des périodes de 1ms, 2ms, 5ms ou 10ms mais il est
-  moins fréquent de trouver des tâches avec des périodes de 1.78ms et
-  de 8.54ms. La valeur de l’hyperpériode ainsi que le nombre de
-  travaux dans une hyperpériode restent donc naturellement
-  raisonnables.
-\item[Date Réveil :] notée $r_i$, c’est la date où la tache libère
-  son premier travail, chaque travail de la tâche est libéré à
-  l’instant $r_{i} + K\period{i}~avec~K \in \mathbb{N}$
-\item[Pire temps d’execution (Worst Case Execution Time WCET) :] est
-  la durée maximale de l’exécution de chacun de ses travaux. Le WCET
-  de la tâche $\task{i}$ est noté Ci. Calculer le WCET d’une tâche est
-  difficile et ce sujet est une thématique de recherche à lui tout
-  seul. Nous renvoyons le lecteur à \cite{WEE+08} pour plus
-  d’informations. Nous supposons que le WCET de chaque travail est
-  connu.
+  l’algorithme d’ordonnancement. Une tâche $\task{i}$ libère ses
+  travaux périodiquement suivant sa période $\period{i}$, un travail
+  n’a donc pas de période associée. Ce modèle est appelé modèle de
+  tâche périodique car chaque travail est libéré exactement lorsque la
+  tâche atteint sa période. D’autres modélisations plus souples
+  existent comme les systèmes de tâches sporadiques ou
+  apériodiques. Pour les systèmes sporadiques, la période d’une tâche
+  est la période de temps minimale entre deux libérations de travaux
+  pour une tâche, ce qui signifie que le système ne peut savoir la
+  date exacte où le travail va être libéré. Dans le cas de systèmes
+  apériodiques, l’intervalle de temps entre deux libérations de
+  travaux n’est soumis à aucune contrainte. Ces systèmes sont plus
+  difficiles à étudier du fait de l’imprévisibilité de l’arrivée des
+  tâches.
+\item[Hyperpériode :] L’hyperpériode $H$ correspond au plus petit
+  commun multiple de toutes les périodes de l’ensemble de tâches.  $H
+  = PPCM(\{\period{0},\period{1},\cdots,\period{n}\})$.
+
+\item[Date Réveil :] notée $\offset{i}$, c’est la date où la t\^ache
+  libère son premier travail, chaque travail de la tâche est libéré à
+  l’instant $\offset{i} + K \cdot \period{i}, ~K \in \mathbb{N}$
+\item[Pire temps d’execution (Worst Case Execution Time WCET,
+  $\charge{i}$) :] est la durée maximale de l’exécution de chacun de
+  ses travaux. Le WCET de la tâche $\task{i}$ est noté
+  $\charge{i}$. Calculer le WCET d’une tâche est difficile et ce sujet
+  est une thématique de recherche à lui tout seul. Nous renvoyons le
+  lecteur à \cite{WEE+08} pour plus d’informations. Nous supposons que
+  le WCET de chaque t\^ache est connu à priori.
+  
 \item[Échéance(Deadline):] Chaque travail une fois libéré doit
   terminer son exécution avec une certaine date sous peine de violer
-  son échéance. Nous notons
-  Di l’échéance relative de la tâche
+  son échéance. Nous notons $\deadline{i}$ l’échéance relative de la
+  tâche $\task{i}$. L’échéance absolue $d_{i,j}$ du travail $j$ sera
+  donc la date de sa libération additionnée de cette échéance
+  relative.
 
-  $\task{i}$. L’échéance absolue $j.d$ du travail $j$ sera donc la
-  date de sa libération additionnée de cette échéance relative.
-
-Il existe trois types de modèles  de taches : 
+Selon l'échéance et la période, il existe trois types de modèles de
+t\^aches :
 
 \begin{itemize}
-\item Modèles à « échéances implicites » où l’échéance de
+\item Modèles à \emph{échéances implicites} où l’échéance de
   chaque travail égale à sa période $\period{i} = \deadline{i}$.
-\item Modèles à « échéances contraintes » où l’échéance de
-  chaque travail est inférieure ou égale à sa période $\deadline{i} <=
+\item Modèles à \emph{échéances contraintes} où l’échéance de chaque
+  travail est inférieure ou égale à sa période $\deadline{i} \leq
   \period{i}$.
-\item le modèle à «échéances arbitraires» ne fixe aucune
+\item le modèle à \emph{échéances arbitraires} ne fixe aucune
   contrainte entre les échéances et les périodes des tâches.
 \end{itemize}
 
+
 \item[Utilisation d’une tâche :] L’utilisation d’une tâche est le
-  rapport entre son WCET et sa période. L’utilisation $U_i$ de la
-  t\^ache $\task{i}$ est donc
+  rapport entre son pire temps d'exécution $\charge{i}$ et sa période
+  $\period{i}$. L’utilisation $u_i$ de la t\^ache $\task{i}$ est donc
   $\frac{\charge{i}}{\period{i}}$
 \item[Utilisation globale de l’ensemble de tâches :] L’utilisation
-  globale U de l’ensemble de tâches est la somme de toutes les
+  globale $U$ de l’ensemble de tâches est la somme de toutes les
   utilisations individuelles des tâches de l’ensemble de tâches :
-
 \begin{equation}
-U = \sum_{i=1}^n U_i
+U = \sum_{i=1}^n u_i
 \end{equation}
-
 \end{description}
 
 \section{Ordonnancement monoprocesseur}
-Un algorithme d’ordonnancement monoprocesseur est chargé
-de répartir les tâches sur un processeur : il décide quelle tâche sera
-exécutée sur le processeur et pour combien de temps.
+L'ensemble des fonctionnalité d'un système temps réel sont en
+concurrence sur les différents ressources. Afin de gérer les
+ressources partagées des algorithmes ``d'arbitrage'' de ressources
+partagées a besoin d'etre mis en oeuvre. Pour la ressource
+\emph{processeur}, ces algorithmes sont appelés particulierement
+``ordonnanceurs''. Un algorithme d’ordonnancement monoprocesseur est
+chargé de décider quelle tâche sera exécutée sur le processeur et
+``probablement'' pour combien de temps. 
 \subsection*{Definition}
-Nous définissons dans un premier temps les termes
-habituels concernant les systèmes temps réel : \\
+Dans un premier temps, nous définissons les termes habituels concernant
+l'ordonnancement temps réel
 \begin{description}
 \item[Hors-ligne / en-ligne:] Un algorithme d’ordonnancement
   hors-ligne prend la totalité de ses décisions d’ordonnancement avant
@@ -144,10 +153,11 @@ habituels concernant les systèmes temps réel : \\
   quelle tâche doit être ordonnancée.
 \item[Préemptif / non préemptif:] Un algorithme d’ordonnancement
   préemptif est un algorithme d’ordonnancement qui peut arrêter
-  l’exécution d’une tâche, i.e. la préempter, à tout moment lors de
-  l’exécution. Au contraire, un algorithme d’ordonnancement non
-  préemptif ne permet aucune préemption, un travail en cours
-  d’exécution ne peut être arrêté.
+  l’exécution d’une tâche à tout moment lors de l’exécution. Au
+  contraire, un algorithme d’ordonnancement non préemptif ne permet
+  aucune préemption, un travail en cours d’exécution ne peut être
+  arrêté et le processeur ne peut etre utilisé par une autre tache
+  qu'à la fin de l'execution de ce dernier.
 \item[Ordonnançabilité / Faisabilité:] Un système de tâches est dit
   ordonnançable si un ordonnancement existe permettant de satisfaire
   toutes les contraintes temps réel. Un système de tâches est dit
@@ -157,13 +167,23 @@ habituels concernant les systèmes temps réel : \\
 \item[Optimalité:] Un algorithme d’ordonnancement est dit optimal s’il
   peut ordonnancer tous les ensembles de tâches ordonnançables par
   d’autres algorithmes d’ordonnancement existants.
+
+\item[Test d'ordo]
+\item [Test suffisasnt]
+\item[Test necessaire]
+\item[Test Exacte]
 \end{description}
+\he{Ajoute les définitions qui faut ci-dessus}
+
+
+Selon la priorité, les algorithmes d'ordonnancement sont classés comme
+ci-dessous:
 \subsection{Algorithme d’ordonnancement à priorité fixe}
 \subsubsection{Rate Monotonic \cite{LL73}}
-Rate Monotonic est un algorithme à priorité fixe
-introduit par Liu et Layland dans \cite{LL73}. Cet algorithme affecte
-des priorités aux tâches inversement proportionnel à leur période :
-plus leur période est petite, plus la tâche est prioritaire.
+Rate Monotonic est un algorithme à priorité fixe introduit par Liu et
+Layland dans \cite{LL73}. Cet algorithme affecte les priorités aux
+tâches inversement proportionnel à leur période : plus leur période
+est petite, plus la tâche est prioritaire.
 
 Un exemple de système de tâche ordonnancée par Rate
 Monotonic est donné table \ref{tab:exempleRM}. La figure
@@ -212,23 +232,23 @@ l'ordonnancement correspondant.
 %\end{figure}
 
 \begin{theoreme}
-Rate Monotonic est optimal pour l'ordonnancement de systèmes de tâches
-synchrones, indépendantes et à échéance sur requête en présence de
-préemption.
+  Rate Monotonic est optimal pour l'ordonnancement de systèmes de
+  tâches synchrones, indépendantes et à échéance sur requête en
+  présence de préemption.
 \end{theoreme}
 
 \begin{theoreme}[Condition Suffisante \cite{LL73}].
-  Un système temps réel composé de n tâches est ordonnançable par Rate
+  Un système temps réel composé de $n$ tâches est ordonnançable par Rate
   Monotonic si :
-\begin{equation}
-U = \sum_{i=1}^n \frac{\charge{i}}{\period{i}} \leq n ( 2^{\frac{1}{n}}
-- 1)
-\end{equation}
+  \begin{equation}
+    U = \sum_{i=1}^n \frac{\charge{i}}{\period{i}} \leq n ( 2^{\frac{1}{n}}
+    - 1)
+  \end{equation}
 \end{theoreme}
 
 \subsubsection{Deadline Monotonic \cite{LW82}}
-Deadline Monotonic est un algorithme à priorité fixe
-introduit par Leung et Whitehead dans \cite{LW82}.
+Deadline Monotonic est un algorithme à priorité fixe introduit par
+Leung et Whitehead dans \cite{LW82}.
 
 Cet algorithme est proche de celui de Rate Monotonic, à la différence
 que les priorités sont maintenant affectées en fonction de l'échéance
@@ -241,7 +261,7 @@ lorsque la préemption est autorisée. Monotonic et Deadline Monotonic
 se confondent.
 \end{theoreme}
 
-\textbf{Condition suffisante d'ordonnançabilité} La condition
+\paragraph{Condition suffisante d'ordonnançabilité} La condition
 suffisante d'ordonnançabilité est inspirée de la condition suffisante
 d'ordonnançabilité de Liu et Layland (cf. théorème 4) :
 
@@ -256,26 +276,23 @@ U = \sum_{i=1}^n \frac{\charge{i}}{\deadline{i}} \leq n ( 2^{\frac{1}{n}} - 1)
 \textbf{Condition necessaire et suffisante d'ordonnançabilité} Joseph
 et al. \cite{JP86} ont proposé un test d’ordonnancabilité basé sur le
 pire temps de reponse $R_{i}$.  Le pire temps de réponse est le moment
-ou la tache $i$ de priorité $p$ terminera son exécution quand les
-taches les plus prioritaire sont actifs avec elle en même temps.\\
+ou la tache $\task{i}$ de priorité $p_i$ terminera son exécution quand
+elle et toutes les t\^aches les plus prioritaire sont actifs même
+temps.
 
 \begin{theoreme}
-soit $\taskset{}$ = \{ $\task{1},\task{2},\cdots, \task{n} \}$ un ensemble de $n$
-taches.  $\taskset{}$ est ordonnancable sous deadline monotonic si et seulement si:
+soit $\taskset{}$ = \{$\task{1},\task{2},\cdots, \task{n}\}$ un
+ensemble de $n$ t\^aches.  $\taskset{}$ est ordonnançable sous deadline
+monotonic si et seulement si:
 \begin{equation}
-\forall \task{i} \in \taskset / R_{i} \leq \deadline{i}
+\forall \task{i} \in \taskset, R_{i} \leq \deadline{i}
 \end{equation}
 
-%\begin{equation}
-%R_{i} = \left\lbrace
-%\begin{array}{l}
-%R_{i}^0=\wcet{i}
-%\\
-% R_{i}^{(k+1)}=\charge{i}+\sum_{j \in pr(i)}  \left \lceil 
-% \frac{R_{i}^{(k)}}{\period{j}} \right \rceil * \wcet{j}  
-%\end{array}
-%\right.
-%\end{equation}
+\begin{align}
+R_{i}^0 &=\charge{i} \\
+ R_{i}^{(k+1)} &=\charge{i}+\sum_{j \in pr(i)}  \left\lceil 
+ \frac{R_{i}^{(k)}}{\period{j}} \right\rceil \cdot \charge{j}  
+\end{align}
 \end{theoreme}
 
 \begin{table}[h]
@@ -322,56 +339,57 @@ taches.  $\taskset{}$ est ordonnancable sous deadline monotonic si et seulement 
 %\end{figure}
 
 
-\subsection{Algorithme d’ordonnancement à priorité dynamique}
-Les algorithmes à priorité dynamique affectent une priorité qui n'est
-plus une donnée statique.  La priorité d'une tâche est mise à jour
-durant la vie du système en fonction de certains critères, les
-critères utilisés dépendant de l'algorithme utilisé.
+\subsection{Algorithme d’ordonnancement à priorité dynamique au t\^aches}
+Les algorithmes à priorité dynamique modifie lors de l'execution d'une
+tache sa priorité qui est donc plus une donnée statique. La priorité
+d'une tâche est mise à jour durant la vie du système en fonction de
+certains critères, les critères utilisés dépendant de l'algorithme
+utilisé. Cette catégorie d'algorithme se résume principallement à
+l'algorithme Earliest Deadline First (EDF).
 
 \subsubsection{Earliest Deadline First\cite{LL73}}
-Earliest Deadline First est un algorithme connu et étudié depuis
-longtemps \cite{LL73, Der74, Hor74}. Le principe de cet algorithme est
-d'accorder la priorité la plus grande à la tâche ayant une instance
-dont l'échéance absolue est la plus proche.  L'avantage majeur de cet
-algorithme est qu'en présence d'un système de tâche à échéance sur
-requête, le taux d'utilisation maximum du processeur est de 100\%
-(théorème 8).
+Earliest Deadline First est un algorithme un des algorithmes les plus
+connus et étudiés depuis longtemps \cite{LL73, Der74, Hor74}. Le
+principe de cet algorithme est d'accorder la priorité la plus grande à
+la tâche ayant une instance dont l'échéance absolue est la plus
+proche.  L'avantage majeur de cet algorithme est qu'en présence d'un
+système de tâche à échéance sur requête, le taux d'utilisation maximum
+du processeur est de 100\% (théorème \ref{theo:edf_implicite}).
+\he{STP prends soin à copier les choses correctement, ce théoreme
+  était totalement faux.}
 
-\begin{theoreme}[\cite{LL73}]
- Un système de n tâches à échéance contrainte est ordonnançable par
+\begin{theoreme}[\cite{LL73}]\label{theo:edf_implicite}
+ Un système de $n$ tâches à échéance sur requete  est ordonnançable par
  Earliest Deadline First si et seulement si :
  \begin{equation}
  U \leq 1
  \end{equation}
 \end{theoreme}
 
+\he{Encore une fois une définition fausse!!! il faut vérifier les sources}
 \paragraph{Fonction de demande du processeur}
-
-La demande du processeur des tâches devant se terminer avant la date t
-(c’est-à-dire dont l’échéance est avant ou à la date t), notée
-dbf($\taskset{}$, t) (Demand Bound Function) est définie par la durée
-cumulée des requêtes dont la date d’activation et l’échéance sont dans
-l’intervalle de temps[0, t]:
+La demande du processeur des tâches est une fonction qui calcul la
+demandes maximale de taches qui ont leur activation et échéance dans
+n'importe quel interval de temps de longueur $t$ notée
+$\dbf{\taskset{}}{t}$. Durant le reste du mémoire, nous ferons
+référence à la fonction de demande du processeur par $\dbff$.
 
 \begin{equation}
-DBF(\taskset{},t) = \sum_{\task{} \in \taskset{}}dbf(\task{},t)
+\dbf{\taskset{}}{t} = \sum_{\task{i}\in\taskset{}} \left\lfloor \frac{t-\period{i}+\deadline{i}}{\period{i}}\right\rfloor \charge{i}
 \end{equation}
-%
-%\begin{equation}
-%dbf(\task{},t) = max \bigg( 0,\bigg( \bigg\lfloor \frac{t - \deadline{i}}{\period{i}} \bigg\rfloor + 1 \bigg) \times \wcet{i} \bigg)
-%\end{equation}
 
 \paragraph{Condition necessaire et suffisante
-  d'ordonnançabilité}\cite{BHR93} il existe un test d’ordonnancabilité
-basée sur la fonction de la demande processeur DBF($\taskset,t$)
-causée par des tâches activées et devant être terminées dans
-l’intervalle [0, t].
+  d'ordonnançabilité}\cite{BHR93}
+
+il existe un test d’ordonnancabilité basée sur la fonction de la
+demande processeur $\dbf{\taskset{}}{t}$ causée par des tâches activées et
+devant être terminées dans l’intervalle de longueur $t$.
 
 \begin{theoreme}
 Un système $\taskset{}$ de $n$ tâches à échéance contrainte est
 ordonnançable par Earliest Deadline First si et seulement si :
 \begin{equation}
-\forall t \geq 0 , DBF(\taskset,t) \leq t 
+\forall t \geq 0 , \dbf{\taskset{}}{t} \leq t 
 \end{equation}
 \end{theoreme}
 
@@ -392,7 +410,8 @@ inférieur ou égale à 1 (absence de surcharge).
 \end{center}
 \caption{ensemble de tache } \label{tab:exempleEDF}
 \end{table}
-
+\he{Sur tout tes examples il faut ajouter une description des
+  exemples}
 
 %\begin{figure}[h]
 %\begin{center}
@@ -421,76 +440,92 @@ monoprocesseur par la présence de plusieurs processeurs sur lesquels
 peuvent s'exécuter les tâches. Se pose alors certains problèmes parmis
 eux :
 \begin{itemize}
-\item[$\bullet$] le problème de placement des tâches : sur quel(s) processeur(s) une tâche va-t-elle s'exécuter ?
-\item[$\bullet$] le problème de la migration des tâches : une tâche peut-elle changer de processeur pour s'exécuter ?
-\item[$\bullet$] le problème de l'ordonnancement des tâches : affectation des priorités.
+\item le problème de placement des tâches : sur quel(s) processeur(s)
+  une tâche va-t-elle s'exécuter ?
+\item le problème de la migration des tâches : une tâche peut-elle
+  changer de processeur pour s'exécuter ?
+\item le problème de l'ordonnancement des tâches : affectation des
+  priorités.
 \end{itemize}
-
-Nous allons nous intéressé uniquement au problème de placement et
-d'ordonnancement des tâches, sans prendre en compte la migration et
-nous supposerons que les tâches sont indépendantes.
 
 \subsection{Classification}
- Les algorithmes d'ordonnancement peuvent être classés
-dans différentes catégories, en fonction de leurs caractéristiques :
+ Les algorithmes d'ordonnancement peuvent être classés dans
+ différentes catégories, en fonction de leurs caractéristiques :
 \begin{itemize}
-\item  stratégie globale : sur un système comprenant m
-  processeurs, un algorithme d'ordonnancement utilisant une stratégie
-  globale va affecter les m tâches les plus prioritaires aux m
-  processeurs.
-\item  stratégie partitionner : le principe d'un algorithme
-  utilisant une stratégie par partitionnement est de placer chaque
-  tâche sur un processeur, et ensuite d'exécuter sur chaque processeur
-  un algorithme d'ordonnancement monoprocesseur.
-\item stratégie par semi partitionner : Elle est obtenue
-  par combinaison de la stratégie par partitionnement et de la
-  stratégie globale.
+\item stratégie globale : sur un système comprenant $m$ processeurs,
+  un algorithme d'ordonnancement utilisant une stratégie globale va
+  affecter les $m$ tâches les plus prioritaires aux $m$ processeurs.
+
+\item stratégie partitionnée : le principe d'un algorithme utilisant
+  une stratégie par partitionnement est de placer chaque tâche sur un
+  processeur, et ensuite d'exécuter sur chaque processeur un
+  algorithme d'ordonnancement monoprocesseur. Comme vous pouvez le
+  remarquer dans une stratégie partitionée une tache s'execute
+  seulement sur un processeur au contraire de la stratégie globale ou
+  les taches ont le droit de s'executer sur différents processeurs.
+
+\item stratégie semi partitionnée : Elle est obtenue par combinaison
+  de la stratégie par partitionnement et de la stratégie
+  globale. Ainsi, les taches sont alloués à des processeurs et certain
+  jotravaux de certaines taches ont le droit de migrer à un autre
+  processeur.
 \end{itemize}
-Il est à noter qu'il n'y a pas une catégorie qui soit
-meilleure qu'une autre. Il existe des systèmes de tâches qui peuvent
-être ordonnancés en utilisant une stratégie globale mais pas avec une
-stratégie par partitionnement et inversement. On dit que ces
-algorithmes sont non comparables \cite{LW82}.
+
+Il est à noter qu'il n'y a pas une catégorie qui soit meilleure qu'une
+autre. Il existe des systèmes de tâches qui peuvent être ordonnancés
+en utilisant une stratégie globale mais pas avec une stratégie par
+partitionnement et inversement. On dit que ces algorithmes sont
+\textbf{incomparables} \cite{LW82}.
 
 \subsection{Optimalité}
 \begin{theoreme}[\cite{HL92}]
 Il n'existe pas d'algorithme en-ligne optimal pour des systèmes
 multiprocesseurs. Toutefois, lorsqu'on restreint le cadre d'étude et
-que l'on ne considère uniquement des systèmes de tâches périodiques,
-alors il existe des algorithmes optimaux, comme les algorithmes de
-type Pfair par exemple.
+que l'on ne considère uniquement des systèmes de tâches périodiques, à
+échéance sur requete, alors il existe des algorithmes optimaux, comme
+les algorithmes de type Pfair par exemple.
 \end{theoreme}
 
+Dans ce manuscrit, nous nous interessons aux stratégies partitionées
+parce qu'ils sont simple à implémenter et leur testes
+d'ordonnançabilités sont basés sur les testes monoprocesseurs.
+
+
 \subsection{Algorithme d'ordonnancement utilisant une stratégie par partitionnement}
+
 \subsubsection{Généralité}
-Les algorithmes utilisant une stratégie par
-partitionnement relèvent dans la plupart des cas du problème du
-bin-packing, c'est-à-dire comment trouver un placement pour l'ensemble
-des tâches sur un nombre minimum de processeurs.  Ce problème de
-partitionnement des tâches pour les placer sur les processeurs a été
-montré comme étant NP-difficile dans \cite{LW82}. Il n'existe donc pas
-d'algorithmes s'exécutant en temps polynomial permettant de trouver
-une solution optimale à ce problème. Toutefois, il existe des
-heuristiques permettant d'obtenir des résultats corrects en temps
-polynomial.
+Les algorithmes utilisant une stratégie par partitionnement relèvent
+dans la plupart des cas du problème du bin-packing, c'est-à-dire
+comment trouver un placement pour l'ensemble des tâches sur un nombre
+minimum de processeurs.  Ce problème de partitionnement des tâches
+pour les placer sur les processeurs a été montré comme étant
+NP-difficile dans \cite{LW82}. Il n'existe donc pas d'algorithmes
+s'exécutant en temps polynomial permettant de trouver une solution
+optimale à ce problème. Toutefois, il existe des heuristiques
+permettant d'obtenir des résultats corrects en temps polynomial.
+
 \subsubsection{First-Fit et Best-Fit}
 Parmi les heuristiques existantes pour résoudre ce type de problème,
-il existe quatre heuristiques First Fit, Best Fit, Next Fit et Worst
+ quatre heuristiques: First Fit, Best Fit, Next Fit et Worst
 Fit qui reposent tous sur le même principe : on affecte chaque tâche
-dans l'ordre à un processeur, selon un critère d'acceptation.  La
+dans l'ordre à un processeur, selon un critère d'acceptation. La
 différence entre les deux types d'algorithmes réside sur la manière
 dont est placée chaque tâche :
-\begin{itemize}
-\item[$\bullet$] First Fit : la tâche est placée sur le premier
-  processeur avec un ensemble de tache ordonnançable ;
-\item[$\bullet$] Next Fit : même principe que First Fit ...
-\item[$\bullet$] Best Fit : la tâche est placée sur le processeur avec
-  un ensemble de tache ordonnançable et ayant le taux d'utilisation
+\begin{description}
+\item[First Fit :] la tâche est placée sur le premier processeur avec
+  un ensemble de tache ordonnançable; \he{dis que ça commence toujours
+    par le proc 0 au contraire de NF ou ça continue !}
+\item[Next Fit :] même principe que First Fit \he{Si c'est le meme
+  principe pourquoi il y a deux !!!! }
+\item[Best Fit :] la tâche est placée sur le processeur avec un
+  ensemble de tache ordonnançable et ayant le taux d'utilisation
   maximal.
-\item[$\bullet$] Worst Fit : la tâche est placée sur le processeur
-  avec un ensemble de tache ordonnançable et ayant le taux
-  d'utilisation minimal.
-\end{itemize}
+\item[Worst Fit :] la tâche est placée sur le processeur avec un
+  ensemble de tache ordonnançable et ayant le taux d'utilisation
+  minimal.
+\end{description}
+\he{Il faut dire que le teste d'acceptation doit etre un teste d'ordo}
+
 Les algorithmes de type First Fit ou Best Fit ne sont pas les seuls
 existants il existe aussi Next Fit ou aussi Worst Fit.
 
@@ -578,4 +613,12 @@ processeurs.
   DM} \label{fig:exempleBF}
 \end{center}
 \end{figure}
+
+\he{Parle un petit peu des algorithmes d'ordonnancement globale!}
 \section{Conclusion}
+Dans ce chapitre, nous avons fait un survol sur les systèmes temps
+réel. Nous avons particulierement mis l'accent sur l'ordonanncement
+temps réel. Nous avons présenté tout les testes d'ordonanaçabilité qui
+seront utilisés dans le reste de ce document. En ce qui concerne les
+algorithme d'ordonnancement: Nous utiliserons DM et EDF pour le
+monoprocesseur et un DM et EDF partitioné pour le cas multiprocesseur.
