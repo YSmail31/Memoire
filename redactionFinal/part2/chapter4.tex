@@ -17,27 +17,46 @@ tache, chaque tache $\task{i}$ est caracterisé par $\task{i} =
 
 \section{Limitation de nombre de preemption}
 
-%\begin{center}
-%\begin{algorithm}[H]
-%\KwData{TaskSet de tâches sporadic $\taskset{}$}
-%\KwResult{$Q(t)$}
-%\Begin{
-% Posons $\{t_{1},t_{2},...,t_{n}\}$ ensemble ordonné de $\{\deadline{i}+l\periode{i},\forall l \in N, 1 \leq i \leq n \}$ où $(t_{k} < t_{k+1},\forall k)$
-% $Q(t_{1}) \leftarrow t_{1} - \sum_{\tache{i} \in \taskset{}} DBF(\tache{i},t_{1})$\;
-% \For{$k \leftarrow 2,3...$}{
-%	$Q(t_{k}) \leftarrow Min(Q(t_{k-1}),t_{k} - \sum_{\tache{i} \in \taskset{}} DBF(\tache{i},t_{k}))$\;
-%	\If{$Q(t_{k}) < 0$}{
-%	\textbf{return} faux\;
-%	}
-%	}
-%	\textbf{return} vrai\;
-% }
-%\caption{Insertion Taches Endormissement Dans Un Mono-processeur}
-%\end{algorithm}
-%\end{center}
+\begin{algorithm}
+\caption{fonction de limitation de préemption}
+\label{qt}
+\begin{algorithmic}
+\State TaskSet de tâches sporadic $\taskset{}$
+\State $Q(t)$
+\State ~
+\textbf{Posons} $\{t_{1},t_{2},...,t_{n}\}$ ensemble ordonné de $\{\deadline{i}+L\period{i},\forall L \in N, 1 \leq i \leq n \}$ où $(t_{k} < t_{k+1},\forall k)$
+\State $Q(t_{1}) \leftarrow t_{1} - \sum_{\task{i} \in \taskset{}} \dbft{\task{i}}{t_{1}}$
+\For {$k=2,3,...$}
+\State $Q(t_{k}) \leftarrow Min(Q(t_{k-1}),t_{k} - \sum_{\task{i} \in \taskset{}} \dbft{\task{i}}{t_{k}}$
+\If{$Q(t_{k}) < 0$}
+\State return False
+\EndIf
+\EndFor
+\Return True
+\end{algorithmic}
+\end{algorithm}
 
 \section{Le cas monoprocesseur}
-%\input{edfup.tex}
+
+\begin{algorithm}
+\caption{Insertion Taches Endormissement Dans Un Mono-processeur}
+\label{edfup}
+\begin{algorithmic}
+\State TaskSet $\taskset{}$, Temps Minimum d'execution $\wcetf_{SleepMin}$, Temps d'execution Maximum $\wcetf_{SleepMax}$, Pas de decrementation $\Delta \wcetf_{}$
+\State Tache $\task{Sleep}$
+\State $\wcetf_{Sleep}  \longleftarrow \wcetf_{SleepMax}$ 
+\State $\deadline{Sleep}	\longleftarrow \period{H}$ 
+\State $\period{sleep} \longleftarrow \period{H}$ 
+\While {$\taskset{} \cup tache(\wcetf_{Sleep},\deadline{Sleep},\period{H})$ est non  ordonnançable et $\wcetf_{Sleep} \geq \wcetf_{SleepMin}$}
+\State $\wcetf_{Sleep} \longleftarrow \wcetf_{Sleep} - \Delta \wcetf_{}$ 
+\EndWhile 
+\If {$\taskset{} \cup \task{sleep}$ est non ordonnançable \textbf{or} $\wcetf_{Sleep} \leq \wcetf_{SleepMin}$ \textbf{or} $!test(\task{sleep})$}
+\State return $\emptyset$
+\EndIf
+\State $\task{Sleep} \leftarrow Tache(\wcetf_{Sleep},\deadline{Sleep},\period{sleep})$
+\State return $\task{Sleep}$
+\end{algorithmic}
+\end{algorithm}
 
 \begin{table}[!h]
 \begin{center}
@@ -85,9 +104,38 @@ tache, chaque tache $\task{i}$ est caracterisé par $\task{i} =
 
 \section{Le cas multiprocesseur}
 
-%Réécris les algorithmes ici !! et pas dans un autre fichier en utilisant le package algorithmic !
-%\input{edfmpl.tex}
-%\input{edfmpg.tex}
+\begin{algorithm}
+\caption{Algorithme d'insertion de Tache d'endormissement en locale dans un multiprocesseur}
+\label{edfmpl}
+\begin{algorithmic}
+\State Ensemble de processeur $\core{}$, Temps Minimum d'exécution $\wcetf_{SleepMin}$
+\State Ensemble de Tache d'endormissement $\taskset{Sleep}$
+\For{$ \proc{i} \in \core{}$}
+\State $\task{sleep}^i$ = tache\_endormissement\_monoprocesseur($\wcetf_{SleepMin}$) 
+\State $\taskset{Sleep}^i =\taskset{Sleep}^i \cup \task{sleep}^i$
+\EndFor
+\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}
+\caption{Algorithme d'insertion de Tache d'endormissement en globale dans un multiprocesseur}
+\label{edfmpg}
+\begin{algorithmic}
+\State Ensemble de processeur $\core{}$, Temps Minimum d'exécution $\wcetf_{SleepMin}$
+\State Ensemble de Tache d'endormissement $\taskset{Sleep}$
+\State $\taskset{sleep} \leftarrow \emptyset$
+\State $\task{sleep} \leftarrow \emptyset$
+\State $\thrf \leftarrow PeriodeHarmonic(\taskset{Sleep})$
+\For{$ \proc{i} \in \core{}$}
+\State $\task{sleep}^i$ = tache\_endormissement\_monoprocesseur($\wcetf_{SleepMin},\thrf$) 
+\State $\task{sleep} \leftarrow \task{sleep} \cup task{sleep}^i$
+\EndFor
+\For{$ \proc{i} \in \core{}$}
+\State $\taskset{Sleep} \leftarrow \taskset{Sleep} \cup Min_{i =1..m}(\task{Sleep}^i)$
+\EndFor
+\end{algorithmic}
+\end{algorithm}
+
 
 \begin{table}[h]
 \begin{center}
@@ -103,186 +151,73 @@ tache, chaque tache $\task{i}$ est caracterisé par $\task{i} =
 \section{insertion locale}
 \begin{figure}[!h]
 \begin{center}
-\resizebox{15cm}{4cm}{
-\begin{tikzpicture}
-\node at (-0.5,0.5) {P1};
-\node at (-0.5,1.5) {P2};
-%P1
-\draw[fill=white] (0.0,0) rectangle (12,1) ;
 
-\draw[fill=red] (0.0,0) rectangle (0.3,1) ;
-\draw[fill=blue] (0.3,0) rectangle (0.5,1) ;
+\begin{RTGrid}[width=10cm,nosymbols=1]{4}{31}
 
-\draw[fill=red] (1.0,0) rectangle (1.3,1) ;
-\draw[fill=blue] (1.3,0) rectangle (1.5,1) ;
+\RowLabel{2}{$\task{Sleep}$}
+\RowLabel{1}{$\task{1}$}
+\RowLabel{3}{$\task{2}$}
+\RowLabel{4}{$\task{Sleep}$}
 
-\draw[fill=red] (2.0,0) rectangle (2.3,1) ;
-\draw[fill=blue] (2.3,0) rectangle (2.5,1) ;
+\TaskNArrDead{3}{0}{15}{21}{1}
+\TaskArrival{3}{21}
+\TaskNArrDead{4}{0}{15}{21}{1}
+\TaskArrival{4}{21}
+\TaskNArrDead{1}{0}{10}{10}{3}
+\TaskArrival{1}{30}
+\TaskNArrDead{2}{0}{10}{10}{3}
+\TaskArrival{2}{30}
 
-\draw[fill=red] (3.0,0) rectangle (3.3,1) ;
-\draw[fill=blue] (3.3,0) rectangle (3.5,1) ;
+\TaskExecution[color=green]{2}{0}{3}
+\TaskExecution{1}{3}{5}
+\TaskExecution[color=green]{2}{10}{13}
+\TaskExecution{1}{13}{15}
+\TaskExecution[color=green]{2}{20}{23}
+\TaskExecution{1}{23}{25}
 
-\draw[fill=red] (4.0,0) rectangle (4.3,1) ;
-\draw[fill=blue] (4.3,0) rectangle (4.5,1) ;
+\TaskExecution{3}{0}{2}
+\TaskExecution[color=green]{4}{2}{11}
+\TaskExecution{3}{21}{23}
+\TaskExecution[color=green]{4}{23}{30}
 
-\draw[fill=red] (5.0,0) rectangle (5.3,1) ;
-\draw[fill=blue] (5.3,0) rectangle (5.5,1) ;
+\end{RTGrid}
 
-\draw[fill=red] (6.0,0) rectangle (6.3,1) ;
-\draw[fill=blue] (6.3,0) rectangle (6.5,1) ;
-
-\draw[fill=red] (7.0,0) rectangle (7.3,1) ;
-\draw[fill=blue] (7.3,0) rectangle (7.5,1) ;
-
-\draw[fill=red] (8.0,0) rectangle (8.3,1) ;
-\draw[fill=blue] (8.3,0) rectangle (8.5,1) ;
-
-\draw[fill=red] (9.0,0) rectangle (9.3,1) ;
-\draw[fill=blue] (9.3,0) rectangle (9.5,1) ;
-
-\draw[fill=red] (10.0,0) rectangle (10.3,1) ;
-\draw[fill=blue] (10.3,0) rectangle (10.5,1) ;
-
-\draw[fill=red] (11.0,0) rectangle (11.3,1) ;
-\draw[fill=blue] (11.3,0) rectangle (11.5,1) ;
-%P2
-\draw[fill=white] (0.0,1) rectangle (12,2) ;
-
-\draw[fill=yellow] (0.0,1) rectangle (0.2,2) ;
-\draw[fill=red] (0.2,1) rectangle (1.1,2) ;
-
-\draw[fill=yellow] (2.1,1) rectangle (2.2999999046325685,2) ;
-\draw[fill=red] (2.2999999046325685,1) rectangle (3.1999999046325684,2) ;
-
-\draw[fill=yellow] (4.2,1) rectangle (4.399999809265137,2) ;
-\draw[fill=red] (4.399999809265137,1) rectangle (5.299999809265136,2) ;
-
-\draw[fill=yellow] (6.2999997,1) rectangle (6.499999713897705,2) ;
-\draw[fill=red] (6.499999713897705,1) rectangle (7.399999713897705,2) ;
-
-\draw[fill=yellow] (8.4,1) rectangle (8.599999618530273,2) ;
-\draw[fill=red] (8.599999618530273,1) rectangle (9.499999618530273,2) ;
-
-\draw[fill=yellow] (10.5,1) rectangle (10.7,2) ;
-\draw[fill=red] (10.7,1) rectangle (11.6,2) ;
-%%%%%%%
-\draw [->](0,-1) -- coordinate (x axis mid) (12.5,-1);
-\draw (0,-1) -- (0,-1.5) node[fill=white,rotate=90] {0};
-\draw (1,-1) -- (1,-1.5) node[fill=white,rotate=90] {10};
-\draw (2,-1) -- (2,-1.5) node[fill=white,rotate=90] {20};
-\draw (3,-1) -- (3,-1.5) node[fill=white,rotate=90] {30};
-\draw (4,-1) -- (4,-1.5) node[fill=white,rotate=90] {40};
-\draw (5,-1) -- (5,-1.5) node[fill=white,rotate=90] {50};
-\draw (6,-1) -- (6,-1.5) node[fill=white,rotate=90] {60};
-\draw (7,-1) -- (7,-1.5) node[fill=white,rotate=90] {70};
-\draw (8,-1) -- (8,-1.5) node[fill=white,rotate=90] {80};
-\draw (9,-1) -- (9,-1.5) node[fill=white,rotate=90] {90};
-\draw (10,-1) -- (10,-1.5) node[fill=white,rotate=90] {100};
-\draw (11,-1) -- (11,-1.5) node[fill=white,rotate=90] {110};
-\draw (12,-1) -- (12,-1.5) node[fill=white,rotate=90] {120};
-
-\draw[fill=white] (12.2,-0.4) rectangle (15.5,2.2) ;
-\draw[fill=red] (12.6,0) rectangle (13.2,0.2) ;
-\draw (14.5,0) -- (14.5,0) node[fill=white] {DeepSleep};
-\draw[fill=blue] (12.6,0.5) rectangle (13.2,0.7) ;
-\draw (14.5,0.5) -- (14.5,0.5) node[fill=white] {$\tau_1$};
-\draw[fill=yellow] (12.6,1) rectangle (13.2,1.2) ;
-\draw (14.5,1) -- (14.5,1) node[fill=white] {$\tau_2$};
-\end{tikzpicture}}
 \end{center}
 \caption{Insertion globale de tâches d'endormissements dans un multiprocesseur} \label{fig:edfmpl}
 \end{figure}
+
 \section{insertion globale}
 \begin{figure}[!h]
 \begin{center}
-\resizebox{15cm}{4cm}{
-\begin{tikzpicture}
-\node at (-0.5,0.5) {P1};
-\node at (-0.5,1.5) {P2};
-%P1
-\draw[fill=white] (0.0,0) rectangle (12,1) ;
+\begin{RTGrid}[width=10cm,nosymbols=1]{4}{31}
 
-\draw[fill=red] (0.0,0) rectangle (0.3,1) ;
-\draw[fill=blue] (0.3,0) rectangle (0.5,1) ;
+\RowLabel{2}{$\task{Sleep}$}
+\RowLabel{1}{$\task{1}$}
+\RowLabel{3}{$\task{2}$}
+\RowLabel{4}{$\task{Sleep}$}
 
-\draw[fill=red] (1.0,0) rectangle (1.3,1) ;
-\draw[fill=blue] (1.3,0) rectangle (1.5,1) ;
+\TaskNArrDead{3}{0}{15}{21}{1}
+\TaskArrival{3}{21}
+\TaskNArrDead{4}{0}{15}{21}{1}
+\TaskArrival{4}{21}
+\TaskNArrDead{1}{0}{10}{10}{3}
+\TaskArrival{1}{30}
+\TaskNArrDead{2}{0}{10}{10}{3}
+\TaskArrival{2}{30}
 
-\draw[fill=red] (2.0,0) rectangle (2.3,1) ;
-\draw[fill=blue] (2.3,0) rectangle (2.5,1) ;
+\TaskExecution[color=green]{2}{0}{3}
+\TaskExecution{1}{3}{5}
+\TaskExecution[color=green]{2}{10}{13}
+\TaskExecution{1}{13}{15}
+\TaskExecution[color=green]{2}{20}{23}
+\TaskExecution{1}{23}{25}
 
-\draw[fill=red] (3.0,0) rectangle (3.3,1) ;
-\draw[fill=blue] (3.3,0) rectangle (3.5,1) ;
+\TaskExecution{3}{0}{2}
+\TaskExecution[color=green]{4}{2}{11}
+\TaskExecution{3}{21}{23}
+\TaskExecution[color=green]{4}{23}{30}
 
-\draw[fill=red] (4.0,0) rectangle (4.3,1) ;
-\draw[fill=blue] (4.3,0) rectangle (4.5,1) ;
-
-\draw[fill=red] (5.0,0) rectangle (5.3,1) ;
-\draw[fill=blue] (5.3,0) rectangle (5.5,1) ;
-
-\draw[fill=red] (6.0,0) rectangle (6.3,1) ;
-\draw[fill=blue] (6.3,0) rectangle (6.5,1) ;
-
-\draw[fill=red] (7.0,0) rectangle (7.3,1) ;
-\draw[fill=blue] (7.3,0) rectangle (7.5,1) ;
-
-\draw[fill=red] (8.0,0) rectangle (8.3,1) ;
-\draw[fill=blue] (8.3,0) rectangle (8.5,1) ;
-
-\draw[fill=red] (9.0,0) rectangle (9.3,1) ;
-\draw[fill=blue] (9.3,0) rectangle (9.5,1) ;
-
-\draw[fill=red] (10.0,0) rectangle (10.3,1) ;
-\draw[fill=blue] (10.3,0) rectangle (10.5,1) ;
-
-\draw[fill=red] (11.0,0) rectangle (11.3,1) ;
-\draw[fill=blue] (11.3,0) rectangle (11.5,1) ;
-%P2
-\draw[fill=white] (0.0,1) rectangle (12,2) ;
-
-\draw[fill=red] (0.0,1) rectangle (0.3,2) ;
-\draw[fill=red] (1.0,1) rectangle (1.3,2) ;
-\draw[fill=red] (2.0,1) rectangle (2.3,2) ;
-\draw[fill=red] (3.0,1) rectangle (3.3,2) ;
-\draw[fill=red] (4.0,1) rectangle (4.3,2) ;
-\draw[fill=red] (5.0,1) rectangle (5.3,2) ;
-\draw[fill=red] (6.0,1) rectangle (6.3,2) ;
-\draw[fill=red] (7.0,1) rectangle (7.3,2) ;
-\draw[fill=red] (8.0,1) rectangle (8.3,2) ;
-\draw[fill=red] (9.0,1) rectangle (9.3,2) ;
-\draw[fill=red] (10.0,1) rectangle (10.3,2) ;
-\draw[fill=red] (11.0,1) rectangle (11.3,2) ;
-
-\draw[fill=yellow] (0.3,1) rectangle (0.5,2) ;
-\draw[fill=yellow] (2.3,1) rectangle (2.5,2) ;
-\draw[fill=yellow] (4.3,1) rectangle (4.5,2) ;
-\draw[fill=yellow] (6.3,1) rectangle (6.5,2) ;
-\draw[fill=yellow] (8.4,1) rectangle (8.6,2) ;
-\draw[fill=yellow] (10.5,1) rectangle (10.7,2) ;
-%%%%%%%
-\draw [->](0,-1) -- coordinate (x axis mid) (12.5,-1);
-\draw (0,-1) -- (0,-1.5) node[fill=white,rotate=90] {0};
-\draw (1,-1) -- (1,-1.5) node[fill=white,rotate=90] {10};
-\draw (2,-1) -- (2,-1.5) node[fill=white,rotate=90] {20};
-\draw (3,-1) -- (3,-1.5) node[fill=white,rotate=90] {30};
-\draw (4,-1) -- (4,-1.5) node[fill=white,rotate=90] {40};
-\draw (5,-1) -- (5,-1.5) node[fill=white,rotate=90] {50};
-\draw (6,-1) -- (6,-1.5) node[fill=white,rotate=90] {60};
-\draw (7,-1) -- (7,-1.5) node[fill=white,rotate=90] {70};
-\draw (8,-1) -- (8,-1.5) node[fill=white,rotate=90] {80};
-\draw (9,-1) -- (9,-1.5) node[fill=white,rotate=90] {90};
-\draw (10,-1) -- (10,-1.5) node[fill=white,rotate=90] {100};
-\draw (11,-1) -- (11,-1.5) node[fill=white,rotate=90] {110};
-\draw (12,-1) -- (12,-1.5) node[fill=white,rotate=90] {120};
-
-\draw[fill=white] (12.2,-0.4) rectangle (15.5,2.2) ;
-\draw[fill=red] (12.6,0) rectangle (13.2,0.2) ;
-\draw (14.5,0) -- (14.5,0) node[fill=white] {DeepSleep};
-\draw[fill=blue] (12.6,0.5) rectangle (13.2,0.7) ;
-\draw (14.5,0.5) -- (14.5,0.5) node[fill=white] {$\tau_1$};
-\draw[fill=yellow] (12.6,1) rectangle (13.2,1.2) ;
-\draw (14.5,1) -- (14.5,1) node[fill=white] {$\tau_2$};
-\end{tikzpicture}}
+\end{RTGrid}
 \end{center}
 \caption{} \label{fig:edfmpg}
 \end{figure}
